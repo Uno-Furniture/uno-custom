@@ -123,10 +123,26 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin-bottom: 0.2rem;
 }
 
+/* =================================
+Custom handling of secondary menu 
+==================================*/
 .menu-drawer__menu-item {
-  padding: 1.1rem 3.2rem;
+  padding: 1rem 3.2rem;
   text-decoration: none;
   font-size: 1.8rem;
+}
+
+.menu-drawer__menu-item.secondary-menu-link {
+  font-size: 1.25rem;
+}
+
+.last-primary-menu-link:after {
+  content: '';
+  display: block;
+  width: calc(100% - 6.4rem);
+  height: 1px;
+  background-color: rgb(var(--color-base-background-2));
+  margin: 1rem 3.2rem;
 }
 
 .no-js .menu-drawer__menu-item {
