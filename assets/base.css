@@ -2309,7 +2309,7 @@ input[type='checkbox'] {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   /* Custom layout for secondary menu */
   .header--middle-left.header--has-menu-secondary {
     grid-template-columns: 3fr 5fr 3fr;
@@ -2659,11 +2659,13 @@ details[open] > .header__submenu {
   .header--has-menu-secondary .header__inline-menu {
     display: flex;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+    min-height: 44px;
   } 
 
   .header--has-menu-secondary .header__inline-menu > .list-menu--inline {
     justify-content: center;
+    align-items: center;
   }
   
   .header--has-menu-secondary .header__inline-menu-secondary {
@@ -2695,12 +2697,16 @@ details[open] > .header__submenu {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 990px) and (max-width: 1100px) {
+@media screen and (min-width: 990px) and (max-width: 1150px) {
   .header__menu-item {
     padding: .5rem;
     font-size: 1.3rem;
     letter-spacing: 0;
-  } 
+  }
+
+  summary.header__menu-item {
+    padding-right: 2.4rem;
+  }
 }
 
 .header__inline-menu-secondary .header__menu-item:last-child {
