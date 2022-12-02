@@ -2284,6 +2284,14 @@ input[type='checkbox'] {
     column-gap: 2rem;
   }
 
+  /* Custom layout for secondary menu */
+  .header--middle-left.header--has-menu-secondary {
+    grid-template-areas: 'heading navigation navigation-secondary';
+    grid-template-columns: auto auto auto;
+    column-gap: 2rem;
+    align-items: end;
+  }
+
   .header--middle-center {
     grid-template-areas: 'navigation heading icons';
     grid-template-columns: 1fr auto 1fr;
@@ -2299,6 +2307,14 @@ input[type='checkbox'] {
   .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
     margin-top: 1.05rem;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Custom layout for secondary menu */
+  .header--middle-left.header--has-menu-secondary {
+    grid-template-columns: 3fr 5fr 3fr;
+    column-gap: 2rem;
+  }  
 }
 
 .header *[tabindex='-1']:focus {
@@ -2380,6 +2396,14 @@ input[type='checkbox'] {
   display: flex;
   grid-area: icons;
   justify-self: end;
+}
+
+/* Custom icons position for secondary menu layout */
+@media screen and (min-width: 990px) {
+  .header--has-menu-secondary .header__icons {
+    position: absolute;
+    top: 6px;
+  }
 }
 
 .header__icon:not(.header__icon--summary),
@@ -2616,6 +2640,11 @@ details[open] > .header__submenu {
   display: none;
 }
 
+/* Custom grid-area for secondary menu */
+.header__inline-menu-secondary {
+  grid-area: navigation-secondary;
+}
+
 .header--top-center .header__inline-menu,
 .header--top-center .header__heading-link {
   margin-left: 0;
@@ -2625,6 +2654,21 @@ details[open] > .header__submenu {
   .header__inline-menu {
     display: block;
   }
+
+  /* Custom alignment when secondary menu used */
+  .header--has-menu-secondary .header__inline-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  } 
+
+  .header--has-menu-secondary .header__inline-menu > .list-menu--inline {
+    justify-content: center;
+  }
+  
+  .header--has-menu-secondary .header__inline-menu-secondary {
+    justify-content: flex-end;
+  }  
 
   .header--top-center .header__inline-menu {
     justify-self: center;
@@ -2643,10 +2687,24 @@ details[open] > .header__submenu {
   padding: 0 1rem;
 }
 
+/* Custom menu item styling */
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 990px) and (max-width: 1100px) {
+  .header__menu-item {
+    padding: .5rem;
+    font-size: 1.3rem;
+    letter-spacing: 0;
+  } 
+}
+
+.header__inline-menu-secondary .header__menu-item:last-child {
+  padding-right: 0;
 }
 
 .header__menu-item:hover {
