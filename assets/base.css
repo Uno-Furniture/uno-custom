@@ -2413,8 +2413,9 @@ input[type='checkbox'] {
   justify-content: center;
 }
 
+/* Change colour to accent from --color-foreground */
 .header__icon {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-base-accent-1));
 }
 
 .header__icon span {
@@ -2704,7 +2705,7 @@ details[open] > .header__submenu {
     letter-spacing: 0;
   }
 
-  summary.header__menu-item {
+  .header__inline-menu summary.header__menu-item {
     padding-right: 2.4rem;
   }
 }

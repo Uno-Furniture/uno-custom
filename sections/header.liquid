@@ -657,9 +657,9 @@
     {%- endif -%}
 
     <div class="header__icons">
-      {%- comment -%} Custom - Only include search here if not using secondary menu {%- endcomment -%}
-      {% unless section.settings.menu_secondary != blank %}
-        <details-modal class="header__search">
+
+      {%- comment -%} Custom - Only show search here on mobile {%- endcomment -%}
+        <details-modal class="header__search large-up-hide">
           <details>
             <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
               <span>
@@ -731,7 +731,6 @@
             </div>
           </details>
         </details-modal>
-      {% endunless %}
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
