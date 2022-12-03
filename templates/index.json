@@ -96,11 +96,66 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
+    },
+    "120edbb0-6cdb-4deb-a205-aef676f9bb3b": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "standing-desks-nz"
+          }
+        },
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "desk-storage-combos"
+          }
+        },
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "workstation-corner-desks"
+          }
+        },
+        "ab64a91c-ea1d-4c08-b65a-43b2d9d6dc31": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fixed-height-desks"
+          }
+        },
+        "236dccb3-693a-43d4-836f-2800839bb0d6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "chairs"
+          }
+        }
+      },
+      "block_order": [
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-0",
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-1",
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-2",
+        "ab64a91c-ea1d-4c08-b65a-43b2d9d6dc31",
+        "236dccb3-693a-43d4-836f-2800839bb0d6"
+      ],
+      "settings": {
+        "title": "Featured Collections",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
-    "featured_collection"
+    "featured_collection",
+    "120edbb0-6cdb-4deb-a205-aef676f9bb3b"
   ]
 }
