@@ -91,6 +91,14 @@
     "settings": [
       {
         "type": "header",
+        "content": "Custom Font"
+      },
+      {
+        "type": "paragraph",
+        "content": "Leave the below fonts as system as we are using a custom Google font not available through Shopify."
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.typography.settings.header__1.content"
       },
       {

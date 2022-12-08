@@ -934,6 +934,7 @@ summary::-webkit-details-marker {
 
 .title-wrapper {
   margin-bottom: 3rem;
+  border-bottom: 1px solid;
 }
 
 .title-wrapper-with-link {
@@ -2701,7 +2702,6 @@ details[open] > .header__submenu {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
-  text-transform: uppercase;
 }
 
 @media screen and (min-width: 990px) and (max-width: 1150px) {

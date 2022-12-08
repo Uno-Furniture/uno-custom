@@ -56,7 +56,7 @@
 }
 
 .mega-count-8, .mega-count-7, .mega-count-4 {
-  max-width: 950px;
+  max-width: 980px;
 }
 
 .mega-count-8 li, .mega-count-7 li, .mega-count-4 li {
@@ -64,7 +64,7 @@
 }
 
 .mega-count-6, .mega-count-3 {
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .mega-count-6 li, .mega-count-3 li {
@@ -81,6 +81,7 @@
   text-decoration: none;
   transition: text-decoration var(--duration-short) ease;
   word-wrap: break-word;
+  font-family: var(--font-heading-family);
 }
 
 .mega-image-wrap {
