@@ -485,7 +485,9 @@
                                   </div>
                                 {% endif %}
                                 
-                                {{ childlink.title | escape }}
+                                <div class="mega-text-wrap">
+                                  {{ childlink.title | escape }}
+                                </div>
                               </a>
                               {%- if childlink.links != blank -%}
                                 <ul class="list-unstyled" role="list">

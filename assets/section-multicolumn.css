@@ -8,6 +8,8 @@
 
 .multicolumn .title-wrapper-with-link {
   margin-top: 0;
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 749px) {

@@ -1,3 +1,8 @@
+.collection-list-wrapper .title-wrapper-with-link {
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
+}
+
 .collection-list {
   margin-top: 0;
   margin-bottom: 0;

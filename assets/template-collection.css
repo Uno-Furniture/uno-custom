@@ -54,6 +54,8 @@
 
 .collection__title .title:not(:only-child) {
   margin-bottom: 1rem;
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
 }
 
 @media screen and (min-width: 990px) {

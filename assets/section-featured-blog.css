@@ -1,3 +1,8 @@
+.blog .title-wrapper-with-link {
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
+}
+
 .blog-placeholder {
   margin: 0 1.5rem;
   background: rgb(var(--color-background));
