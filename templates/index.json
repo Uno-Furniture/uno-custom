@@ -90,7 +90,7 @@
         "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 72,
+        "padding_top": 100,
         "padding_bottom": 36
       }
     },
@@ -101,7 +101,9 @@
           "type": "column",
           "settings": {
             "title": "",
+            "heading_accent_color": false,
             "text": "<p>Uno Furniture offers the latest in standing desks and desk accessories, office desks and much more. Our product range provides not only practicality but a modern and sleek finish to your space.<\/p>",
+            "text_is_display": true,
             "link_label": "",
             "link": ""
           }
@@ -110,7 +112,9 @@
           "type": "column",
           "settings": {
             "title": "The uno Furniture Promise:",
-            "text": "<p>Every day, genuine low prices – we won’t increase prices just to discount them.<\/p><p>100% Kiwi owned and operated.<\/p><p>We are a Direct to Market Importer, meaning no middle man.<\/p><p>Easy Online ordering with fast dispatch of core products.<\/p><p>Seven-day Smart Showroom for furniture viewing.<\/p><p>Free nationwide shipping to metro areas on all standing desks and many more products.<\/p>",
+            "heading_accent_color": true,
+            "text": "<ul><li>Every day, genuine low prices – we won’t increase prices just to discount them.<\/li><li>100% Kiwi owned and operated.<\/li><li>We are a Direct to Market Importer, meaning no middle man.<\/li><li>Easy Online ordering with fast dispatch of core products.<\/li><li>Seven-day Smart Showroom for furniture viewing.<\/li><li>Free nationwide shipping to metro areas on all standing desks and many more products.<\/li><\/ul>",
+            "text_is_display": false,
             "link_label": "",
             "link": ""
           }
@@ -133,7 +137,7 @@
         "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 100,
         "padding_bottom": 36
       }
     },
@@ -142,7 +146,7 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h1",
-        "description": "<p><\/p>",
+        "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "all",
@@ -160,7 +164,7 @@
         "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 28,
+        "padding_top": 100,
         "padding_bottom": 36
       }
     },
@@ -177,7 +181,7 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
-        "padding_top": 36,
+        "padding_top": 100,
         "padding_bottom": 36
       }
     }
