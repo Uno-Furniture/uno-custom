@@ -54,6 +54,10 @@
 
 .collection__title .title:not(:only-child) {
   margin-bottom: 1rem;
+}
+
+.collection__title .title {
+  margin-bottom: 1rem;
   border-bottom: 1px solid;
   padding-bottom: 2rem;
 }

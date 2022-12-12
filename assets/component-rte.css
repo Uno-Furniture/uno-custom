@@ -37,7 +37,8 @@
 }
 
 .rte li {
-  list-style: inherit;
+  list-style: disc;
+  padding-bottom: .5em;
 }
 
 .rte li:last-child {
