@@ -134,6 +134,8 @@ Custom handling of secondary menu
 
 .menu-drawer__menu-item.secondary-menu-link {
   font-size: 1.25rem;
+  font-family: var(--font-heading-family);
+  text-transform: uppercase;
 }
 
 .last-primary-menu-link:after {
