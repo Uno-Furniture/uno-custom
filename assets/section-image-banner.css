@@ -81,7 +81,7 @@
   }
 
   .banner--medium:not(.banner--adapt) {
-    min-height: 56rem;
+    min-height: 64rem;
   }
 
   .banner--large:not(.banner--adapt) {
@@ -185,6 +185,14 @@
 .banner--adapt,
 .banner--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
   height: auto;
+}
+
+@media screen and (min-width: 990px) {
+  .banner--restrict {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
 }
 
 @media screen and (max-width: 749px) {
