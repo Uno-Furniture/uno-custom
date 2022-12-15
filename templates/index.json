@@ -29,8 +29,9 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Hero_BannerUno_Talent_-5_1600x_e7c19387-27aa-4204-a892-11c1eb3b2f37.webp",
         "image_overlay_opacity": 0,
-        "image_height": "large",
-        "adapt_height_first_image": true,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "restrict_banner_width": true,
         "desktop_content_position": "top-right",
         "show_text_box": false,
         "desktop_content_alignment": "left",
