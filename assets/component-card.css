@@ -343,7 +343,8 @@
 }
 
 .card-information > .price {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-base-accent-1));
+  font-size: 1.3rem;
 }
 
 .card--horizontal .card-information > .price {
@@ -366,4 +367,10 @@
 
 .card-article-info {
   margin-top: 1rem;
+}
+
+.card-information .product-options-info-wrap {
+  color: rgb(var(--color-base-accent-1));
+  font-size: 1.2rem;
+  margin-top: .7rem;
 }

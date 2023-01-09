@@ -158,6 +158,63 @@
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
             {%- endif -%}
 
+            {% assign option_index = 0 %}
+            <div class="product-options-info-wrap">
+              {% for option in card_product.options %}
+                {% capture downcased_option %}{{ option | downcase }}{% endcapture %}
+                {% assign option_index = forloop.index0 %}
+
+                {% assign is_color = false %}
+                {% assign is_frame = false %}
+                {% if downcased_option contains 'color' or downcased_option contains 'colour' %}
+                  {% assign is_color = true %}
+                {% elsif downcased_option contains 'frame option' or downcased_option contains 'frame option' %}
+                  {% assign is_frame = true %}
+                {% endif %}
+                
+
+                {% assign how_many_options = 0 %}
+                {% assign current_options = '' %}
+                {% for variant in card_product.variants %}
+                  {% if is_color %}
+                    {% assign current_option = variant.options[option_index] %}
+                    {% unless current_options contains current_option %}
+                      {% if how_many_options > 0 %}
+                        {% assign current_options = current_options | join: '|' | append: '|' %}
+                      {% endif %}
+                      {% assign current_options = current_options | append: current_option %}
+                      {% assign current_options = current_options | split: '|' | sort %}
+                      {% assign how_many_options = current_options | size %}
+                    {% endunless %}
+                  {% endif %}
+                  {% if is_frame %}
+                    {% assign current_option = variant.options[option_index] %}
+                    {% unless current_options contains current_option %}
+                      {% if how_many_options > 0 %}
+                        {% assign current_options = current_options | join: '|' | append: '|' %}
+                      {% endif %}
+                      {% assign current_options = current_options | append: current_option %}
+                      {% assign current_options = current_options | split: '|' | sort %}
+                      {% assign how_many_options = current_options | size %}
+                    {% endunless %}
+                  {% endif %}
+                {% endfor %}
+
+                  {% if is_color %}
+                    {%comment%}Output the amount of options for each option. Add an 's' if there is more than one available{% endcomment %}
+                    {% unless option == "Title" %}
+                      {{current_options.size}} {{option}}{% if current_options.size > 1 %}s{% endif %} <br/>
+                    {% endunless %}
+                  {% endif %}
+                  {% if is_frame %}
+                    {%comment%}Output the amount of options for each option. Add an 's' if there is more than one available{% endcomment %}
+                    {% unless option == "Title" %}
+                      {{current_options.size}} {{option}}{% if current_options.size > 1 %}s{% endif %} <br/>
+                    {% endunless %}
+                  {% endif %}
+              {% endfor %} 
+            </div>           
+
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
             {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
