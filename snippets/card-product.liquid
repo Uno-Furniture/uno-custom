@@ -217,6 +217,8 @@
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
+            <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ card_product.id }}" data-product-sku="{{ card_product.handle }}" data-product-type="{{card_product.type}}" data-product-title="{{card_product.title}}"  style="display: inline-block;">{{ card_product.metafields.stamped.badge }}</span>
+
             {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
               {% liquid
                 assign rating_decimal = 0
