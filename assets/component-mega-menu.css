@@ -47,16 +47,16 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  max-width: 1200px;
+  max-width: 1280px;
 }
 
 .mega-menu__list li {
   width: 20%;
-  padding: 0 8px 18px;
+  padding: 0 10px 16px;
 }
 
 .mega-count-8, .mega-count-7, .mega-count-4 {
-  max-width: 980px;
+  max-width: 1060px;
 }
 
 .mega-count-8 li, .mega-count-7 li, .mega-count-4 li {
@@ -64,7 +64,7 @@
 }
 
 .mega-count-6, .mega-count-3 {
-  max-width: 760px;
+  max-width: 840px;
 }
 
 .mega-count-6 li, .mega-count-3 li {
@@ -72,7 +72,7 @@
 }
 
 .mega-menu__link {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 0.85);
   display: block;
   font-size: 1.3rem;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
@@ -101,7 +101,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   opacity: .9;
   transition: opacity .5s ease;
 }
@@ -111,7 +111,7 @@
 }
 
 .mega-menu__link--level-2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .mega-menu__link--level-2:not(:only-child) {
