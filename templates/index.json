@@ -27,7 +27,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Hero_BannerUno_Talent_-5_1600x_e7c19387-27aa-4204-a892-11c1eb3b2f37.webp",
+        "image": "shopify:\/\/shop_images\/banner_image.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
@@ -47,19 +47,19 @@
         "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": "standing-desks-nz"
+            "collection": "standing-desks"
           }
         },
         "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "desk-storage-combos"
+            "collection": "desk-and-drawer-combos-collection"
           }
         },
         "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "workstation-corner-desks"
+            "collection": "workstations-and-corner-desks"
           }
         },
         "ab64a91c-ea1d-4c08-b65a-43b2d9d6dc31": {
@@ -71,7 +71,7 @@
         "236dccb3-693a-43d4-836f-2800839bb0d6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "chairs"
+            "collection": "office-chairs-1"
           }
         }
       },
@@ -145,12 +145,12 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Best Sellers",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "best-sellers",
         "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": false,
@@ -161,7 +161,7 @@
         "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
