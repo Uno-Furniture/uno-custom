@@ -42,7 +42,7 @@
   display: none;
 }
 
-.page-handle-stamped-store-reviews-only .stamped-widget-text {
+.page-handle-stamped-store-reviews-only div#stamped-reviews-widget[data-widget-type="full-page-nps"] .stamped-widget-text {
   margin: 0;
   font-size: 1.3rem;
 }
@@ -52,4 +52,15 @@
     padding-left: 5rem;
     padding-right: 5rem;
   }  
+}
+
+@media screen and (min-width: 1100px) {
+  .page-handle-stamped-store-reviews-only .stamped-reviews-wrapper {
+    display: flex;
+  }
+  
+  .page-handle-stamped-store-reviews-only div#stamped-reviews-widget[data-widget-type="full-page-nps"] .stamped-ratings-wrapper {
+    width: 25% !important;
+    margin-right: 4% !important;
+  }
 }
