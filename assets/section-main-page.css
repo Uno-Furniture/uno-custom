@@ -24,7 +24,7 @@
 
 .page-handle-stamped-store-reviews-only {
   max-width: var(--page-width);
-  margin: 0 auto;
+  margin: 100px auto 32px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
