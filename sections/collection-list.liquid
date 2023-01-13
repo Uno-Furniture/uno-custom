@@ -1,5 +1,17 @@
+{% comment %} Check how many real blocks there are considering empty dynamic sources {% endcomment %}
+{% assign blocksWithCollections = 0 %}
+{%- for block in section.blocks -%}
+  {% if block.settings.collection.featured_image %}
+    {% assign blocksWithCollections = blocksWithCollections | plus: 1 %}
+  {% endif %}
+{%- endfor -%}
+
+{% if blocksWithCollections > 1 and blocksWithCollections < 4 %}
+  {% assign blocksWithCollections = 4 %}
+{% endif %}
+
 {% comment %} CUSTOM - Only show section if collections have been assigned to blocks {% endcomment %}
-{% if section.blocks[0].settings.collection.featured_image %}
+{% if blocksWithCollections > 0 %}
 
   {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
   {{ 'component-card.css' | asset_url | stylesheet_tag }}
@@ -42,7 +54,7 @@
       {%- endunless -%}
     
       <slider-component class="slider-mobile-gutter">
-        <ul class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
+        <ul class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ blocksWithCollections }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ blocksWithCollections }}-items"
           id="Slider-{{ section.id }}"
           role="list"
         >
@@ -130,11 +142,15 @@
           "label": "t:sections.collection-list.settings.image_ratio.options__2.label"
         },
         {
+          "value": "landscape",
+          "label": "Landscape"
+        },
+        {
           "value": "square",
           "label": "t:sections.collection-list.settings.image_ratio.options__3.label"
         }
       ],
-      "default": "square",
+      "default": "landscape",
       "label": "t:sections.collection-list.settings.image_ratio.label",
       "info": "t:sections.collection-list.settings.image_ratio.info"
     },
