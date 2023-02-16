@@ -42,7 +42,8 @@
         "44b08df1-fcc7-44ac-8a00-af7c9c51ddee"
       ],
       "settings": {
-        "title": "{{ collection.title }} - Categories",
+        "collection_list": "{{ collection.metafields.custom.sub_collections.value }}",
+        "title": "{{ collection.title }} - Featured Categories",
         "heading_size": "h1",
         "image_ratio": "landscape",
         "columns_desktop": 5,
