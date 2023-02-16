@@ -92,6 +92,9 @@
                   {% render 'card-collection', card_collection: collectionItem, media_aspect_ratio: section.settings.image_ratio, columns: columns %}
                 </li>
               {% endif %}
+              {% if forloop.index == blocksWithCollections %}
+                {% break %}
+              {% endif %}
             {%- endfor -%}          
           {% else %}
             {%- for block in section.blocks -%}
