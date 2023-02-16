@@ -1,13 +1,32 @@
-{% comment %} Check how many real blocks there are considering empty dynamic sources {% endcomment %}
+{% comment %} ========================================================================
+  CUSTOM - Section did not originally allow for collection_list input setting. 
+  blocksWithCollections variable is actually either block or list collections
+======================================================================{% endcomment %}
+{% assign collectionList = section.settings.collection_list %}
+
 {% assign blocksWithCollections = 0 %}
-{%- for block in section.blocks -%}
-  {% if block.settings.collection.featured_image %}
-    {% assign blocksWithCollections = blocksWithCollections | plus: 1 %}
-  {% endif %}
-{%- endfor -%}
+{% if collectionList != blank %}
+  {%- for collectionItem in collectionList -%}
+    {% if collectionItem.featured_image %}
+      {% assign blocksWithCollections = blocksWithCollections | plus: 1 %}
+    {% endif %}
+  {%- endfor -%}
+{% else %}
+  {% comment %} Check how many real blocks there are considering empty dynamic sources {% endcomment %}
+  {%- for block in section.blocks -%}
+    {% if block.settings.collection.featured_image %}
+      {% assign blocksWithCollections = blocksWithCollections | plus: 1 %}
+    {% endif %}
+  {%- endfor -%}
+{% endif %}
+
+
+
 
 {% if blocksWithCollections > 1 and blocksWithCollections < 4 %}
   {% assign blocksWithCollections = 4 %}
+{% elsif blocksWithCollections > 5 %}
+  {% assign blocksWithCollections = 5 %}
 {% endif %}
 
 {% comment %} CUSTOM - Only show section if collections have been assigned to blocks {% endcomment %}
@@ -36,13 +55,13 @@
   {%- liquid
     assign columns_mobile_int = section.settings.columns_mobile | plus: 0
     assign show_mobile_slider = false
-    if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+    if section.settings.swipe_on_mobile and blocksWithCollections > columns_mobile_int
       assign show_mobile_slider = true
     endif
   -%}
 
   <div class="color-{{ section.settings.color_scheme }} gradient">
-    <div class="collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
+    <div class="collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or blocksWithCollections > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
       {%- unless section.settings.title == blank -%}
         <div class="title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
           <h2 id="SectionHeading-{{ section.id }}" class="collection-list-title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
@@ -59,19 +78,31 @@
           role="list"
         >
           {%- liquid
-            assign columns = section.blocks.size
+            assign columns = blocksWithCollections
             if columns > 3
               assign columns = 3
             endif
           -%}
-          {%- for block in section.blocks -%}
-            {% comment %} CUSTOM - Only show block if collection has been assigned {% endcomment %}
-            {% if block.settings.collection.featured_image %}
-              <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}" {{ block.shopify_attributes }}>
-                {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
-              </li>
-            {% endif %}
-          {%- endfor -%}
+
+          {% comment %} Check if working with collection list or blocks {% endcomment %}
+          {% if collectionList != blank %}
+            {%- for collectionItem in collectionList -%}
+              {% if collectionItem.featured_image %}
+                <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if collectionItem.featured_image == nil %} collection-list__item--no-media{% endif %}">
+                  {% render 'card-collection', card_collection: collectionItem, media_aspect_ratio: section.settings.image_ratio, columns: columns %}
+                </li>
+              {% endif %}
+            {%- endfor -%}          
+          {% else %}
+            {%- for block in section.blocks -%}
+              {% comment %} CUSTOM - Only show block if collection has been assigned {% endcomment %}
+              {% if block.settings.collection.featured_image %}
+                <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}" {{ block.shopify_attributes }}>
+                  {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
+                </li>
+              {% endif %}
+            {%- endfor -%}
+          {% endif %}
         </ul>
         {%- if show_mobile_slider -%}
           <div class="slider-buttons no-js-hidden">
@@ -80,14 +111,14 @@
               <span class="slider-counter--current">1</span>
                 <span aria-hidden="true"> / </span>
                 <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-              <span class="slider-counter--total">{{ section.blocks.size }}</span>
+              <span class="slider-counter--total">{{ blocksWithCollections }}</span>
             </div>
             <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
           </div>
         {%- endif -%}
       </slider-component>
     
-      {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
+      {%- if section.settings.show_view_all and blocksWithCollections < collections.size -%}
         <div class="center collection-list-view-all{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
           <a href="{{ routes.collections_url }}" class="button" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">{{ 'sections.collection_list.view_all' | t }}</a>
         </div>
@@ -103,6 +134,16 @@
   "class": "section section-collection-list",
   "max_blocks": 15,
   "settings": [
+    {
+      "type": "header",
+      "content": "This collection list will overide blocks if used"
+    },    
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "Collections list",
+      "limit": 20
+    },    
     {
       "type": "text",
       "id": "title",
