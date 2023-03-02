@@ -1,9 +1,7 @@
 {
   "sections": {
     "7d03ade4-fb87-43cb-9771-3e061899eab1": {
-      "type": "collection-list", 
-      "blocks": {},
-      "block_order": [],
+      "type": "collection-list",
       "settings": {
         "collection_list": "{{ collection.metafields.custom.sub_collections.value }}",
         "title": "{{ collection.title }} - Featured Categories",
