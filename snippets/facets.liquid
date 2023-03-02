@@ -204,6 +204,10 @@
                                     stroke-linejoin="round" />
                                 </svg>
 
+                                {%- if filter.label == "Colour" -%}
+                                  {% render 'facet-swatch', colour: value.label %}
+                                {%- endif -%}
+
                                 <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
