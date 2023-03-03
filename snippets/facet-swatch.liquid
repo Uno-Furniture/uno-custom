@@ -1,6 +1,9 @@
+{% assign image_name = colour | handleize | append: '.jpg'  %}
+
 <span class="colour-option">
-  {% case colour %}
-    {%  when "Black" %}
-      {{ section.settings.filter_type }}
-  {% endcase %}
+  {{ image_name | file_img_url: '50x' | img_tag }}
+
+  {% if product_swatch %}
+    <span class="colour-tooltip">{{ colour }}</span>
+  {% endif %}
 </span>

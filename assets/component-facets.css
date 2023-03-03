@@ -294,6 +294,24 @@
   word-break: break-word;
 }
 
+/* CUSTOM - Swatch class */
+.facet-checkbox.swatch-filter {
+  align-items: center;
+}
+
+.swatch-filter .colour-option {
+  margin-right: 1.2rem;
+}
+
+.swatch-filter .colour-option img {
+  width: 36px;
+  border-radius: 2px;
+}
+
+.facet-checkbox.swatch-filter .icon-checkmark {
+  top: 2.7rem;
+}
+
 .facet-checkbox input[type='checkbox'] {
   position: absolute;
   opacity: 1;
