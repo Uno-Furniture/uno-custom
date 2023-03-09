@@ -214,6 +214,7 @@ fieldset.product-form__input .form__label {
   border: 2px solid rgba(var(--color-foreground), 0);
   padding: 0;
   border-radius: 0;
+  margin-right: .25rem;
 }
 
 .product-form__input .colour-option {
@@ -221,6 +222,8 @@ fieldset.product-form__input .form__label {
   width: 36px;
   height: 36px;
   cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .product-form__input .colour-option img {
@@ -242,6 +245,7 @@ fieldset.product-form__input .form__label {
   opacity: 0;
   pointer-events: none;
   border: 1px solid rgba(var(--color-foreground), 0.55);
+  line-height: 1.4;
 }
 
 .product-form__input .colour-option:hover .colour-tooltip {
@@ -305,7 +309,8 @@ fieldset.product-form__input .form__label {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: rotate(45deg) scale(1.4);
+  transform: rotate(45deg) scale(1.5);
+  transform-origin: center;
   background-color: rgba(var(--color-foreground), 0.55);
 }
 

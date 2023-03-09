@@ -163,7 +163,7 @@
                             <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               <label
                                 for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}{% if filter.label == "Colour" %} swatch-filter{% endif %}"
+                                class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}{% if filter.label contains "Colour" %} swatch-filter{% endif %}"
                               >
                                 <input
                                   type="checkbox"
@@ -205,7 +205,7 @@
                                 </svg>
 
                                 {% comment %} CUSTOM - Swatch images for colours {% endcomment %}
-                                {%- if filter.label == "Colour" -%}
+                                {%- if filter.label contains "Colour" -%}
                                   {% render 'facet-swatch', colour: value.label %}
                                 {%- endif -%}
 
