@@ -166,6 +166,10 @@
   border: none;
 }
 
+.product-form__input.only-one-value {
+  display: none;
+}
+
 variant-radios,
 variant-selects {
   display: block;
@@ -222,8 +226,6 @@ fieldset.product-form__input .form__label {
   width: 36px;
   height: 36px;
   cursor: pointer;
-  border-radius: 6px;
-  overflow: hidden;
 }
 
 .product-form__input .colour-option img {
@@ -232,6 +234,7 @@ fieldset.product-form__input .form__label {
   object-fit: cover;
   display: block;
   padding: 1px;
+  border-radius: 3px;
 }
 
 .product-form__input .colour-tooltip {
@@ -246,6 +249,7 @@ fieldset.product-form__input .form__label {
   pointer-events: none;
   border: 1px solid rgba(var(--color-foreground), 0.55);
   line-height: 1.4;
+  min-width: 126px;
 }
 
 .product-form__input .colour-option:hover .colour-tooltip {
