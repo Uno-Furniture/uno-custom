@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+.collection-list-title span {
+  color: rgb(var(--color-base-accent-2));
+}
+
 @media screen and (max-width: 749px) {
   .collection-list:not(.slider) {
     padding-left: 0;

@@ -1,0 +1,22 @@
+.breadcrumbs-wrap ol {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0;
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.breadcrumbs-wrap ol a {
+  text-decoration: none;
+  color: rgb(var(--color-base-accent-2));
+}
+
+.breadcrumbs-wrap svg {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+
+.breadcrumbs-wrap svg path {
+  fill: rgb(var(--color-base-accent-2));
+}

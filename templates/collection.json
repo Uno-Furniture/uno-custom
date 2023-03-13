@@ -1,11 +1,18 @@
 {
   "sections": {
+    "bd1bb340-802d-48ce-96cf-3ccb87b5c5a3": {
+      "type": "breadcrumbs",
+      "settings": {
+        "menu": "new-shop-menu",
+        "products_per_page": 24
+      }
+    },
     "7d03ade4-fb87-43cb-9771-3e061899eab1": {
       "type": "collection-list",
       "settings": {
         "collection_list": "{{ collection.metafields.custom.sub_collections.value }}",
-        "title": "{{ collection.title }} - Featured Categories",
-        "heading_size": "h1",
+        "title": "{{ collection.title }}",
+        "heading_size": "h2",
         "image_ratio": "landscape",
         "columns_desktop": 5,
         "color_scheme": "background-1",
@@ -44,6 +51,7 @@
     }
   },
   "order": [
+    "bd1bb340-802d-48ce-96cf-3ccb87b5c5a3",
     "7d03ade4-fb87-43cb-9771-3e061899eab1",
     "banner",
     "product-grid"

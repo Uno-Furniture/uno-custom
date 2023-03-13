@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="{{ 'section-breadcrumbs.css' | asset_url }}">
+
+<noscript>{{ 'section-breadcrumbs.css' | asset_url | stylesheet_tag }}</noscript>
+
+{% assign item_2 = false %}
+{% assign item_3 = false %}
+
+{% for link in section.settings.menu.links %}
+  {% if link.current %}
+    {% assign item_2 = link %}
+    {% break %}
+  {% elsif link.child_active %}
+    {% assign item_2 = link %}
+
+    {% for childLink in link.links %}
+      {% if childLink %}
+      
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{%- paginate collection.products by section.settings.products_per_page -%}
+
+<div class="breadcrumbs-wrap page-width-desktop">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="item" class="breadcrumb_link">
+        <span itemprop="name">
+          Home
+          {% comment %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z"/></svg>
+          {% endcomment %}
+        </span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+    <span class="breadcrumb-divider">/</span>
+    <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="{{ item_2.url }}" title="{{ item_2.title }}" itemprop="item" class="breadcrumb_link">
+        <span itemprop="name">{{ item_2.title }}</span>
+      </a>
+      <meta itemprop="position" content="2" />
+    </span>
+
+    {% if paginate.pages != 0 %}
+      <span class="breadcrumb-divider">/</span> 
+      Page {{ paginate.current_page }} of {{ paginate.pages }}
+    {% endif %}
+  </ol>
+</div>
+
+{%- endpaginate -%}
+
+{% schema %}
+  {
+    "name": "Breadcrumbs",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu to use for breadcrumbs"
+      },
+      {
+        "type": "number",
+        "id": "products_per_page",
+        "label": "Products per page (match Product grid section)"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Breadcrumbs"
+      }
+    ]
+  }
+{% endschema %}
