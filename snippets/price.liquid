@@ -25,10 +25,19 @@
     assign money_price = price | money_with_currency
   endif
 
+  assign price_gst = price | times: 1.15 | money 
+  assign savings_total = compare_at_price | minus: price 
+  assign compare_at_price_float = compare_at_price | divided_by: 1.0 
+  assign savings_percent = savings_total | divided_by: compare_at_price_float | times: 100 | round: 1
+
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
+
+{%- comment -%} =======================================================
+  CUSTOM - display of price on product page with/without GST
+===================================================== {%- endcomment -%}
 
 <div class="
     price
@@ -47,8 +56,13 @@
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
-        {{ money_price }}
+        {{ money_price }} {% if template == 'product' %}+ GST{% endif %}
       </span>
+      {% if template == 'product' %}
+        <div class="price-with-gst">
+          {{ price_gst }} incl. GST
+        </div>      
+      {% endif %}
     </div>
     <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
@@ -56,17 +70,31 @@
         <span>
           <s class="price-item price-item--regular">
             {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }}
+              {{ compare_at_price | money_with_currency }} {% if template == 'product' %}+ GST{% endif %}
             {% else %}
-              {{ compare_at_price | money }}
+              {{ compare_at_price | money }} {% if template == 'product' %}+ GST{% endif %}
             {% endif %}
           </s>
         </span>
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
       <span class="price-item price-item--sale price-item--last">
-        {{ money_price }}
+        {{ money_price }} {% if template == 'product' %}+ GST{% endif %}
       </span>
+      {% if template == 'product' %}
+        <div class="price-with-gst">
+          <s class="price-item price-item--regular">
+            {% if settings.currency_code_enabled %}
+              {{ compare_at_price | times: 1.15 | money_with_currency }} incl. GST
+            {% else %}
+              {{ compare_at_price | times: 1.15 | money }} incl. GST
+            {% endif %}
+          </s>
+          <span class="price-item price-item--sale price-item--last">
+            {{ price_gst }} incl. GST
+          </span>          
+        </div>      
+      {% endif %}
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
@@ -82,6 +110,11 @@
         </span>
       </span>
     </small>
+    {% if template == 'product' %}
+      <div class="savings-info">
+          You save {{ savings_percent }}% ({{ savings_total | money }})
+      </div>
+    {% endif %}
   </div>
   {%- if show_badges -%}
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">

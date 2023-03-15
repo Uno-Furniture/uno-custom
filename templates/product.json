@@ -3,23 +3,18 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
           }
         },
-        "caption": {
-          "type": "text",
+        "47ece7e1-a554-4cfa-b8fb-23806c91976c": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "use_metafields": false,
+            "sku_tagtype": "sku",
+            "is_featured_product": false,
+            "featured_product_handle": ""
           }
         },
         "price": {
@@ -44,16 +39,11 @@
             "show_dynamic_checkout": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
+            "heading": "Full Description",
+            "icon": "clipboard",
             "content": "",
             "page": ""
           }
@@ -61,7 +51,7 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
+            "heading": "Shipping Information",
             "icon": "truck",
             "content": "",
             "page": ""
@@ -84,28 +74,19 @@
             "content": "",
             "page": ""
           }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "caption",
+        "47ece7e1-a554-4cfa-b8fb-23806c91976c",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "collapsible-row-3"
       ],
       "settings": {
         "enable_sticky_info": false,
