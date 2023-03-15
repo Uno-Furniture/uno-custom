@@ -1531,3 +1531,7 @@ a.product__text {
     display: none;
   }
 }
+
+.product .stamped-product-reviews-badge {
+  min-height: 30px;
+}
