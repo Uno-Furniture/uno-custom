@@ -31,6 +31,18 @@
 
 @media all and (min-width: 750px) {
   .totals {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
+}
+
+.totals-gst {
+  margin: .75rem 0;
+}
+
+.totals-gst h2, .totals-gst .totals__subtotal-value, .totals-final h2, .totals-final .totals__subtotal-value {
+  font-size: 1.3rem;
+}
+
+.totals-final {
+  margin-bottom: 1.5rem;
 }

@@ -17,7 +17,7 @@
 
 .drawer__inner {
   height: 100%;
-  width: 40rem;
+  width: 50rem;
   max-width: calc(100vw - 3rem);
   padding: 0 1.5rem;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
@@ -209,7 +209,7 @@ cart-drawer-items {
 .cart-drawer .cart-item {
   display: grid;
   grid-template: repeat(2,auto) / repeat(4,1fr);
-  gap: 1.5rem;
+  gap: 1.5rem 0;
   margin-bottom: 0;
 }
 
@@ -311,8 +311,29 @@ cart-drawer-items {
   justify-content: space-between;
 }
 
+.cart-drawer .totals-gst h2, .cart-drawer .totals-final h2 {
+  font-size: 1.3rem;
+}
+
+.cart-drawer .totals-gst .totals__subtotal-value, .cart-drawer .totals-final .totals__subtotal-value {
+  font-size: 1.3rem;
+}
+
+.cart-drawer .totals-final {
+  margin-bottom: 1.5rem;
+}
+
 .cart-drawer .price {
   line-height: 1;
+  font-size: 1.3rem;
+  letter-spacing: 0;
+}
+
+.cart-drawer .price-with-gst {
+  display: none;
+  line-height: 1;
+  font-size: 1.1rem;
+  letter-spacing: 0;
 }
 
 .cart-drawer .tax-note {
@@ -322,6 +343,11 @@ cart-drawer-items {
 
 .cart-drawer .product-option dd {
   word-break: break-word;
+  font-size: 1.2rem;
+}
+
+.cart-drawer .product-option dt {
+  font-size: 1.2rem;
 }
 
 .cart-drawer details[open]>summary .icon-caret {

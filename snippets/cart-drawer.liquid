@@ -147,12 +147,12 @@
                                 {{ 'products.product.price.sale_price' | t }}
                               </span>
                               <strong class="cart-item__final-price product-option">
-                                {{ item.final_price | money }}
+                                {{ item.final_price | money }} + GST
                               </strong>
                             </div>
                           {%- else -%}
                             <div class="product-option">
-                              {{ item.original_price | money }}
+                              {{ item.original_price | money }} + GST
                             </div>
                           {%- endif -%}
 
@@ -242,12 +242,15 @@
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                 <span class="price price--end">
-                                  {{ item.final_line_price | money }}
+                                  {{ item.final_line_price | money }} + GST
+                                </span>
+                                <span class="price-with-gst">
+                                  {{ item.final_line_price | times: 1.15  | money }} incl. GST
                                 </span>
                               </div>
                             {%- else -%}
                               <span class="price price--end">
-                                {{ item.original_line_price | money }}
+                                {{ item.original_line_price | money }} + GST
                               </span>
                             {%- endif -%}
 
@@ -386,6 +389,17 @@
             {%- endif -%}
           </div>
 
+          <div class="totals totals-gst" role="status">
+            <h2 class="totals__subtotal">GST</h2>
+            <p class="totals__subtotal-value">{{ cart.total_price | times: 0.15 | money }}</p>
+          </div>
+
+          <div class="totals totals-final" role="status">
+            <h2 class="totals__subtotal">Total</h2>
+            <p class="totals__subtotal-value">{{ cart.total_price | times: 1.15 | money }}</p>
+          </div>
+
+          {% comment %}
           <small class="tax-note caption-large rte">
             {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
               {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
@@ -397,6 +411,7 @@
               {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
             {%- endif -%}
           </small>
+          {% endcomment %}
         </div>
 
         <!-- CTAs -->
