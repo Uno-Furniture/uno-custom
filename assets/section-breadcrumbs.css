@@ -1,14 +1,24 @@
 .breadcrumbs-wrap ol {
   list-style: none;
   padding: 0;
-  margin: 6px 0;
+  margin: 18px 0 0;
   display: flex;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .breadcrumbs-wrap ol a {
   text-decoration: none;
   color: rgb(var(--color-base-accent-2));
+  transition: color .2s ease;
+}
+
+.breadcrumbs-wrap ol a.active-link {
+  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
+}
+
+.breadcrumbs-wrap ol a:hover {
+  color: rgb(var(--color-foreground));
 }
 
 .breadcrumbs-wrap svg {
@@ -19,4 +29,8 @@
 
 .breadcrumbs-wrap svg path {
   fill: rgb(var(--color-base-accent-2));
+}
+
+.breadcrumb-divider {
+  padding: 0 8px;
 }

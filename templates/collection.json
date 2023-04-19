@@ -3,7 +3,7 @@
     "bd1bb340-802d-48ce-96cf-3ccb87b5c5a3": {
       "type": "breadcrumbs",
       "settings": {
-        "menu": "new-shop-menu",
+        "menu": "breadcrumbs-structure",
         "products_per_page": 24
       }
     },
