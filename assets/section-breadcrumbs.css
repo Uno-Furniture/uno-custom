@@ -1,9 +1,19 @@
 .breadcrumbs-wrap ol {
   list-style: none;
-  padding: 0;
+  padding: 0 6px;
   margin: 18px 0 0;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 989px){
+  .breadcrumbs-wrap ol {
+    justify-content: center;
+  }
 }
 
 .breadcrumbs-wrap ol a {
@@ -14,7 +24,8 @@
 
 .breadcrumbs-wrap ol a.active-link {
   color: rgba(var(--color-foreground), 0.75);
-  color: rgb(var(--color-foreground));
+  /* color: rgb(var(--color-foreground)); */
+  pointer-events: none;
 }
 
 .breadcrumbs-wrap ol a:hover {

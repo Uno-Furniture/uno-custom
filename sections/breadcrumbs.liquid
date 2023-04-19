@@ -6,82 +6,211 @@
 {% assign item_3 = false %}
 {% assign item_4 = false %}
 
-{% for link in section.settings.menu.links %}
-  {% if link.current %}
-    {% assign item_2 = link %}
-    {% break %}
-  {% endif %}
+{% comment %} =========================================================
+If product, find the primary collection it belongs to
+========================================================{% endcomment %}
+{% if product %}
 
-  {% for childLink in link.links %}
-    {% if childLink.current %}
-      {% assign item_2 = link %}
-      {% assign item_3 = childLink %}
+  {% comment %}Collect all breadcrumb collections in two arrays based on nesting level{% endcomment %}
+  {% for link in section.settings.menu.links %}
+    {% for childLink in link.links %}
+      {% if childLink.links != blank %}
+        {% assign collectionLinksThirdLevel = collectionLinksThirdLevel | concat: childLink.links %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign collectionLinksSecondLevel = collectionLinksSecondLevel | concat: link.links | where: 'levels', 0 %}
+  {% endfor %}
+
+  {% comment %}Find the primary collection the product belongs to{% endcomment %}
+  {% for productCollection in product.collections %}
+    {% for collectionLinkThirdLevel in collectionLinksThirdLevel %}
+      {% if productCollection == collectionLinkThirdLevel.object %}
+        {% assign primaryCollectionLink = collectionLinkThirdLevel %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% if primaryCollectionLink != blank %}
       {% break %}
     {% endif %}
+  {% endfor %}
 
+  {% if primaryCollectionLink == blank %}
+    {% for productCollection in product.collections %}
+      {% for collectionLinkSecondLevel in collectionLinksSecondLevel %}
+        {% if productCollection == collectionLinkSecondLevel.object %}
+          {% assign primaryCollectionLink = collectionLinkSecondLevel %}
+          {% break %}
+        {% endif %}        
+      {% endfor %}
 
-    {% for grandchildLink in childLink.links %}
-      {% if grandchildLink.current %}
-        {% assign item_2 = link %}
-        {% assign item_3 = childLink %}
-        {% assign item_4 = grandchildLink %}
+      {% if primaryCollectionLink != blank %}
         {% break %}
       {% endif %}      
     {% endfor %}
+  {% endif %}  
 
+  {% for link in section.settings.menu.links %}
+    {% for childLink in link.links %}
+      {% if childLink == primaryCollectionLink %}
+        {% assign item_2 = link %}
+        {% assign item_3 = primaryCollectionLink %}
+        {% break %}
+      {% endif %}
+
+      {% for grandchildLink in childLink.links %}
+        {% if grandchildLink == primaryCollectionLink %}
+          {% assign item_2 = link %}
+          {% assign item_3 = childLink %}
+          {% assign item_4 = primaryCollectionLink %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    {% if item_2 != blank %}
+      {% break %}
+    {% endif %}
   {% endfor %}
-{% endfor %}
 
-{%- paginate collection.products by section.settings.products_per_page -%}
+  <div class="breadcrumbs-wrap page-width-desktop">
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="item" class="breadcrumb_link">
+          <span itemprop="name">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M22 11.414v12.586h-20v-12.586l-1.293 1.293-.707-.707 12-12 12 12-.707.707-1.293-1.293zm-6 11.586h5v-12.586l-9-9-9 9v12.586h5v-9h8v9zm-1-7.889h-6v7.778h6v-7.778z"/></svg>        
+          </span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+      {% if item_2 %}
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="{{ item_2.url }}" title="{{ item_2.title }}" itemprop="item" class="breadcrumb_link{% if item_2.current %} active-link{% endif %}">
+            <span itemprop="name">{{ item_2.title }}</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+      {% endif %}
+      {% if item_3 %}
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="{{ item_3.url }}" title="{{ item_3.title }}" itemprop="item" class="breadcrumb_link{% if item_3.current %} active-link{% endif %}">
+            <span itemprop="name">{{ item_3.title }}</span>
+          </a>
+          <meta itemprop="position" content="3" />
+        </li>
+      {% endif %}
+      {% if item_4 %}
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="{{ item_4.url }}" title="{{ item_4.title }}" itemprop="item" class="breadcrumb_link{% if item_4.current %} active-link{% endif %}">
+            <span itemprop="name">{{ item_4.title }}</span>
+          </a>
+          <meta itemprop="position" content="4" />
+        </li>
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">{{ product.title }}</span>
+          <meta itemprop="position" content="5" />
+        </li>
+      {% else %}
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">{{ product.title }}</span>
+          <meta itemprop="position" content="4" />
+        </li>              
+      {% endif %}    
 
-<div class="breadcrumbs-wrap page-width-desktop">
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="item" class="breadcrumb_link">
-        <span itemprop="name">
-          {% comment %}
-          Home
-          {% endcomment %}
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M22 11.414v12.586h-20v-12.586l-1.293 1.293-.707-.707 12-12 12 12-.707.707-1.293-1.293zm-6 11.586h5v-12.586l-9-9-9 9v12.586h5v-9h8v9zm-1-7.889h-6v7.778h6v-7.778z"/></svg>        
-        </span>
-      </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    {% if item_2 %}
-      <span class="breadcrumb-divider">&rsaquo;</span>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <a href="{{ item_2.url }}" title="{{ item_2.title }}" itemprop="item" class="breadcrumb_link{% if item_2.current %} active-link{% endif %}">
-          <span itemprop="name">{{ item_2.title }}</span>
-        </a>
-        <meta itemprop="position" content="2" />
-      </li>
-    {% endif %}
-    {% if item_3 %}
-      <span class="breadcrumb-divider">&rsaquo;</span>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <a href="{{ item_3.url }}" title="{{ item_3.title }}" itemprop="item" class="breadcrumb_link{% if item_3.current %} active-link{% endif %}">
-          <span itemprop="name">{{ item_3.title }}</span>
-        </a>
-        <meta itemprop="position" content="3" />
-      </li>
-    {% endif %}
-    {% if item_4 %}
-      <span class="breadcrumb-divider">&rsaquo;</span>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <a href="{{ item_4.url }}" title="{{ item_4.title }}" itemprop="item" class="breadcrumb_link{% if item_4.current %} active-link{% endif %}">
-          <span itemprop="name">{{ item_4.title }}</span>
-        </a>
-        <meta itemprop="position" content="4" />
-      </li>
-    {% endif %}    
-    {% if paginate.pages > 1 %}
-      <span class="breadcrumb-divider">&rsaquo;</span> 
-      Page {{ paginate.current_page }} of {{ paginate.pages }}
-    {% endif %}
-  </ol>
-</div>
+    </ol>
+  </div>  
 
-{%- endpaginate -%}
+{% endif %} {% comment %} END if product {% endcomment %}
+
+
+{% comment %} =========================================================
+Set up breadcrumbs for collection
+========================================================{% endcomment %}
+{% if collection %}
+
+  {% for link in section.settings.menu.links %}
+    {% if link.current %}
+      {% assign item_2 = link %}
+      {% break %}
+    {% endif %}
+
+    {% for childLink in link.links %}
+      {% if childLink.current %}
+        {% assign item_2 = link %}
+        {% assign item_3 = childLink %}
+        {% break %}
+      {% endif %}
+
+
+      {% for grandchildLink in childLink.links %}
+        {% if grandchildLink.current %}
+          {% assign item_2 = link %}
+          {% assign item_3 = childLink %}
+          {% assign item_4 = grandchildLink %}
+          {% break %}
+        {% endif %}      
+      {% endfor %}
+
+    {% endfor %}
+  {% endfor %}
+
+  {%- paginate collection.products by section.settings.products_per_page -%}
+
+  <div class="breadcrumbs-wrap page-width-desktop">
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="item" class="breadcrumb_link">
+          <span itemprop="name">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M22 11.414v12.586h-20v-12.586l-1.293 1.293-.707-.707 12-12 12 12-.707.707-1.293-1.293zm-6 11.586h5v-12.586l-9-9-9 9v12.586h5v-9h8v9zm-1-7.889h-6v7.778h6v-7.778z"/></svg>        
+          </span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+      {% if item_2 %}
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="{{ item_2.url }}" title="{{ item_2.title }}" itemprop="item" class="breadcrumb_link{% if item_2.current %} active-link{% endif %}">
+            <span itemprop="name">{{ item_2.title }}</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+      {% endif %}
+      {% if item_3 %}
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="{{ item_3.url }}" title="{{ item_3.title }}" itemprop="item" class="breadcrumb_link{% if item_3.current %} active-link{% endif %}">
+            <span itemprop="name">{{ item_3.title }}</span>
+          </a>
+          <meta itemprop="position" content="3" />
+        </li>
+      {% endif %}
+      {% if item_4 %}
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="{{ item_4.url }}" title="{{ item_4.title }}" itemprop="item" class="breadcrumb_link{% if item_4.current %} active-link{% endif %}">
+            <span itemprop="name">{{ item_4.title }}</span>
+          </a>
+          <meta itemprop="position" content="4" />
+        </li>
+      {% endif %}    
+      {% if paginate.pages > 1 %}
+        <span class="breadcrumb-divider">&rsaquo;</span> 
+        Page {{ paginate.current_page }} of {{ paginate.pages }}
+      {% endif %}
+    </ol>
+  </div>
+
+  {%- endpaginate -%}
+
+{% endif %}
+
+
 
 {% schema %}
   {
