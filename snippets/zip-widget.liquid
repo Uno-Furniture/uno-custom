@@ -1,10 +1,44 @@
-{% comment %} This code was generated automatically by the Zip application. Do not modify this file manually. {% endcomment %}
+<!-- Zip Widget Start -->
+<span>
+  <style type="text/css">
+       #partPayCalculatorWidget{
+          text-align: left;
+          width: 100% !important;
+          background: none !important;
+          padding: 0 0 15px 0 !important;
+          margin: 0px !important;
+          color: inherit !important;
+          font-size: 1.4rem !important;
+          }
+      #partPayCalculatorWidgetLogo{
+          width: 20% !important;
+          height: 20% !important;
+          }
+     #partPayCalculatorWidget br{
+          display: none !important;
+          }
+      #partPayCalculatorWidgetTextFromCopy {
+          padding-left: 1px !important;
+          }
+       #partPayCalculatorWidget::after {
+           clear:both;
+           }
+       #partPayCalculatorWidgetLogo::after {
+           clear:both;
+           }
+       #partPayCalculatorWidgetTextFromCopy::after {
+           clear:both;
+           }
+    #partpayCalculatorWidgetUnderCopy {
+     display: inline !important; 
+    }
+      </style>
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {% assign inclGST = current_variant.price| times: 1.15 %}
+<script async src="https://widgets.partpay.co.nz/zip-widget-classic-v3.0.0.js?&max=1500&amount={{ inclGST | divided_by: 100.0 }}&locale=nz"></script>
+</span>
+<!-- Zip Widget End -->
 
 
 
-<script src="https://widgets.quadpay.com/quadpay-shopify.js" defer="defer"></script>
 
-
-{% comment %}
-INTEGRATION_METADATA: {"settings":"e30="}
-{% endcomment %}
