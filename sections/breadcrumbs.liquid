@@ -172,6 +172,13 @@ Set up breadcrumbs for collection
         </a>
         <meta itemprop="position" content="1" />
       </li>
+      {% unless item_2 %}
+        <span class="breadcrumb-divider">&rsaquo;</span>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">{{ collection.title }}</span>
+          <meta itemprop="position" content="2" />
+        </li> 
+      {% endunless %}      
       {% if item_2 %}
         <span class="breadcrumb-divider">&rsaquo;</span>
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">

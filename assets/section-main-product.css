@@ -1534,3 +1534,15 @@ a.product__text {
 .product .stamped-product-reviews-badge {
   min-height: 30px;
 }
+
+.product #latitude-product-widget {
+  margin: 0;
+}
+
+.product #latitude-product-widget p, .product #latitude-product-widget a {
+  font-size: 12px;
+}
+
+#addonProducts {
+  margin-top: 4rem;
+}
