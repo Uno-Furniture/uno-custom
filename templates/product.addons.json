@@ -118,7 +118,6 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -132,15 +131,6 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "7ee19107-8f55-491e-bdc0-a20ef143653e": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div id=\"addonProducts\"><\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "1678871509fbdf5d67": {
@@ -171,7 +161,6 @@
     "1d4eaa9d-6bbe-4684-b0be-79c48ca2b9c4",
     "main",
     "product-recommendations",
-    "7ee19107-8f55-491e-bdc0-a20ef143653e",
     "1678871509fbdf5d67"
   ]
 }

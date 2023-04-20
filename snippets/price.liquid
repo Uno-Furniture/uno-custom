@@ -56,9 +56,9 @@
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
-        {{ money_price }} {% if template == 'product' %}+ GST{% endif %}
+        {{ money_price }} {% if template contains 'product' %}+ GST{% endif %}
       </span>
-      {% if template == 'product' %}
+      {% if template contains 'product' %}
         <div class="price-with-gst">
           {{ price_gst }} incl. GST
         </div>      
@@ -70,18 +70,18 @@
         <span>
           <s class="price-item price-item--regular">
             {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }} {% if template == 'product' %}+ GST{% endif %}
+              {{ compare_at_price | money_with_currency }} {% if template contains 'product' %}+ GST{% endif %}
             {% else %}
-              {{ compare_at_price | money }} {% if template == 'product' %}+ GST{% endif %}
+              {{ compare_at_price | money }} {% if template contains 'product' %}+ GST{% endif %}
             {% endif %}
           </s>
         </span>
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
       <span class="price-item price-item--sale price-item--last">
-        {{ money_price }} {% if template == 'product' %}+ GST{% endif %}
+        {{ money_price }} {% if template contains 'product' %}+ GST{% endif %}
       </span>
-      {% if template == 'product' %}
+      {% if template contains 'product' %}
         <div class="price-with-gst">
           <s class="price-item price-item--regular">
             {% if settings.currency_code_enabled %}
@@ -110,7 +110,7 @@
         </span>
       </span>
     </small>
-    {% if template == 'product' %}
+    {% if template contains 'product' %}
       <div class="savings-info">
           You save {{ savings_percent }}% ({{ savings_total | money }})
       </div>
