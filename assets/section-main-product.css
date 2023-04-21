@@ -431,6 +431,17 @@ a.product__text {
 
 .product__accordion .accordion__content {
   padding: 0 1rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+.product__accordion .accordion__content  h3 {
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+
+.product__accordion .accordion__content table td {
+  padding: .5rem;
 }
 
 /* CUSTOM - Youtube iframes in accordions */
