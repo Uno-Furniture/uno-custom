@@ -433,6 +433,13 @@ a.product__text {
   padding: 0 1rem;
 }
 
+/* CUSTOM - Youtube iframes in accordions */
+.product__accordion .accordion__content iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: 9px 0;
+}
+
 .product .price .badge {
   margin-bottom: 0.5rem;
   vertical-align: middle;
@@ -1546,3 +1553,4 @@ a.product__text {
 #addonProducts {
   margin-top: 4rem;
 }
+
