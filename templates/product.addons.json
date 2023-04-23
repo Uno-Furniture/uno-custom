@@ -53,7 +53,6 @@
         },
         "db9ab66c-cb45-4065-afda-741c914d8b84": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div id=\"addonProducts\"><\/div>"
           }
@@ -169,7 +168,6 @@
       "blocks": {
         "dfac5d02-dc6b-4fb9-b794-285b45534fd4": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "disabled": true,
           "settings": {
             "animation": true,
             "tags_exclude": "",
