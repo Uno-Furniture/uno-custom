@@ -107,8 +107,8 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Warranty",
-            "icon": "price_tag",
-            "content": "",
+            "icon": "warranty",
+            "content": "<p>{{ product.metafields.custom.product_warranty.value.info | metafield_tag }}<\/p>",
             "page": "",
             "dynamic_text": ""
           }
