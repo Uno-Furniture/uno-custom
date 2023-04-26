@@ -28,6 +28,12 @@
           "settings": {
           }
         },
+        "895ba9a8-754f-4e15-810d-f2c88fc4d722": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id=\"latitude-product-widget\"><\/div>\n\n{% render 'zip-widget' %}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -45,19 +51,14 @@
             "show_dynamic_checkout": true
           }
         },
-        "895ba9a8-754f-4e15-810d-f2c88fc4d722": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div id=\"latitude-product-widget\"><\/div>\n\n{% render 'zip-widget' %}"
-          }
-        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Full Description",
             "icon": "clipboard",
             "content": "",
-            "page": ""
+            "page": "",
+            "dynamic_text": ""
           }
         },
         "collapsible-row-1": {
@@ -66,7 +67,8 @@
             "heading": "Shipping Information",
             "icon": "truck",
             "content": "",
-            "page": ""
+            "page": "",
+            "dynamic_text": ""
           }
         },
         "collapsible-row-2": {
@@ -75,7 +77,8 @@
             "heading": "Dimensions",
             "icon": "ruler",
             "content": "",
-            "page": ""
+            "page": "",
+            "dynamic_text": ""
           }
         },
         "collapsible-row-3": {
@@ -84,7 +87,8 @@
             "heading": "Care Instructions",
             "icon": "heart",
             "content": "",
-            "page": ""
+            "page": "",
+            "dynamic_text": ""
           }
         }
       },
@@ -92,10 +96,10 @@
         "title",
         "47ece7e1-a554-4cfa-b8fb-23806c91976c",
         "price",
+        "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",

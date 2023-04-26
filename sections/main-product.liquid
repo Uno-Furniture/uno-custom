@@ -70,6 +70,12 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
+            {%- when 'short_description' -%}
+              {% if block.settings.short_desc_richtext != blank %}
+                <div class="short_description" {{ block.shopify_attributes }}>
+                  {{ block.settings.short_desc_richtext }}
+                </div> 
+              {% endif %}             
             {%- when 'text' -%}
               <p
                 class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -749,6 +755,17 @@
       ]
     },
     {
+      "type": "short_description",
+      "name": "Short description",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "short_desc_richtext",
+          "label": "Product short description above accordions"
+        }
+      ]
+    },    
+    {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
       "limit": 1
@@ -1120,7 +1137,7 @@
         {
           "type": "text",
           "id": "dynamic_text",
-          "label": "Metafield output"
+          "label": "Metafield HTML output"
         }        
       ]
     },
