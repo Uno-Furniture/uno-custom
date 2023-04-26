@@ -75,7 +75,9 @@
                 <div class="short_description" {{ block.shopify_attributes }}>
                   {{ block.settings.short_desc_richtext }}
                 </div> 
-              {% endif %}             
+              {% endif %} 
+            {%- when 'addon_products' -%}
+                <div id="addonProducts" {{ block.shopify_attributes }}></div> 
             {%- when 'text' -%}
               <p
                 class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -764,7 +766,11 @@
           "label": "Product short description above accordions"
         }
       ]
-    },    
+    },
+    {
+      "type": "addon_products",
+      "name": "Addon products (FBT)"
+    },        
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",

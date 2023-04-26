@@ -48,13 +48,12 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
-        "db9ab66c-cb45-4065-afda-741c914d8b84": {
-          "type": "custom_liquid",
+        "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
+          "type": "addon_products",
           "settings": {
-            "custom_liquid": "<div id=\"addonProducts\"><\/div>"
           }
         },
         "1f9b7a27-d25b-41cc-807c-248f692563a1": {
@@ -93,6 +92,16 @@
             "dynamic_text": "{{ product.metafields.custom.product_videos.value }}"
           }
         },
+        "2fd08b65-b7f3-452f-b2e8-71c5e3cdbcea": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Assembly Information",
+            "icon": "box",
+            "content": "{{ product.metafields.custom.product_assembly_information | metafield_tag }}",
+            "page": "",
+            "dynamic_text": ""
+          }
+        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
@@ -122,11 +131,12 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "db9ab66c-cb45-4065-afda-741c914d8b84",
+        "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "1f9b7a27-d25b-41cc-807c-248f692563a1",
         "collapsible-row-0",
         "collapsible-row-2",
         "43ac409c-2f43-499f-a2f8-505cfc991704",
+        "2fd08b65-b7f3-452f-b2e8-71c5e3cdbcea",
         "collapsible-row-1",
         "cf36e1c1-8191-4525-9bbf-2d1fd822f01e"
       ],

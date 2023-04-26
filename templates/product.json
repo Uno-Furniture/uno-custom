@@ -48,7 +48,13 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
+          }
+        },
+        "e16f7eb1-7704-438f-9540-0716c4d26981": {
+          "type": "short_description",
+          "settings": {
+            "short_desc_richtext": ""
           }
         },
         "collapsible-row-0": {
@@ -61,32 +67,52 @@
             "dynamic_text": ""
           }
         },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping Information",
-            "icon": "truck",
-            "content": "",
-            "page": "",
-            "dynamic_text": ""
-          }
-        },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
+            "heading": "Specifications",
             "icon": "ruler",
             "content": "",
             "page": "",
-            "dynamic_text": ""
+            "dynamic_text": "{{ product.metafields.custom.product_specifications.value }}"
           }
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
+            "heading": "Videos",
+            "icon": "eye",
             "content": "",
+            "page": "",
+            "dynamic_text": "{{ product.metafields.custom.product_videos.value }}"
+          }
+        },
+        "56e5bc52-12a6-489e-9082-6c2807a6aaa7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Assembly Information",
+            "icon": "box",
+            "content": "{{ product.metafields.custom.product_assembly_information | metafield_tag }}",
+            "page": "",
+            "dynamic_text": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Information",
+            "icon": "truck",
+            "content": "{{ product.metafields.custom.product_shipping_information.value.info | metafield_tag }}",
+            "page": "",
+            "dynamic_text": ""
+          }
+        },
+        "d408bd18-0c7c-42d4-b3d1-39f53d7394a9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Warranty",
+            "icon": "warranty",
+            "content": "{{ product.metafields.custom.product_warranty.value.info | metafield_tag }}",
             "page": "",
             "dynamic_text": ""
           }
@@ -100,10 +126,13 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "e16f7eb1-7704-438f-9540-0716c4d26981",
         "collapsible-row-0",
-        "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible-row-3"
+        "collapsible-row-3",
+        "56e5bc52-12a6-489e-9082-6c2807a6aaa7",
+        "collapsible-row-1",
+        "d408bd18-0c7c-42d4-b3d1-39f53d7394a9"
       ],
       "settings": {
         "enable_sticky_info": false,
