@@ -333,7 +333,25 @@
   padding: 3rem 7rem 3rem 2rem;
 }
 
+.image-with-text .has-image-caption {
+  margin-bottom: 30px;
+}
+
+.image-with-text .image-caption {
+  font-size: 1.2rem;
+  margin-top: .5em;
+  line-height: 1.5;
+}
+
 @media screen and (max-width: 950px) {
+  .image-with-text .has-image-caption {
+    margin-bottom: 0;
+  }
+
+  .image-with-text .has-image-caption .image-with-text__media-item {
+    margin-bottom: 60px;
+  }
+
   .template-suffix-details .image-with-text__media-item {
     width: 100%;
   }

@@ -24,6 +24,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/TeamPhotoCroppedWeb2.jpg",
+        "image_caption": "Left to Right: Kerry Graham (Co-owner) , Melissa Mcintosh (Customer Service and Sales), Gav Pearce (Ops Manager) and Dean Graham (Owner\/Director)",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -52,6 +53,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Standing_Desks_5c1ba5ac-9313-4cd3-94d7-60d9beba9b5d.jpg",
+        "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
