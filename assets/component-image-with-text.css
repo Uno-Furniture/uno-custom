@@ -327,3 +327,30 @@
     margin-left: 0;
   }
 }
+
+/* CUSTOM -About us page image with text sections */
+.template-suffix-details .image-with-text__content--desktop-left {
+  padding: 3rem 7rem 3rem 2rem;
+}
+
+@media screen and (max-width: 950px) {
+  .template-suffix-details .image-with-text__media-item {
+    width: 100%;
+  }
+
+  .template-suffix-details .image-with-text__media {
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .template-suffix-details .image-with-text__content--desktop-left {
+    padding: 3rem .25rem 3rem .25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .template-suffix-details .image-with-text__media {
+    height: 30rem;
+  }
+}
