@@ -1,6 +1,4 @@
 .collection-list-wrapper .title-wrapper-with-link {
-  border-bottom: 1px solid;
-  padding-bottom: 2rem;
 }
 
 .collection-list {
@@ -10,6 +8,9 @@
 
 .collection-list-title {
   margin: 0;
+  width: 100%;
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
 }
 
 .collection-list-title span {
