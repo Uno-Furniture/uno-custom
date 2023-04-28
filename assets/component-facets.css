@@ -225,6 +225,9 @@
 
 .facets__summary span {
   transition: text-decoration var(--duration-short) ease;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: var(--font-heading-family);
 }
 
 .facets__summary:hover span {

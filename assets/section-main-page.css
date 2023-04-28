@@ -4,6 +4,9 @@
 
 .main-page-title {
   margin-bottom: 3rem;
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
+  margin-top: .5em;
 }
 
 @media screen and (min-width: 750px) {

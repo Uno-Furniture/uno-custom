@@ -1,0 +1,25 @@
+{% if collection.description != blank %}
+  <div class="collection-description-wrap">
+    <div class="collection-description__inner page-width--narrow">
+        {{ collection.description }}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Collection description",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Include the collection description on it's own"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection description"
+    }
+  ]
+}
+{% endschema %}

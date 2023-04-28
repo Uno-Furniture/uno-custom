@@ -84,3 +84,8 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.collection-description__inner.page-width--narrow {
+  margin: 8rem auto;
+  padding: 0 18px;
+}
