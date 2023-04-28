@@ -924,8 +924,9 @@ summary::-webkit-details-marker {
   margin: 3rem 0 2rem;
 }
 
-.title-wrapper-with-link .title {
+.title-wrapper-with-link .title, .title-wrapper-with-link .collection-list-title {
   margin: 0;
+  border-bottom: 0;
 }
 
 .title .link {
@@ -943,6 +944,7 @@ summary::-webkit-details-marker {
   gap: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  border-bottom: 1px solid;
 }
 
 .title--primary {
