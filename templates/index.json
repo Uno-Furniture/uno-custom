@@ -1,5 +1,23 @@
 {
   "sections": {
+    "33788c93-ee94-4cd3-af41-784d1e5f2d89": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Christmas-Banner-Image-2023.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "restrict_banner_width": true,
+        "bottom_margin": 42,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -32,6 +50,7 @@
         "image_height": "medium",
         "adapt_height_first_image": false,
         "restrict_banner_width": true,
+        "bottom_margin": 0,
         "desktop_content_position": "top-right",
         "show_text_box": false,
         "desktop_content_alignment": "left",
@@ -201,6 +220,7 @@
     }
   },
   "order": [
+    "33788c93-ee94-4cd3-af41-784d1e5f2d89",
     "image_banner",
     "120edbb0-6cdb-4deb-a205-aef676f9bb3b",
     "18c2a1a7-7b01-4e21-ad19-4ceb7ab69072",
