@@ -20,3 +20,8 @@
   display: flex;
   padding: 0.5rem;
 }
+
+.list-payment__item.custom-payment-icon img {
+  max-height: 23px;
+  border-radius: 4px;
+}
