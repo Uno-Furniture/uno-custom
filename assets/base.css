@@ -3052,3 +3052,8 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+#qab_bar {
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}

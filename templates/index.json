@@ -2,6 +2,7 @@
   "sections": {
     "33788c93-ee94-4cd3-af41-784d1e5f2d89": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Christmas-Banner-Image-2023.jpg",
         "image_overlay_opacity": 0,
