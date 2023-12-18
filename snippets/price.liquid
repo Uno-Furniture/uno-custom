@@ -54,32 +54,20 @@
     {%- endcomment -%}
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-      <span class="price-item price-item--regular">
-        {{ money_price }} {% if template contains 'product' %}+ GST{% endif %}
-      </span>
       {% if template contains 'product' %}
         <div class="price-with-gst">
           {{ price_gst }} incl. GST
         </div>      
-      {% endif %}
+      {% endif %}      
+      <span class="price-item price-item--regular">
+        {% if template contains 'product' %}
+          ({{ money_price }} excl. GST)
+        {% else %}
+          {{ money_price }}
+        {% endif %}
+      </span>
     </div>
     <div class="price__sale">
-      {%- unless product.price_varies == false and product.compare_at_price_varies %}
-        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-        <span>
-          <s class="price-item price-item--regular">
-            {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }} {% if template contains 'product' %}+ GST{% endif %}
-            {% else %}
-              {{ compare_at_price | money }} {% if template contains 'product' %}+ GST{% endif %}
-            {% endif %}
-          </s>
-        </span>
-      {%- endunless -%}
-      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-      <span class="price-item price-item--sale price-item--last">
-        {{ money_price }} {% if template contains 'product' %}+ GST{% endif %}
-      </span>
       {% if template contains 'product' %}
         <div class="price-with-gst">
           <s class="price-item price-item--regular">
@@ -93,7 +81,27 @@
             {{ price_gst }} incl. GST
           </span>          
         </div>      
-      {% endif %}
+      {% endif %}      
+      {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+        <span>
+          <s class="price-item price-item--regular">
+            {% if settings.currency_code_enabled %}
+              {{ compare_at_price | money_with_currency }} {% if template contains 'product' %}excl. GST{% endif %}
+            {% else %}
+              {{ compare_at_price | money }} {% if template contains 'product' %}excl. GST{% endif %}
+            {% endif %}
+          </s>
+        </span>
+      {%- endunless -%}
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+      <span class="price-item price-item--sale price-item--last">
+        {% if template contains 'product' %}
+          ({{ money_price }} excl. GST)
+        {% else %}
+          {{ money_price }}
+        {% endif %}
+      </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
