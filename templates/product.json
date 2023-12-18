@@ -54,7 +54,7 @@
         "e16f7eb1-7704-438f-9540-0716c4d26981": {
           "type": "short_description",
           "settings": {
-            "short_desc_richtext": ""
+            "short_desc_richtext": "{{ product.metafields.custom.product_short_description | metafield_tag }}"
           }
         },
         "collapsible-row-0": {
