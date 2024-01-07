@@ -21,6 +21,30 @@
     },
     "image_banner": {
       "type": "image-banner",
+      "blocks": {
+        "69bf00bf-e08f-4e6f-8e6a-f97753354945": {
+          "type": "heading",
+          "settings": {
+            "heading": "PREMIUM PRODUCTS, AFFORDABLE PRICES",
+            "heading_size": "h0"
+          }
+        },
+        "68168df3-6ccb-4531-8642-56b1af90a5d6": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify:\/\/collections\/shop-now",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "69bf00bf-e08f-4e6f-8e6a-f97753354945",
+        "68168df3-6ccb-4531-8642-56b1af90a5d6"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Uno_Talent_HR_-9_913344f7-af0c-4c0e-99d1-79acf001cb51.jpg",
         "image_overlay_opacity": 0,
