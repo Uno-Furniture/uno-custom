@@ -22,7 +22,7 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Christmas-Banner-Image-2023-NewPageCrop.jpg",
+        "image": "shopify:\/\/shop_images\/Uno_Talent_HR_-9_913344f7-af0c-4c0e-99d1-79acf001cb51.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
@@ -32,7 +32,7 @@
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "right",
+        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
