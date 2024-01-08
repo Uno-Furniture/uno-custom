@@ -22,10 +22,21 @@ If product, find the primary collection it belongs to
     {% assign collectionLinksSecondLevel = collectionLinksSecondLevel | concat: link.links | where: 'levels', 0 %}
   {% endfor %}
 
+  {% comment %} New method of retrieving all collections a product belongs to {% endcomment %}
+  {% for collection in collections %}
+    {% for eachProduct in collection.products %}
+      {% if eachProduct.handle == product.handle %}
+        {% assign allProductCollectionsString = allProductCollectionsString | append: collection.handle | append: ',' %}
+      {% endif  %}
+    {% endfor %}
+  {% endfor %}
+
+  {% assign allProductCollectionsStringArray = allProductCollectionsString | split: ',' %}
+
   {% comment %}Find the primary collection the product belongs to{% endcomment %}
-  {% for productCollection in product.collections %}
-    {% for collectionLinkThirdLevel in collectionLinksThirdLevel %}
-      {% if productCollection == collectionLinkThirdLevel.object %}
+  {% for collectionLinkThirdLevel in collectionLinksThirdLevel %}
+    {% for productCollectionHandle in allProductCollectionsStringArray %}
+      {% if productCollectionHandle == collectionLinkThirdLevel.object.handle %}
         {% assign primaryCollectionLink = collectionLinkThirdLevel %}
         {% break %}
       {% endif %}
@@ -36,18 +47,19 @@ If product, find the primary collection it belongs to
     {% endif %}
   {% endfor %}
 
+  {% comment %} If there is no third level primary collection {% endcomment %}
   {% if primaryCollectionLink == blank %}
-    {% for productCollection in product.collections %}
-      {% for collectionLinkSecondLevel in collectionLinksSecondLevel %}
-        {% if productCollection == collectionLinkSecondLevel.object %}
+    {% for collectionLinkSecondLevel in collectionLinksSecondLevel %}
+      {% for productCollectionHandle in allProductCollectionsStringArray %}
+        {% if productCollectionHandle == collectionLinkSecondLevel.object.handle %}
           {% assign primaryCollectionLink = collectionLinkSecondLevel %}
           {% break %}
-        {% endif %}        
-      {% endfor %}
-
+        {% endif %}
+      {% endfor %}   
+      
       {% if primaryCollectionLink != blank %}
         {% break %}
-      {% endif %}      
+      {% endif %}
     {% endfor %}
   {% endif %}  
 
