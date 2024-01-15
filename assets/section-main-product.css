@@ -1383,6 +1383,36 @@ a.product__text {
   justify-content: center;
 }
 
+.inventory-info-block {
+  color: rgb(var(--color-base-accent-1));
+  font-size: 1.3rem;
+}
+
+.notify_form__inputs {
+  display: flex;
+}
+
+.notify_form input {
+  padding: 1.5rem;
+  border-radius: 0;
+  border: 1px solid;
+}
+
+.notify_form p {
+ font-size: 1.3rem;
+}
+
+.notify_form input:focus-visible {
+  outline: 1px solid;
+  outline-offset: 0;
+  box-shadow: none;
+}
+
+.notify_form input[type=submit] {
+  background-color: rgb(var(--color-foreground));
+  border: 0;
+}
+
 /* This keeps the container from getting display: none; applied to it and to make sure we're not introducing some layout shift when switching to an unavailable variant */
 .product__inventory.visibility-hidden:empty {
   display: block;

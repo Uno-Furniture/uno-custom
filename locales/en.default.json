@@ -193,6 +193,16 @@
       "sort_by_label": "Sort by:",
       "to": "To",
       "clear_filter": "Remove filter"
+    },
+    "notify_form": {
+      "email": "Enter your email address...",
+      "send": "Send",
+      "message_content": "Please notify me when {{ product }} becomes available - {{ url }}",
+      "message_content_first": "Please notify me when ",
+      "message_content_last": " becomes available - ",
+      "post_success": "Thanks! We will notify you when this product becomes available!",
+      "post_error": "Please provide a valid email address.",
+      "description": "Notify me when this product is available:"
     }
   },
   "templates": {

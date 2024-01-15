@@ -772,6 +772,7 @@ class VariantSelects extends HTMLElement {
     this.updatePickupAvailability();
     this.removeErrorMessage();
     this.updateVariantStatuses();
+    this.updateIncomingInventoryMessage();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -862,6 +863,59 @@ class VariantSelects extends HTMLElement {
       pickUpAvailability.removeAttribute('available');
       pickUpAvailability.innerHTML = '';
     }
+  }
+
+  updateIncomingInventoryMessage() {
+    console.log('updating incoming messages', this.currentVariant);
+
+    var theProductId = document.querySelector('.notify_form').id.replace('notify-form-','');
+    var notify_form = document.querySelector('.notify-form-' + theProductId);
+    var notifyFormInputs = document.querySelector('.notify_form__inputs');
+
+    var notifyEmail = "Enter your email address...";
+    var notifyEmailValue = "";
+    var notifySend = "Send";
+  
+    var notifyUrl = notifyFormInputs.dataset.url;    
+
+    if (this.currentVariant) {
+      var notifyMessage = "Please notify me when " + this.currentVariant.name + " becomes available - " + notifyUrl;
+    }
+
+    if (notifyFormInputs.classList.contains('customer--true')) {
+      var notifyCustomerEmail = "";
+      var notifyEmailInput = '<input type="hidden" class="notify_email" name="contact[email]" id="contact[email]" value="' + notifyCustomerEmail + '" />';
+    } else {
+      var notifyEmailInput = '<input required type="email" class="notify_email" name="contact[email]" id="contact[email]" placeholder="' + notifyEmail + '" value="' + notifyEmailValue + '" />';
+    }
+
+    var notifyFormHTML = notifyEmailInput + '<input type="hidden" name="challenge" value="false" /><input type="hidden" name="contact[body]" class="notify_form_message" data-body="' + notifyMessage + '" value="' + notifyMessage + '" /><input class="action_button button" type="submit" value="' + notifySend + '" style="margin-bottom:0px;" />';    
+
+    notify_form.style.display = "none";
+    notifyFormInputs.innerHTML = '';
+
+    if (this.currentVariant) {
+      var currentVarInfo = document.getElementById('info-' + this.currentVariant.id)
+      var infoblocks = document.querySelectorAll('.inventory-info-block')
+      for (let i = 0; i < infoblocks.length; i++) {
+        const element = infoblocks[i];
+        element.style.display = "none"
+      }
+      if (currentVarInfo != undefined) {
+        currentVarInfo.style.display = "block"
+      }
+    } else {
+      var infoblocks = document.querySelectorAll('.inventory-info-block')
+      for (let i = 0; i < infoblocks.length; i++) {
+        const element = infoblocks[i];
+        element.style.display = "none"
+      }
+    }
+    
+    if (this.currentVariant && !this.currentVariant.available) {
+      notify_form.style.display = "block";
+      notifyFormInputs.innerHTML = notifyFormHTML;
+    }    
   }
 
   removeErrorMessage() {

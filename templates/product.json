@@ -40,6 +40,15 @@
             "picker_type": "button"
           }
         },
+        "inventory_tNpPfa": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": false,
+            "notify_title": "<p>Notify me when this product is available:<\/p>"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -124,6 +133,7 @@
         "price",
         "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "variant_picker",
+        "inventory_tNpPfa",
         "quantity_selector",
         "buy_buttons",
         "e16f7eb1-7704-438f-9540-0716c4d26981",

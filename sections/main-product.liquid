@@ -121,6 +121,68 @@
                 {%- endform -%}
               </div>
             {%- when 'inventory' -%}
+
+              {% assign variant = product.selected_or_first_available_variant %}
+
+              {% for newvar in product.variants %}
+                {% assign incoming =  newvar.next_incoming_date | date: "%s" %}
+                {% assign now =  "now" | date: "%s" %}
+                {% assign outOfStockPolicy = newvar.inventory_policy %}
+                {% assign incominglater = false %}
+                {% if incoming > now %}
+                  {% assign incominglater = true %}
+                {% endif %}
+
+                {% if newvar.inventory_management == 'shopify' and newvar.inventory_quantity < 1 %}
+                  {% if incominglater == true and outOfStockPolicy == "continue" %}
+                    <p id="info-{{newvar.id}}" class="inventory-info-block" {% unless newvar == variant %} style="display: none;" {% endunless %}> This item will be shipped after: {{ newvar.next_incoming_date | date: "%d %B %Y" }}</p> 
+                  {% elsif incominglater == true and outOfStockPolicy == "deny" %}
+                    <p id="info-{{newvar.id}}" class="inventory-info-block" {% unless newvar == variant %} style="display: none;" {% endunless %}><strong>Out of Stock.</strong> <br/> The next shipment is due: {{ newvar.next_incoming_date | date: "%d %B %Y" }}</p>
+                  {% elsif incominglater == false and outOfStockPolicy == "deny" %}
+                    <p id="info-{{newvar.id}}" class="inventory-info-block" {% unless newvar == variant %} style="display: none;" {% endunless %}><strong>Out of Stock.</strong> <br/> This item is currently out of stock.</p>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+
+              {% capture full_product_variant_title %}{{ product.title }} - {{ variant.title }}{% endcapture %}
+
+              <div class="notify_form notify-form-{{ product.id }}" id="notify-form-{{ product.id }}" {% if variant.available %}style="display:none"{% endif %}>
+                <p class="message"></p>
+                {% form 'contact', id: "notify_me" %}
+
+                  {% if form.errors %}
+                    <p><em>{{ 'products.notify_form.post_error' | t }}</em></p>
+                  {% else %}
+                    <p>
+                      <label aria-hidden="true" class="visually-hidden" for="contact[email]">{{ 'products.notify_form.description' | t }}:</label>
+
+                      {% if block.settings.notify_title %}
+                        {{ block.settings.notify_title }}
+                      {% endif %}                      
+            
+                      <div class="notify_form__inputs {% if customer %}customer--true{% endif %}"  data-url="{{ canonical_url }}">
+                        {% if variant.available == false %}
+                          {% if customer %}
+                            <input type="hidden" name="contact[email]" class="notify_email" id="contact[email]" value="{{ customer.email }}" />
+                          {% else %}
+                            <input required type="email" class="notify_email" name="contact[email]" id="contact[email]" placeholder="{{ 'products.notify_form.email' | t }}" value="{{ contact.fields.email }}" />
+                          {% endif %}
+            
+                          <input type="hidden" name="challenge" value="false" />
+                          <input type="hidden" name="contact[body]" class="notify_form_message" data-body="{{ 'products.notify_form.message_content' | t: product: full_product_variant_title, url: canonical_url }}" value="{{ 'products.notify_form.message_content' | t: product: full_product_variant_title, url: canonical_url }}" />
+                          <input class="action_button button" type="submit" value="{{ 'products.notify_form.send' | t }}" style="margin-bottom:0px" />
+                        {% endif %}
+                      </div>
+                    </p>
+                  {% endif %}
+
+                  {% if form.posted_successfully? %}
+                    <p><em>{{ 'products.notify_form.post_success' | t }}</em></p>
+                  {% endif %}
+                {% endform %}
+              </div>
+
+            {% comment %}  OLD INVENTORY STATUS
               <p
                 class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
                 {{ block.shopify_attributes }}
@@ -167,6 +229,7 @@
                   {%- endif -%}
                 {%- endif -%}
               </p>
+            {% endcomment %}
             {%- when 'description' -%}
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
@@ -848,6 +911,11 @@
           "id": "show_inventory_quantity",
           "label": "t:sections.main-product.blocks.inventory.settings.show_inventory_quantity.label",
           "default": true
+        },
+        {
+          "type": "richtext",
+          "id": "notify_title",
+          "label": "Notify me form title text"
         }
       ]
     },
