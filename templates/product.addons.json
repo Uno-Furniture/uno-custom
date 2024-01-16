@@ -40,6 +40,15 @@
             "picker_type": "button"
           }
         },
+        "inventory_KghM6e": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true,
+            "notify_title": ""
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -129,6 +138,7 @@
         "price",
         "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "variant_picker",
+        "inventory_KghM6e",
         "quantity_selector",
         "buy_buttons",
         "5b935abd-bfad-4c5b-9968-8ddea7250d72",
