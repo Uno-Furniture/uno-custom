@@ -46,10 +46,10 @@
         "68168df3-6ccb-4531-8642-56b1af90a5d6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Uno_Talent_HR_-9_913344f7-af0c-4c0e-99d1-79acf001cb51.jpg",
+        "image": "shopify:\/\/shop_images\/Uno_Talent_HR_-9-Hero-Crop.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "adapt_height_first_image": false,
+        "adapt_height_first_image": true,
         "restrict_banner_width": true,
         "bottom_margin": 0,
         "desktop_content_position": "top-right",
