@@ -104,11 +104,11 @@
       ],
       "settings": {
         "collection_list": [
-          "individual-electric-standing-desks",
+          "standing-desks",
           "fixed-height-desks",
           "office-chairs",
-          "storage",
-          "screens-and-acoustic-panels"
+          "screens-and-acoustic-panels",
+          "storage"
         ],
         "title": "Featured Collections",
         "heading_size": "h2",
