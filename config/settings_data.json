@@ -217,7 +217,7 @@
         "settings": {
           "layout": "horizontal",
           "effect": "slidetop",
-          "delay_seconds": 7,
+          "delay_seconds": 3,
           "show_seconds": 10,
           "pause_seconds": 35,
           "position": "bottomleft",
