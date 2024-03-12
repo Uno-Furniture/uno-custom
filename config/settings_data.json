@@ -217,9 +217,9 @@
         "settings": {
           "layout": "horizontal",
           "effect": "slidetop",
-          "delay_seconds": 3,
+          "delay_seconds": 6,
           "show_seconds": 10,
-          "pause_seconds": 25,
+          "pause_seconds": 35,
           "position": "bottomleft",
           "color_background": "",
           "color_star": "",
