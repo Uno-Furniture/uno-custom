@@ -219,7 +219,7 @@
           "effect": "slidetop",
           "delay_seconds": 3,
           "show_seconds": 10,
-          "pause_seconds": 35,
+          "pause_seconds": 25,
           "position": "bottomleft",
           "color_background": "",
           "color_star": "",
