@@ -32,7 +32,7 @@
         "68168df3-6ccb-4531-8642-56b1af90a5d6": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "SHOP NOW",
+            "button_label_1": "SHOP All Products NOW",
             "button_link_1": "shopify:\/\/collections\/shop-now",
             "button_style_secondary_1": false,
             "button_label_2": "",
