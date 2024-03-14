@@ -222,7 +222,7 @@
         "disabled": false,
         "settings": {
           "layout": "horizontal",
-          "effect": "flip",
+          "effect": "slidetop",
           "delay_seconds": 5,
           "show_seconds": 8,
           "pause_seconds": 35,
