@@ -222,7 +222,7 @@
         "disabled": false,
         "settings": {
           "layout": "horizontal",
-          "effect": "slidetop",
+          "effect": "flip",
           "delay_seconds": 5,
           "show_seconds": 8,
           "pause_seconds": 35,
@@ -234,7 +234,7 @@
           "product_ids": "",
           "category": "",
           "product_brand": "",
-          "tags": "",
+          "tags": "POP",
           "limit_words": 100,
           "min_rating": "5",
           "fill_empty": true,
