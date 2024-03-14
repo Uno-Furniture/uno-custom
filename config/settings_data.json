@@ -235,7 +235,7 @@
           "category": "",
           "product_brand": "",
           "tags": "POP",
-          "limit_words": 80,
+          "limit_words": 60,
           "min_rating": "5",
           "fill_empty": true,
           "random": true,
