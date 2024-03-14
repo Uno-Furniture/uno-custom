@@ -223,8 +223,8 @@
         "settings": {
           "layout": "horizontal",
           "effect": "flip",
-          "delay_seconds": 5,
-          "show_seconds": 8,
+          "delay_seconds": 3,
+          "show_seconds": 10,
           "pause_seconds": 35,
           "position": "bottomleft",
           "color_background": "#ac9595",
@@ -237,7 +237,7 @@
           "tags": "POP",
           "limit_words": 80,
           "min_rating": "5",
-          "fill_empty": false,
+          "fill_empty": true,
           "random": true,
           "with_photos": false
         }
