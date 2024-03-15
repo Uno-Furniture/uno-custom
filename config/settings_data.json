@@ -219,10 +219,10 @@
       },
       "4697538150380142411": {
         "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/reviews-popup\/a103faaf-2125-4b0e-89fa-de5149736723",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "layout": "horizontal",
-          "effect": "flip",
+          "effect": "slide",
           "delay_seconds": 3,
           "show_seconds": 10,
           "pause_seconds": 35,
