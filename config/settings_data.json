@@ -223,7 +223,7 @@
         "settings": {
           "layout": "horizontal",
           "effect": "slide",
-          "delay_seconds": 3,
+          "delay_seconds": 6,
           "show_seconds": 10,
           "pause_seconds": 60,
           "position": "bottomleft",
