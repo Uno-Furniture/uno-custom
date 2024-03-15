@@ -225,7 +225,7 @@
           "effect": "slide",
           "delay_seconds": 3,
           "show_seconds": 10,
-          "pause_seconds": 35,
+          "pause_seconds": 60,
           "position": "bottomleft",
           "color_background": "#ac9595",
           "color_star": "#e9161d",
