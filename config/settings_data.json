@@ -211,12 +211,6 @@
         "settings": {
         }
       },
-      "14082181514032464150": {
-        "type": "shopify:\/\/apps\/o-request-a-quote\/blocks\/omgrfq_script\/5f4ac0e6-8a57-4f3d-853e-0194eab86273",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "4697538150380142411": {
         "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/reviews-popup\/a103faaf-2125-4b0e-89fa-de5149736723",
         "disabled": true,
@@ -240,6 +234,12 @@
           "fill_empty": true,
           "random": true,
           "with_photos": false
+        }
+      },
+      "14082181514032464150": {
+        "type": "shopify:\/\/apps\/o-request-a-quote\/blocks\/omgrfq_script\/5f4ac0e6-8a57-4f3d-853e-0194eab86273",
+        "disabled": false,
+        "settings": {
         }
       }
     }
