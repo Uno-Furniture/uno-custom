@@ -144,8 +144,8 @@ If product, find the primary collection it belongs to
 {% comment %} =========================================================
 Set up breadcrumbs for collection
 ========================================================{% endcomment %}
-{% if collection and template != 'product' %}
-
+{% if collection and template != 'product' and template != 'product.addons' %}
+  
   {% for link in section.settings.menu.links %}
     {% if link.current %}
       {% assign item_2 = link %}
