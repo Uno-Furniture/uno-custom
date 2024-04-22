@@ -1683,6 +1683,10 @@ a.product__text {
     flex-direction: column;
     vertical-align: top;
   }
+
+  .template-product .quantity {
+    min-height: calc((var(--inputs-border-width) * 2) + 3.8rem);
+  }  
   
   .template-product .product-buy-buttons {
     display: inline-flex;
@@ -1697,7 +1701,8 @@ a.product__text {
   }
   
   .template-product .product-buy-buttons button {
-    height: 47px;
+    height: 40px;
+    min-height: 40px;
   }
   
   .template-product .product-form__buttons > * {
