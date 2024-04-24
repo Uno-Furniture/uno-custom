@@ -28,12 +28,6 @@
           "settings": {
           }
         },
-        "895ba9a8-754f-4e15-810d-f2c88fc4d722": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div id=\"latitude-product-widget\"><\/div>\n\n{% render 'zip-widget' %}"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -46,7 +40,7 @@
             "text_style": "body",
             "inventory_threshold": 10,
             "show_inventory_quantity": false,
-            "notify_title": "<p>Notify me when this product is available:<\/p>"
+            "notify_title": ""
           }
         },
         "quantity_selector": {
@@ -58,6 +52,12 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false
+          }
+        },
+        "895ba9a8-754f-4e15-810d-f2c88fc4d722": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id=\"latitude-product-widget\"><\/div>\n\n{% render 'zip-widget' %}"
           }
         },
         "e16f7eb1-7704-438f-9540-0716c4d26981": {
@@ -131,11 +131,11 @@
         "title",
         "47ece7e1-a554-4cfa-b8fb-23806c91976c",
         "price",
-        "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "variant_picker",
         "inventory_tNpPfa",
         "quantity_selector",
         "buy_buttons",
+        "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "e16f7eb1-7704-438f-9540-0716c4d26981",
         "collapsible-row-0",
         "collapsible-row-2",
