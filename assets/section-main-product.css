@@ -455,7 +455,12 @@ a.product__text {
   margin-bottom: 0.5rem;
   vertical-align: top;
   margin-top: 3px;
-  margin-left: .75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .product .price .badge {
+    margin-left: .75rem;
+  }  
 }
 
 .product .price__container {
