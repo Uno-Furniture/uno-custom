@@ -60,15 +60,15 @@
             "custom_liquid": "<div id=\"latitude-product-widget\"><\/div>\n\n{% render 'zip-widget' %}"
           }
         },
-        "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
-          "type": "addon_products",
-          "settings": {
-          }
-        },
         "1f9b7a27-d25b-41cc-807c-248f692563a1": {
           "type": "short_description",
           "settings": {
             "short_desc_richtext": "{{ product.metafields.custom.product_short_description | metafield_tag }}"
+          }
+        },
+        "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
+          "type": "addon_products",
+          "settings": {
           }
         },
         "collapsible-row-0": {
@@ -141,8 +141,8 @@
         "quantity_selector",
         "buy_buttons",
         "895ba9a8-754f-4e15-810d-f2c88fc4d722",
-        "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "1f9b7a27-d25b-41cc-807c-248f692563a1",
+        "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "collapsible-row-0",
         "collapsible-row-2",
         "43ac409c-2f43-499f-a2f8-505cfc991704",
