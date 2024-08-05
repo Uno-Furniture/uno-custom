@@ -1465,7 +1465,7 @@
           "content": "Add a description or image by editing your collection. [Learn more](https://help.shopify.com/manual/products/collections/collection-layout)"
         },
         "show_collection_description": {
-          "label": "Show collection description"
+          "label": "Show collection short description"
         },
         "show_collection_image": {
           "label": "Show collection image",
