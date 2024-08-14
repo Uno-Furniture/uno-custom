@@ -217,7 +217,8 @@
   {%- endif -%}
 </article>
 
-<script type="application/ld+json">
+
+{% comment %} <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Article",
@@ -246,7 +247,7 @@
       "name": {{ shop.name | json }}
     }
   }
-  </script>
+</script> {% endcomment %}
 
 
 {% schema %}

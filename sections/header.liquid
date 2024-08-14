@@ -881,6 +881,7 @@
   customElements.define('sticky-header', StickyHeader);
 {% endjavascript %}
 
+{% comment %}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -903,7 +904,9 @@
     "url": {{ request.origin | append: page.url | json }}
   }
 </script>
+{% endcomment %}
 
+{% comment %}
 {%- if request.page_type == 'index' -%}
   {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
   <script type="application/ld+json">
@@ -920,6 +923,7 @@
     }
   </script>
 {%- endif -%}
+{% endcomment %}
 
 {% schema %}
 {
