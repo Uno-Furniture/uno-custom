@@ -10,26 +10,28 @@
 </div>
 
 <script>
-    let imgZip = document.getElementById('bnplZip');
-    let imgGem = document.getElementById('bnplGem');
-    let infoZip = document.getElementById('infoZip');
-    let infoGem = document.getElementById('infoGem');
+    (function() {
+        let imgZip = document.getElementById('bnplZip');
+        let imgGem = document.getElementById('bnplGem');
+        let infoZip = document.getElementById('infoZip');
+        let infoGem = document.getElementById('infoGem');
 
-    imgZip.addEventListener('click', () => {
+        imgZip.addEventListener('click', () => {
 
-        if(!infoZip.classList.contains('show-me')) {
-            infoGem.classList.remove('show-me');
-        }
+            if(!infoZip.classList.contains('show-me')) {
+                infoGem.classList.remove('show-me');
+            }
 
-        infoZip.classList.toggle('show-me');
-    });
+            infoZip.classList.toggle('show-me');
+        });
 
-    imgGem.addEventListener('click', () => {
+        imgGem.addEventListener('click', () => {
 
-        if(!imgGem.classList.contains('show-me')) {
-            infoZip.classList.remove('show-me');
-        }
+            if(!imgGem.classList.contains('show-me')) {
+                infoZip.classList.remove('show-me');
+            }
 
-        infoGem.classList.toggle('show-me');
-    });
+            infoGem.classList.toggle('show-me');
+        });
+    })();
 </script>
