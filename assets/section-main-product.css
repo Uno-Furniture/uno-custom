@@ -1597,6 +1597,10 @@ a.product__text {
   min-height: 30px;
 }
 
+.product .stamped-product-reviews-badge:has(span[data-rating="0.0"]) {
+  display: none !important;
+}
+
 .product #latitude-product-widget {
   margin: 0;
 }
