@@ -429,6 +429,11 @@ a.product__text {
   margin-top: 0;
 }
 
+.product-subtitle {
+  font-weight: 600;
+  margin-top: 1em;
+}
+
 .product__accordion .accordion__content {
   padding: 0 1rem;
   line-height: 1.5;

@@ -93,6 +93,11 @@
                     {{ product.title | escape }}
                   </h2>
                 </a>
+
+                {% if product.metafields.custom.product_sub_title.value.sub_title != blank %}
+                  <h4 class="product-subtitle h5">{{ product.metafields.custom.product_sub_title.value.sub_title }}</h4>
+                {% endif %}
+
               </div>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>

@@ -152,7 +152,9 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
-          <h4 class="card-product-subtitle h5">{{ card_product.metafields.custom.product_sub_title.value.sub_title }}</h4>
+          {% if card_product.metafields.custom.product_sub_title.value.sub_title != blank %}
+            <h4 class="card-product-subtitle h5">{{ card_product.metafields.custom.product_sub_title.value.sub_title }}</h4>
+          {% endif %}
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
