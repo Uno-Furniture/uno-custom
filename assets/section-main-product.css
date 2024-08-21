@@ -1726,3 +1726,44 @@ a.product__text {
 .stamped-summary-actions-newreview {
   display: none !important;
 }
+
+/* CUSTOM - Buy now pay later section */
+.bnpl-wrap {
+  font-size: 1.2rem;
+}
+
+.bnpl-wrap #bnplZip {
+  width: 52px;
+  margin: 0 4px 0 8px;
+  cursor: pointer;
+}
+
+.bnpl-wrap #bnplGem {
+  height: 18px;
+  margin: 0 4px;
+  position: relative;
+  transform: translateY(3px);
+  cursor: pointer;
+}
+
+.bnpl-wrap #infoZip {
+  display: none;
+  margin-top: 1rem;
+}
+
+.bnpl-wrap #infoZip #partPayCalculatorWidget {
+  padding-bottom: 0 !important;
+}
+
+.bnpl-wrap #infoGem {
+  display: none;
+  margin-top: 1rem;
+}
+
+.bnpl-wrap #infoZip.show-me {
+  display: block;
+}
+
+.bnpl-wrap #infoGem.show-me {
+  display: block;
+}

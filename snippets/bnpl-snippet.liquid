@@ -1,0 +1,35 @@
+<div class="bnpl-wrap">
+    Buy Now or Pay Later With <img id="bnplZip" src="https://assets.partpay.co.nz/assets/Images/fearless/zip-fearless-98.svg"> <img id="bnplGem" src="https://assets.latitudefinancial.com/merchant-services/latitude/icon/gem-logo.svg" alt="logo-NZD">
+
+    <div id="infoZip">
+        {% render 'zip-widget' %}
+    </div>
+    <div id="infoGem">
+        <div id="latitude-product-widget"></div>
+    </div>
+</div>
+
+<script>
+    let imgZip = document.getElementById('bnplZip');
+    let imgGem = document.getElementById('bnplGem');
+    let infoZip = document.getElementById('infoZip');
+    let infoGem = document.getElementById('infoGem');
+
+    imgZip.addEventListener('click', () => {
+
+        if(!infoZip.classList.contains('show-me')) {
+            infoGem.classList.remove('show-me');
+        }
+
+        infoZip.classList.toggle('show-me');
+    });
+
+    imgGem.addEventListener('click', () => {
+
+        if(!imgGem.classList.contains('show-me')) {
+            infoZip.classList.remove('show-me');
+        }
+
+        infoGem.classList.toggle('show-me');
+    });
+</script>

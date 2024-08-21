@@ -28,6 +28,12 @@
           "settings": {
           }
         },
+        "895ba9a8-754f-4e15-810d-f2c88fc4d722": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'bnpl-snippet' %}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -52,12 +58,6 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false
-          }
-        },
-        "895ba9a8-754f-4e15-810d-f2c88fc4d722": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div id=\"latitude-product-widget\"><\/div>\n\n{% render 'zip-widget' %}"
           }
         },
         "1f9b7a27-d25b-41cc-807c-248f692563a1": {
@@ -136,11 +136,11 @@
         "title",
         "47ece7e1-a554-4cfa-b8fb-23806c91976c",
         "price",
+        "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "variant_picker",
         "inventory_KghM6e",
         "quantity_selector",
         "buy_buttons",
-        "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "1f9b7a27-d25b-41cc-807c-248f692563a1",
         "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "collapsible-row-0",

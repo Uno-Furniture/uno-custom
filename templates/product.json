@@ -28,6 +28,12 @@
           "settings": {
           }
         },
+        "custom_liquid_pG6fBQ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'bnpl-snippet' %}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -56,6 +62,7 @@
         },
         "895ba9a8-754f-4e15-810d-f2c88fc4d722": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div id=\"latitude-product-widget\"><\/div>\n\n{% render 'zip-widget' %}"
           }
@@ -131,6 +138,7 @@
         "title",
         "47ece7e1-a554-4cfa-b8fb-23806c91976c",
         "price",
+        "custom_liquid_pG6fBQ",
         "variant_picker",
         "inventory_tNpPfa",
         "quantity_selector",
