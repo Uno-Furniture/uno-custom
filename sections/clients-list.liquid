@@ -8,12 +8,21 @@
           {{ section.settings.title | escape }}
         </h2>
       </div>
-      <div class="clients-wrapper">
+      <div class="clients-wrapper grid grid--3-col-desktop grid--2-col-tablet-down">
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'client' %}
-                <div class="client" {{ block.shopify_attributes }}>
-                    {{ block.settings.image | image_url: width: 200 | image_tag }}
+                <div class="client grid__item" {{ block.shopify_attributes }}>
+                    <div class="client-image-wrap">
+                      <a href="{{ block.settings.link }}">
+                        {% if block.settings.svg_link != blank %}
+                          <img src="{{ block.settings.svg_link }}" alt="Uno furniture client logo">
+                        {% else %}
+                          {{ block.settings.image | image_url: width: 800 | image_tag }}
+                        {% endif %}
+                      </a>
+                    </div>
+                    <h3><a href="{{ block.settings.link }}" class="full-unstyled-link">{{ block.settings.client_name }}</a></h3>
                 </div>
             {% endcase %}
         {% endfor %}        
@@ -78,6 +87,11 @@
           "type": "url",
           "id": "link",
           "label": "Client URL"
+        },
+        {
+          "type": "text",
+          "id": "client_name",
+          "label": "Client name"
         }
       ]
     }

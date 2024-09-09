@@ -1,0 +1,37 @@
+.clients-list {
+    
+}
+
+.clients-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clients-wrapper .client:hover img {
+    transform: scale(1.03);
+}
+
+.clients-wrapper .client-image-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.clients-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--duration-long) ease;
+    will-change: transform;
+}
+
+.clients-wrapper h3 {
+    margin-top: 1.7rem;
+}
+
+@media screen and (max-width: 749px) {
+    .clients-wrapper h3 {
+        margin-top: 1.3rem;
+    }    
+}
