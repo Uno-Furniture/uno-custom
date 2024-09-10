@@ -7,6 +7,51 @@
         "padding_bottom": 28
       }
     },
+    "image_with_text_QxFxjH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_D4B7da": {
+          "type": "heading",
+          "settings": {
+            "heading": "Office Furniture Fit-Out Solutions Tailored for Efficiency and Style",
+            "heading_size": "h2"
+          }
+        },
+        "text_qDrBHK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Uno Furniture offers complete office fit-outs tailored to your business needs, with a focus on quality and affordability. Whether you’re furnishing an entire office or upgrading key areas, we provide a range of solutions, including ergonomic standing desks and accessories. With fast delivery across New Zealand, we ensure your office fit-out is efficient and hassle-free.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_H3BK4H": {
+          "type": "button",
+          "settings": {
+            "button_label": "Free Consultation",
+            "button_link": "shopify:\/\/pages\/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_D4B7da",
+        "text_qDrBHK",
+        "button_H3BK4H"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/getty_175138996_9706479704500121.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "clients_list_P9FKdc": {
       "type": "clients-list",
       "blocks": {
@@ -71,6 +116,7 @@
   },
   "order": [
     "main",
+    "image_with_text_QxFxjH",
     "clients_list_P9FKdc"
   ]
 }
