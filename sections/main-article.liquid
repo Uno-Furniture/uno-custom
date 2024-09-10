@@ -1,6 +1,6 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
-<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article-template {% if template.suffix == 'fit-out' %}article-fit-out{% endif %}" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -59,14 +59,40 @@
               share_link: share_url
             %}
           </div>
+        {%- when 'meta_images' -%}
+          {% if article.metafields.custom.fit_out_photos != blank %}
+            <div class="article-meta-images grid">
+              {% for image in article.metafields.custom.fit_out_photos.value %}
+                <div class="meta-image-wrap grid__item">
+                  {{ image | image_url: width: image.width, height: image.height | image_tag }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {%- when 'meta_products' -%}
+          {% if article.metafields.custom.fit_out_products.value != blank %}
+            <div class="article-meta-products grid">
+                {% render 'meta-products',
+                  meta_products: article.metafields.custom.fit_out_products.value
+                  section_id: section.id
+                  meta_products_title: block.settings.meta_products_title
+                %}
+            </div>
+          {% endif %}          
     {%- endcase -%}
   {%- endfor -%}
 
   <div class="article-template__back element-margin-top center">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-      {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
-    </a>
+    {% comment %} CUSTOM - Handle if this is a fit-out article {% endcomment %}
+    {% if template.suffix == 'fit-out' %}
+      {% comment %} Do nothing for now {% endcomment %}
+    {% else %}
+      <a href="{{ blog.url }}" class="article-template__link link animate-arrow"></a>
+        <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+        {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
+      </a>    
+    {% endif %}
+
   </div>
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
@@ -334,6 +360,21 @@
           "type": "paragraph",
           "content": "t:sections.main-article.blocks.share.settings.title_info.content"
         }
+      ]
+    },
+    {
+      "type": "meta_images",
+      "name": "Article meta images"
+    },
+    {
+      "type": "meta_products",
+      "name": "Article meta products",
+      "settings": [
+        {
+          "type": "text",
+          "id": "meta_products_title",
+          "label": "Metafield products title"
+        }       
       ]
     }
   ]

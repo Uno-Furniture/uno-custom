@@ -1,0 +1,45 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- if section.settings.enable_quick_add -%}
+    <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+    <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+{%- liquid
+  assign products_to_display = section.settings.collection.all_products_count
+  assign columns_mobile_int = 2
+  assign show_mobile_slider = false
+  assign show_desktop_slider = false
+-%}
+
+
+<div class="meta-products-wrap color-background-1 isolate gradient">
+  <div class="collection section-{{ section_id }}-padding">
+      <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}">
+        {%- if meta_products_title != blank -%}
+          <h2 class="title">{{ meta_products_title | escape }}</h2>
+        {%- endif -%}
+      </div>
+
+    <slider-component class="slider-mobile-gutter slider-component-full-width{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false %} page-width-desktop{% endif %}">
+      <ul id="Slider-{{ section_id }}" class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--5-col-desktop grid--2-col-tablet-down" role="list" aria-label="{{ 'general.slider.name' | t }}">
+        {%- for product in meta_products -%}
+          <li id="Slide-{{ section_id }}-{{ forloop.index }}" class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
+            {% render 'card-product',
+              card_product: product,
+              section_id: section_id
+            %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </slider-component>
+  </div>
+</div>
