@@ -5,6 +5,7 @@
       "blocks": {
         "featured_image": {
           "type": "featured_image",
+          "disabled": true,
           "settings": {
             "image_height": "adapt"
           }
@@ -16,23 +17,29 @@
             "blog_show_author": false
           }
         },
-        "share": {
-          "type": "share",
+        "meta_images_8A4jMB": {
+          "type": "meta_images",
           "settings": {
-            "share_label": "Share"
           }
         },
         "content": {
           "type": "content",
           "settings": {
           }
+        },
+        "meta_products_macyrd": {
+          "type": "meta_products",
+          "settings": {
+            "meta_products_title": "Products in this Fit-out"
+          }
         }
       },
       "block_order": [
         "featured_image",
         "title",
-        "share",
-        "content"
+        "meta_images_8A4jMB",
+        "content",
+        "meta_products_macyrd"
       ],
       "settings": {
       }

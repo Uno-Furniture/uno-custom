@@ -116,7 +116,7 @@
     "featured_blog_g6dDUA": {
       "type": "featured-blog",
       "settings": {
-        "heading": "Blog posts",
+        "heading": "Recent Fit-out Projects",
         "heading_size": "h1",
         "blog": "office-furniture-fit-outs",
         "post_limit": 3,
@@ -125,7 +125,7 @@
         "show_image": true,
         "show_date": false,
         "show_author": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
