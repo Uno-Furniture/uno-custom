@@ -38,7 +38,7 @@
         "button_H3BK4H"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/getty_175138996_9706479704500121.jpg",
+        "image": "shopify:\/\/shop_images\/uno-fit-out-hero.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -59,45 +59,72 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/nice-offices-ra-anana-3-1200x800.jpg",
-            "link": "shopify:\/\/pages\/about",
-            "client_name": "Company 1"
+            "image": "shopify:\/\/shop_images\/Datacom_200x_f1067471-dff3-4bb5-a74d-35dd0f051ab1.png",
+            "link": "https:\/\/www.datacom.co.nz\/Home.aspx",
+            "client_name": ""
           }
         },
         "client_DQhrib": {
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/Love-That-Design-Nice-Office-Raa.jpg",
-            "link": "",
-            "client_name": "Company 2"
+            "image": "shopify:\/\/shop_images\/cLrX2cO_200x200_bf0b62b4-8318-48.png",
+            "link": "https:\/\/www.sharesies.nz\/",
+            "client_name": ""
           }
         },
         "client_73rrNL": {
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/getty_175138996_9706479704500121.jpg",
-            "link": "",
-            "client_name": "Company 3"
+            "image": "shopify:\/\/shop_images\/robertBird_200x_8e6350df-e202-4189-8a4b-452586998358.png",
+            "link": "https:\/\/www.robertbird.com\/",
+            "client_name": ""
           }
         },
         "client_YHeQzb": {
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/nice-systems-offices-london-7.jpg",
-            "link": "",
-            "client_name": "Company 4"
+            "image": "shopify:\/\/shop_images\/logo_200x_bcaf4ad6-84b1-4149-83dc-8213084ed3be.png",
+            "link": "https:\/\/www.port-tauranga.co.nz\/",
+            "client_name": ""
           }
         },
         "client_Phfi4Y": {
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/4_Reasons_Why_Good_Office_Design.jpg",
-            "link": "",
-            "client_name": "Company 5"
+            "image": "shopify:\/\/shop_images\/The-Salvation-Army-Logo-1200_200.png",
+            "link": "https:\/\/www.salvationarmy.org.nz\/",
+            "client_name": ""
+          }
+        },
+        "client_p3mpAc": {
+          "type": "client",
+          "settings": {
+            "svg_link": "",
+            "image": "shopify:\/\/shop_images\/SilverFernFarms-Logo3-200_200x_0253fad2-8ccd-4091-a124-938a56f26bd9.png",
+            "link": "https:\/\/silverfernfarms.com\/",
+            "client_name": ""
+          }
+        },
+        "client_URrWcg": {
+          "type": "client",
+          "settings": {
+            "svg_link": "",
+            "image": "shopify:\/\/shop_images\/og_logo-200_200x_6de1e7a4-e34e-4555-a432-ce6ffaf558db.png",
+            "link": "https:\/\/www.consultrecruitment.co.nz\/",
+            "client_name": ""
+          }
+        },
+        "client_pYCeFt": {
+          "type": "client",
+          "settings": {
+            "svg_link": "",
+            "image": "shopify:\/\/shop_images\/0718408001522210091-200_200x_e035482d-0900-42b0-aa15-fe45e4785e66.png",
+            "link": "https:\/\/www.rewardhospitality.co.nz\/",
+            "client_name": ""
           }
         }
       },
@@ -106,7 +133,10 @@
         "client_DQhrib",
         "client_73rrNL",
         "client_YHeQzb",
-        "client_Phfi4Y"
+        "client_Phfi4Y",
+        "client_p3mpAc",
+        "client_URrWcg",
+        "client_pYCeFt"
       ],
       "settings": {
         "title": "Our Customers",
