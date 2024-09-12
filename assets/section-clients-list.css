@@ -1,10 +1,15 @@
 .clients-list {
-    
+    padding: 48px 0;   
+}
+
+.clients-list .title {
+    padding-bottom: 20px;
 }
 
 .clients-wrapper {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 20px;
 }
 
 .clients-wrapper .client:hover img {
@@ -12,16 +17,17 @@
 }
 
 .clients-wrapper .client-image-wrap {
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
     aspect-ratio: 4/3;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .clients-wrapper img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: var(--duration-long) ease;
     will-change: transform;
 }
