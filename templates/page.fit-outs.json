@@ -140,14 +140,14 @@
       ],
       "settings": {
         "title": "Our Customers",
-        "heading_size": "h1"
+        "heading_size": "h2"
       }
     },
     "featured_blog_g6dDUA": {
       "type": "featured-blog",
       "settings": {
-        "heading": "Recent Fit-out Projects",
-        "heading_size": "h1",
+        "heading": "Recent Office Fit-out Projects",
+        "heading_size": "h2",
         "blog": "office-furniture-fit-outs",
         "post_limit": 3,
         "columns_desktop": 3,
@@ -159,12 +159,59 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_gallery_9i6fAP": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_iKNxkQ": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify:\/\/shop_images\/1643224410-20200910-scandi.jpg"
+          }
+        },
+        "image_Q6TQVN": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify:\/\/shop_images\/hq720.jpg"
+          }
+        },
+        "image_Rmhzq8": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify:\/\/shop_images\/65b9925012ef28d3862b5e64_home_of.jpg"
+          }
+        },
+        "image_XiGXGw": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify:\/\/shop_images\/fdcapril2020.jpg"
+          }
+        },
+        "image_CgtTqq": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify:\/\/shop_images\/2.homeoffice.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_iKNxkQ",
+        "image_Q6TQVN",
+        "image_Rmhzq8",
+        "image_XiGXGw",
+        "image_CgtTqq"
+      ],
+      "settings": {
+        "gallery_title": "Home Office FIt-outs",
+        "gallery_description": "<p>Our customers have been transforming their home offices into functional and stylish workspaces with our premium office furniture. Below are some amazing fit-outs they’ve shared with us, showing how our pieces have helped create inspiring environments to boost productivity and comfort. Take a look for inspiration and see how our furniture can enhance your own home office.<\/p>"
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_QxFxjH",
     "clients_list_P9FKdc",
-    "featured_blog_g6dDUA"
+    "featured_blog_g6dDUA",
+    "image_gallery_9i6fAP"
   ]
 }
