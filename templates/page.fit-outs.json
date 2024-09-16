@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -166,7 +175,7 @@
         "image_iKNxkQ": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/1643224410-20200910-scandi.jpg"
+            "gallery_image": "shopify:\/\/shop_images\/1643224410-20200910-scandi_0e0c5d23-6720-4e0b-8d49-ca60cf797b55.jpg"
           }
         },
         "image_Q6TQVN": {
@@ -192,6 +201,12 @@
           "settings": {
             "gallery_image": "shopify:\/\/shop_images\/2.homeoffice.jpg"
           }
+        },
+        "image_JBkGB3": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify:\/\/shop_images\/Clear-cut-3.png"
+          }
         }
       },
       "block_order": [
@@ -199,7 +214,8 @@
         "image_Q6TQVN",
         "image_Rmhzq8",
         "image_XiGXGw",
-        "image_CgtTqq"
+        "image_CgtTqq",
+        "image_JBkGB3"
       ],
       "settings": {
         "gallery_title": "Home Office FIt-outs",
