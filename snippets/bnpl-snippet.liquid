@@ -1,6 +1,11 @@
 <div class="bnpl-wrap">
-    Buy Now or Pay Later With <img id="bnplZip" src="https://assets.partpay.co.nz/assets/Images/fearless/zip-fearless-98.svg"> <img id="bnplGem" src="https://assets.latitudefinancial.com/merchant-services/latitude/icon/gem-logo.svg" alt="logo-NZD">
+    Buy Now or Pay Later With <img id="bnplAfterpay" src="https://cdn.shopify.com/s/files/1/0008/5796/4659/files/afterpay.svg?v=1726722237" alt="Afterpay logo"> <img id="bnplZip" src="https://assets.partpay.co.nz/assets/Images/fearless/zip-fearless-98.svg" alt="Zip logo"> <img id="bnplGem" src="https://assets.latitudefinancial.com/merchant-services/latitude/icon/gem-logo.svg" alt="Gem logo-NZD">
 
+    
+    <div id="infoAfterpay">
+        <div id="afterpayTarget"></div>
+        {% render 'afterpay-widget' %}
+    </div>
     <div id="infoZip">
         {% render 'zip-widget' %}
     </div>
@@ -11,15 +16,29 @@
 
 <script>
     (function() {
+        let imgAfterpay = document.getElementById('bnplAfterpay');
         let imgZip = document.getElementById('bnplZip');
         let imgGem = document.getElementById('bnplGem');
+
+        let infoAfterpay = document.getElementById('infoAfterpay');
         let infoZip = document.getElementById('infoZip');
         let infoGem = document.getElementById('infoGem');
+
+        imgAfterpay.addEventListener('click', () => {
+
+            if(!infoAfterpay.classList.contains('show-me')) {
+                infoGem.classList.remove('show-me');
+                infoZip.classList.remove('show-me');
+            }
+
+            infoAfterpay.classList.toggle('show-me');
+        });        
 
         imgZip.addEventListener('click', () => {
 
             if(!infoZip.classList.contains('show-me')) {
                 infoGem.classList.remove('show-me');
+                infoAfterpay.classList.remove('show-me');
             }
 
             infoZip.classList.toggle('show-me');
@@ -29,6 +48,7 @@
 
             if(!imgGem.classList.contains('show-me')) {
                 infoZip.classList.remove('show-me');
+                infoAfterpay.classList.remove('show-me');
             }
 
             infoGem.classList.toggle('show-me');
