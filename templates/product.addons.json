@@ -162,7 +162,9 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "model_heading": "Explore this Desk in 3D!",
+        "model_info": "<ul><li>Move the model with your mouse (PC) or finger (mobile) to see it from all angles.<\/li><li>On mobile, tap \"View in your space\" to see the desk in Augmented Reality.<\/li><li>Resize the model with your fingers for a better fit.<\/li><\/ul>"
       }
     },
     "product-recommendations": {
