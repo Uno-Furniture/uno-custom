@@ -1796,3 +1796,59 @@ a.product__text {
 .bnpl-wrap #infoGem.show-me {
   display: block;
 }
+
+/* ======================================================= 
+CUSTOM -  3D model helper popup
+=========================================================*/
+
+media-gallery {
+  position: relative;
+}
+
+.model-intro-popup {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  z-index: 100000;
+  background: rgba(255,255,255,.9);
+  width: 100%;
+  max-width: 440px;
+  padding: 30px 24px;
+  font-size: 14px;
+  line-height: 1.3;
+  box-shadow: 3px 3px 10px rgba(0,0,0, 0.125);
+}
+
+.model-intro-popup.hide-me {
+  display: none;
+}
+
+.model-intro-popup h4 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 1.5em;
+}
+
+.model-intro-popup ul {
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.model-intro-popup li {
+  padding-bottom: 12px;
+}
+
+.model-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 2rem;
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  color: #888;
+  cursor: pointer;
+}

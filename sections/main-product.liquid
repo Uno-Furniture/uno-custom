@@ -700,6 +700,48 @@
       {{ product.media | where: 'media_type', 'model' | json }}
     </script>
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+
+    <script>
+      // CUSTOM - Handle query parameter that indicates 3D model emphasis experience
+      document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if(urlParams.get('tryout3d')) {
+          let mediaGallery = document.querySelector('media-gallery');
+          let firstModelButton = mediaGallery.querySelector('.thumbnail-slider .media-type-model button');
+
+          setTimeout(() => {
+            firstModelButton.click();
+
+            let modelPopup = document.createElement('div');
+            modelPopup.classList.add('model-intro-popup');
+
+            let modelPopupHeading = document.createElement('h4');
+            modelPopupHeading.innerHTML = '{{ section.settings.model_heading }}';
+            modelPopup.appendChild(modelPopupHeading);
+
+            let modelPopupInfo = document.createElement('div');
+            modelPopupInfo.innerHTML = '{{ section.settings.model_info }}';
+            modelPopup.appendChild(modelPopupInfo);
+
+            let modelPopupClose = document.createElement('span');
+            modelPopupClose.classList.add('model-popup-close');
+            modelPopupClose.innerHTML = '&times';
+            modelPopup.appendChild(modelPopupClose);
+
+            mediaGallery.appendChild(modelPopup);
+
+            modelPopupClose.addEventListener('click', () => {
+              modelPopup.classList.add('hide-me');
+            });
+
+          }, 0);
+
+        } else {
+          console.log('no 3d model param');
+        }
+      });
+    </script>
   {%- endif -%}
 
   <script>
@@ -2308,6 +2350,20 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "3D model popup text guide"
+    },
+    {
+      "type": "text",
+      "id": "model_heading",
+      "label": "Heading for popup"
+    },
+    {
+      "type": "richtext",
+      "id": "model_info",
+      "label": "Info for popup"
     }
   ]
 }
