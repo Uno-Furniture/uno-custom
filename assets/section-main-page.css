@@ -67,3 +67,11 @@
     margin-right: 4% !important;
   }
 }
+
+/* Fit outs page */
+
+@media screen and (min-width: 990px) {
+  .template-suffix-fit-outs .page-width--narrow {
+    max-width: 73.6rem;
+  }
+}

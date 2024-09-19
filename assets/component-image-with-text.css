@@ -80,6 +80,12 @@
   z-index: 1;
 }
 
+@media screen and (max-width: 747px) {
+  .image-with-text__content {
+    padding: 4rem 0 5rem;
+  }  
+}
+
 .image-with-text .grid__item::after {
   content: '';
   position: absolute;

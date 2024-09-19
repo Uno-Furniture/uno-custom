@@ -1741,9 +1741,16 @@ a.product__text {
   font-size: 1.2rem;
 }
 
+.bnpl-wrap #bnplAfterpay {
+  margin: 0 4px 0 8px;
+  cursor: pointer;
+  position: relative;
+  transform: translateY(3px);
+}
+
 .bnpl-wrap #bnplZip {
   width: 52px;
-  margin: 0 4px 0 8px;
+  margin: 0 4px 0 4px;
   cursor: pointer;
 }
 
@@ -1753,6 +1760,15 @@ a.product__text {
   position: relative;
   transform: translateY(3px);
   cursor: pointer;
+}
+
+.bnpl-wrap #infoAfterpay {
+  display: none;
+  margin-top: 1rem;
+}
+
+.bnpl-wrap #infoAfterpay square-placement {
+  display: block !important
 }
 
 .bnpl-wrap #infoZip {
@@ -1767,6 +1783,10 @@ a.product__text {
 .bnpl-wrap #infoGem {
   display: none;
   margin-top: 1rem;
+}
+
+.bnpl-wrap #infoAfterpay.show-me {
+  display: block;
 }
 
 .bnpl-wrap #infoZip.show-me {

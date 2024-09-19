@@ -1,0 +1,174 @@
+<section class="image-gallery">
+    <div class="page-width container">
+        <header class="image-gallery__header">
+            <h2>{{ section.settings.gallery_title }}</h2>
+            <div class="rte">{{ section.settings.gallery_description }}</div>
+        </header>
+
+        <div class="grid grid--4-col-desktop grid--2-col-tablet-down gallery">
+            {% for block in section.blocks %}
+                <a href="{{ block.settings.gallery_image | img_url: 'master' }}" class="media-modal__link grid__item" data-media-id="gallery-{{ block.id }}">
+                    <img src="{{ block.settings.gallery_image | img_url: 'large' }}" alt="{{ block.settings.image.alt }}" class="gallery__image">
+                </a>
+            {% endfor %}
+        </div>
+
+        <!-- Lightbox container, initially hidden -->
+        <div id="galleryLightbox" class="lightbox hidden">
+            <span class="lightbox__close">&times;</span>
+            <img class="lightbox__image" id="lightboxImage" src="" alt="">
+        </div>        
+    </div>
+</section>
+    
+{% javascript %}
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const lightbox = document.getElementById('galleryLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const closeBtn = document.querySelector('.lightbox__close');
+
+        document.querySelectorAll('.media-modal__link').forEach(function(el) {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                let largeImageUrl = this.getAttribute('href');
+                
+                lightboxImage.src = largeImageUrl;
+                lightbox.classList.remove('hidden');
+                
+            });
+        });
+        
+        // Close the lightbox when the close button is clicked
+        closeBtn.addEventListener('click', function() {
+            lightbox.classList.add('hidden');
+            lightboxImage.src = ''; // Clear image source
+        });
+
+        // Close the lightbox when clicking outside the image
+        lightbox.addEventListener('click', function(e) {
+            if (e.target !== lightboxImage) {
+                lightbox.classList.add('hidden');
+                lightboxImage.src = ''; // Clear image source
+            }
+        });        
+    
+    });
+{% endjavascript %}
+    
+<style>
+    .image-gallery {
+      padding: 20px 0;
+    }
+    
+    .image-gallery__header {
+      text-align: left;
+      margin-bottom: 20px;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid;
+    }
+
+    @media screen and (min-width: 768px) {
+        .image-gallery__header .rte {
+            max-width: 720px;
+        }
+    }
+
+    .gallery {
+      display: flex;
+    }
+    
+    .gallery__image {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      transition: opacity .2s ease;
+    }
+    
+    .gallery__image:hover {
+      opacity: 0.8;
+    }
+
+    .media-modal__link {
+        aspect-ratio: 4 / 3;
+    }
+
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .lightbox.hidden {
+        display: none;
+    }
+
+    .lightbox__image {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .lightbox__close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 2rem;
+        color: rgb(185 185 185);
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        border: 1px solid;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 50%;
+        font-weight: 100;
+    }
+
+    .lightbox__close:hover {
+        opacity: 0.7;
+    }    
+</style>
+    
+{% schema %}
+{
+    "name": "Image Gallery",
+    "settings": [
+        {
+            "type": "text",
+            "id": "gallery_title",
+            "label": "Gallery Title"
+        },
+        {
+            "type": "richtext",
+            "id": "gallery_description",
+            "label": "Gallery Description"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "gallery_image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image Gallery"
+        }
+    ]
+}
+{% endschema %}
