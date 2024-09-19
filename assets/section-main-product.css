@@ -1767,6 +1767,10 @@ a.product__text {
   margin-top: 1rem;
 }
 
+.bnpl-wrap #infoAfterpay square-placement {
+  display: block !important
+}
+
 .bnpl-wrap #infoZip {
   display: none;
   margin-top: 1rem;
