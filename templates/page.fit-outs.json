@@ -172,6 +172,18 @@
     "image_gallery_9i6fAP": {
       "type": "image-gallery",
       "blocks": {
+        "image_CgtTqq": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Premio_1500_Black_Legs_UGC.jpg"
+          }
+        },
+        "image_pTqKMD": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Ultimo_1800_Gaming_UGC.jpg"
+          }
+        },
         "image_iKNxkQ": {
           "type": "image",
           "settings": {
@@ -193,47 +205,87 @@
         "image_XiGXGw": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify://shop_images/fdcapril2020.jpg"
-          }
-        },
-        "image_CgtTqq": {
-          "type": "image",
-          "settings": {
-            "gallery_image": "shopify://shop_images/2.homeoffice.jpg"
+            "gallery_image": "shopify://shop_images/Evolve_1850_Cherry_Top_Black_Legs_UGC.jpg"
           }
         },
         "image_JBkGB3": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify://shop_images/Clear-cut-3.png"
+            "gallery_image": "shopify://shop_images/Premio_1500_White_legs_UGC_2.jpg"
           }
         },
         "image_NQQhBG": {
           "type": "image",
           "settings": {
-          }
-        },
-        "image_pTqKMD": {
-          "type": "image",
-          "settings": {
+            "gallery_image": "shopify://shop_images/Ultimo_White_Top_WHite_Legs_Home_Office.jpg"
           }
         },
         "image_9JiEAL": {
           "type": "image",
           "settings": {
+            "gallery_image": "shopify://shop_images/Evolve_Bamboo_UGC.jpg"
+          }
+        },
+        "image_qVAknA": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Ultimo_1500_Cherry_Top_Black_legs_Side_by_Side_UGC.jpg"
+          }
+        },
+        "image_nUxdh4": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Ultimo_White_Top_White_Legs_Home_Office_UGC.jpg"
+          }
+        },
+        "image_Cc9G6H": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Ultimo_1500_Cherry_Top_Black_legs_UGC.jpg"
+          }
+        },
+        "image_6Hjrxc": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Evolve_1500_English_Oak_White_Legs_UGC.jpg"
+          }
+        },
+        "image_nVrpHk": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Evolve_1800_Cherry_Top_UGC.jpg"
+          }
+        },
+        "image_6G87qQ": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Ultimo_1500_Cherry_Top_White_legs_UGC.jpg"
+          }
+        },
+        "image_KgGRma": {
+          "type": "image",
+          "settings": {
+            "gallery_image": "shopify://shop_images/Evolve_1800_Contoured_Black_Legs_UGC.jpg"
           }
         }
       },
       "block_order": [
+        "image_CgtTqq",
+        "image_pTqKMD",
         "image_iKNxkQ",
         "image_Q6TQVN",
         "image_Rmhzq8",
         "image_XiGXGw",
-        "image_CgtTqq",
         "image_JBkGB3",
         "image_NQQhBG",
-        "image_pTqKMD",
-        "image_9JiEAL"
+        "image_9JiEAL",
+        "image_qVAknA",
+        "image_nUxdh4",
+        "image_Cc9G6H",
+        "image_6Hjrxc",
+        "image_nVrpHk",
+        "image_6G87qQ",
+        "image_KgGRma"
       ],
       "settings": {
         "gallery_title": "Home Office FIt-outs",
