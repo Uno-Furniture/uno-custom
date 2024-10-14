@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -29,7 +29,7 @@
         "text_qDrBHK": {
           "type": "text",
           "settings": {
-            "text": "<p>Uno Furniture offers complete office fit-outs tailored to your business needs, with a focus on quality and affordability. Whether you’re furnishing an entire office or upgrading key areas, we provide a range of solutions, including ergonomic standing desks and accessories. With fast delivery across New Zealand, we ensure your office fit-out is efficient and hassle-free.<\/p>",
+            "text": "<p>Uno Furniture offers complete office fit-outs tailored to your business needs, with a focus on quality and affordability. Whether you’re furnishing an entire office or upgrading key areas, we provide a range of solutions, including ergonomic standing desks and accessories. With fast delivery across New Zealand, we ensure your office fit-out is efficient and hassle-free.</p>",
             "text_style": "body"
           }
         },
@@ -37,7 +37,7 @@
           "type": "button",
           "settings": {
             "button_label": "Free Consultation",
-            "button_link": "shopify:\/\/pages\/contact"
+            "button_link": "shopify://pages/contact"
           }
         }
       },
@@ -47,7 +47,7 @@
         "button_H3BK4H"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/uno-fit-out-hero.jpg",
+        "image": "shopify://shop_images/uno-fit-out-hero.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -68,8 +68,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/Datacom_200x_f1067471-dff3-4bb5-a74d-35dd0f051ab1.png",
-            "link": "https:\/\/www.datacom.co.nz\/Home.aspx",
+            "image": "shopify://shop_images/Datacom_200x_f1067471-dff3-4bb5-a74d-35dd0f051ab1.png",
+            "link": "https://www.datacom.co.nz/Home.aspx",
             "client_name": ""
           }
         },
@@ -77,8 +77,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/cLrX2cO_200x200_bf0b62b4-8318-48.png",
-            "link": "https:\/\/www.sharesies.nz\/",
+            "image": "shopify://shop_images/cLrX2cO_200x200_bf0b62b4-8318-48.png",
+            "link": "https://www.sharesies.nz/",
             "client_name": ""
           }
         },
@@ -86,8 +86,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/robertBird_200x_8e6350df-e202-4189-8a4b-452586998358.png",
-            "link": "https:\/\/www.robertbird.com\/",
+            "image": "shopify://shop_images/robertBird_200x_8e6350df-e202-4189-8a4b-452586998358.png",
+            "link": "https://www.robertbird.com/",
             "client_name": ""
           }
         },
@@ -95,8 +95,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/logo_200x_bcaf4ad6-84b1-4149-83dc-8213084ed3be.png",
-            "link": "https:\/\/www.port-tauranga.co.nz\/",
+            "image": "shopify://shop_images/logo_200x_bcaf4ad6-84b1-4149-83dc-8213084ed3be.png",
+            "link": "https://www.port-tauranga.co.nz/",
             "client_name": ""
           }
         },
@@ -104,8 +104,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/The-Salvation-Army-Logo-1200_200.png",
-            "link": "https:\/\/www.salvationarmy.org.nz\/",
+            "image": "shopify://shop_images/The-Salvation-Army-Logo-1200_200.png",
+            "link": "https://www.salvationarmy.org.nz/",
             "client_name": ""
           }
         },
@@ -113,8 +113,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/SilverFernFarms-Logo3-200_200x_0253fad2-8ccd-4091-a124-938a56f26bd9.png",
-            "link": "https:\/\/silverfernfarms.com\/",
+            "image": "shopify://shop_images/SilverFernFarms-Logo3-200_200x_0253fad2-8ccd-4091-a124-938a56f26bd9.png",
+            "link": "https://silverfernfarms.com/",
             "client_name": ""
           }
         },
@@ -122,8 +122,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/og_logo-200_200x_6de1e7a4-e34e-4555-a432-ce6ffaf558db.png",
-            "link": "https:\/\/www.consultrecruitment.co.nz\/",
+            "image": "shopify://shop_images/og_logo-200_200x_6de1e7a4-e34e-4555-a432-ce6ffaf558db.png",
+            "link": "https://www.consultrecruitment.co.nz/",
             "client_name": ""
           }
         },
@@ -131,8 +131,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/0718408001522210091-200_200x_e035482d-0900-42b0-aa15-fe45e4785e66.png",
-            "link": "https:\/\/www.rewardhospitality.co.nz\/",
+            "image": "shopify://shop_images/0718408001522210091-200_200x_e035482d-0900-42b0-aa15-fe45e4785e66.png",
+            "link": "https://www.rewardhospitality.co.nz/",
             "client_name": ""
           }
         }
@@ -175,37 +175,52 @@
         "image_iKNxkQ": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/1643224410-20200910-scandi_0e0c5d23-6720-4e0b-8d49-ca60cf797b55.jpg"
+            "gallery_image": "shopify://shop_images/Copenhagen_1800_UGC.jpg"
           }
         },
         "image_Q6TQVN": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/hq720.jpg"
+            "gallery_image": "shopify://shop_images/hq720.jpg"
           }
         },
         "image_Rmhzq8": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/65b9925012ef28d3862b5e64_home_of.jpg"
+            "gallery_image": "shopify://shop_images/65b9925012ef28d3862b5e64_home_of.jpg"
           }
         },
         "image_XiGXGw": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/fdcapril2020.jpg"
+            "gallery_image": "shopify://shop_images/fdcapril2020.jpg"
           }
         },
         "image_CgtTqq": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/2.homeoffice.jpg"
+            "gallery_image": "shopify://shop_images/2.homeoffice.jpg"
           }
         },
         "image_JBkGB3": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Clear-cut-3.png"
+            "gallery_image": "shopify://shop_images/Clear-cut-3.png"
+          }
+        },
+        "image_NQQhBG": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image_pTqKMD": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image_9JiEAL": {
+          "type": "image",
+          "settings": {
           }
         }
       },
@@ -215,11 +230,14 @@
         "image_Rmhzq8",
         "image_XiGXGw",
         "image_CgtTqq",
-        "image_JBkGB3"
+        "image_JBkGB3",
+        "image_NQQhBG",
+        "image_pTqKMD",
+        "image_9JiEAL"
       ],
       "settings": {
         "gallery_title": "Home Office FIt-outs",
-        "gallery_description": "<p>Our customers have been transforming their home offices into functional and stylish workspaces with our premium office furniture. Below are some amazing fit-outs they’ve shared with us, showing how our pieces have helped create inspiring environments to boost productivity and comfort. Take a look for inspiration and see how our furniture can enhance your own home office. <\/p>"
+        "gallery_description": "<p>Our customers have been transforming their home offices into functional and stylish workspaces with our premium office furniture. Below are some amazing fit-outs they’ve shared with us, showing how our pieces have helped create inspiring environments to boost productivity and comfort. Take a look for inspiration and see how our furniture can enhance your own home office. </p>"
       }
     }
   },
