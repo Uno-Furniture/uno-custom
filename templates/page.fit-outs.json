@@ -135,6 +135,15 @@
             "link": "https://www.rewardhospitality.co.nz/",
             "client_name": ""
           }
+        },
+        "client_f67Uxc": {
+          "type": "client",
+          "settings": {
+            "svg_link": "",
+            "image": "shopify://shop_images/logo-header.png",
+            "link": "",
+            "client_name": ""
+          }
         }
       },
       "block_order": [
@@ -145,7 +154,8 @@
         "client_Phfi4Y",
         "client_p3mpAc",
         "client_URrWcg",
-        "client_pYCeFt"
+        "client_pYCeFt",
+        "client_f67Uxc"
       ],
       "settings": {
         "title": "Our Customers",
