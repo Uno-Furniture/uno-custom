@@ -55,6 +55,19 @@
   padding: 0 10px 16px;
 }
 
+.mega-menu__list:has(.shop-all-link) {
+  padding-top: 48px;
+  position: relative;
+}
+
+.shop-all-link {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
 .mega-count-8, .mega-count-7, .mega-count-4 {
   max-width: 1060px;
 }

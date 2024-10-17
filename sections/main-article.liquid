@@ -64,7 +64,7 @@
             <div class="article-meta-images grid">
               {% for image in article.metafields.custom.fit_out_photos.value %}
                 <div class="meta-image-wrap grid__item">
-                  {{ image | image_url: width: image.width, height: image.height | image_tag }}
+                  {{ image | image_url: width: 1024 | image_tag }}
                 </div>
               {% endfor %}
             </div>
