@@ -17,13 +17,13 @@
             "blog_show_author": false
           }
         },
-        "meta_images_8A4jMB": {
-          "type": "meta_images",
+        "content": {
+          "type": "content",
           "settings": {
           }
         },
-        "content": {
-          "type": "content",
+        "meta_images_8A4jMB": {
+          "type": "meta_images",
           "settings": {
           }
         },
@@ -37,8 +37,8 @@
       "block_order": [
         "featured_image",
         "title",
-        "meta_images_8A4jMB",
         "content",
+        "meta_images_8A4jMB",
         "meta_products_macyrd"
       ],
       "settings": {
