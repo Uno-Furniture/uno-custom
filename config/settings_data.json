@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
@@ -114,10 +114,10 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
-    "social_facebook_link": "https:\/\/www.facebook.com\/unofurniture.co.nz\/",
-    "social_instagram_link": "https:\/\/www.instagram.com\/unofurniture.co.nz\/",
-    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCrFRReSFf85ETwddbQsrKYg\/featured",
-    "social_linkedin_link": "https:\/\/www.linkedin.com\/company\/uno-furniture-new-zealand\/",
+    "social_facebook_link": "https://www.facebook.com/unofurniture.co.nz/",
+    "social_instagram_link": "https://www.instagram.com/unofurniture.co.nz/",
+    "social_youtube_link": "https://www.youtube.com/channel/UCrFRReSFf85ETwddbQsrKYg/featured",
+    "social_linkedin_link": "https://www.linkedin.com/company/uno-furniture-new-zealand/",
     "social_pinterest_link": "",
     "social_twitter_link": "",
     "social_tiktok_link": "",
@@ -127,11 +127,11 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "favicon": "shopify://shop_images/favicon.png",
     "currency_code_enabled": false,
     "cart_type": "drawer",
     "show_cart_note": true,
-    "checkout_logo_image": "shopify:\/\/shop_images\/logo-centred.png",
+    "checkout_logo_image": "shopify://shop_images/logo-centred.png",
     "checkout_sidebar_background_color": "#f3f3f3",
     "checkout_accent_color": "#ec3237",
     "checkout_button_color": "#ec3237",
@@ -149,10 +149,20 @@
               "color_scheme": "accent-1",
               "link": ""
             }
+          },
+          "announcement_QEgUbn": {
+            "type": "announcement",
+            "settings": {
+              "text": "Shop Black November Specials Now",
+              "text_alignment": "center",
+              "color_scheme": "inverse",
+              "link": "shopify://collections/items-on-sale"
+            }
           }
         },
         "block_order": [
-          "announcement_b3q4ny"
+          "announcement_b3q4ny",
+          "announcement_QEgUbn"
         ],
         "settings": {
         }
@@ -163,7 +173,7 @@
           "color_scheme": "background-1",
           "logo_width": 210,
           "logo_position": "middle-left",
-          "logo": "shopify:\/\/shop_images\/logo-centred.png",
+          "logo": "shopify://shop_images/logo-centred.png",
           "menu": "new-shop-menu",
           "menu_secondary": "new-info-menu",
           "menu_type_desktop": "mega",
@@ -182,7 +192,7 @@
             "type": "text",
             "settings": {
               "heading": "Uno Furniture",
-              "subtext": "<p><em>Affordable furniture for the whole office.<br\/>See why we’re numero Uno.<\/em><\/p><p><a href=\"https:\/\/goo.gl\/maps\/aXAdA1Bopcm7dinWA\" target=\"_blank\" title=\"Uno Furniture map link\">35 Constellation Drive<br\/>Rosedale<br\/>Auckland 0623<\/a><\/p><p><a href=\"tel:0800400010\" target=\"_blank\" title=\"tel:0800400010\">0800 400 010<\/a><\/p>",
+              "subtext": "<p><em>Affordable furniture for the whole office.<br/>See why we’re numero Uno.</em></p><p><a href=\"https://goo.gl/maps/aXAdA1Bopcm7dinWA\" target=\"_blank\" title=\"Uno Furniture map link\">35 Constellation Drive<br/>Rosedale<br/>Auckland 0623</a></p><p><a href=\"tel:0800400010\" target=\"_blank\" title=\"tel:0800400010\">0800 400 010</a></p>",
               "custom_subtext": true
             }
           },
@@ -230,13 +240,13 @@
     ],
     "blocks": {
       "11724500921838622758": {
-        "type": "shopify:\/\/apps\/frequently-bought-together\/blocks\/app-embed-block\/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
+        "type": "shopify://apps/frequently-bought-together/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
         "settings": {
         }
       },
       "4697538150380142411": {
-        "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/reviews-popup\/a103faaf-2125-4b0e-89fa-de5149736723",
+        "type": "shopify://apps/stamped-product-reviews-ugc/blocks/reviews-popup/a103faaf-2125-4b0e-89fa-de5149736723",
         "disabled": true,
         "settings": {
           "layout": "horizontal",
@@ -261,13 +271,13 @@
         }
       },
       "14082181514032464150": {
-        "type": "shopify:\/\/apps\/o-request-a-quote\/blocks\/omgrfq_script\/5f4ac0e6-8a57-4f3d-853e-0194eab86273",
+        "type": "shopify://apps/o-request-a-quote/blocks/omgrfq_script/5f4ac0e6-8a57-4f3d-853e-0194eab86273",
         "disabled": false,
         "settings": {
         }
       },
       "15573056287721514228": {
-        "type": "shopify:\/\/apps\/json-ld-for-seo\/blocks\/app-embed\/3fcb4f45-bdde-43fd-84ae-8006cdcd1028",
+        "type": "shopify://apps/json-ld-for-seo/blocks/app-embed/3fcb4f45-bdde-43fd-84ae-8006cdcd1028",
         "disabled": false,
         "settings": {
         }
@@ -446,7 +456,7 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
               }
             }
           },
