@@ -151,7 +151,7 @@
           "settings": {
             "title": "The uno Furniture Promise:",
             "heading_accent_color": true,
-            "text": "<ul><li>Every day, genuine low prices – we won’t increase prices just to discount them.<\/li><li>100% Kiwi owned and operated.<\/li><li>We are a Direct to Market Importer, meaning no middle man.<\/li><li>Easy Online ordering with fast dispatch of core products.<\/li><li>Seven-day Smart Showroom for furniture viewing.<\/li><li>Free nationwide shipping to metro areas on all standing desks and many more products.<\/li><\/ul>",
+            "text": "<ul><li>Every day, genuine low prices – we won’t increase prices just to discount them.<\/li><li>100% Kiwi owned and operated.<\/li><li>We are a direct-to-market importer—no middleman.<\/li><li>Easy Online ordering with fast dispatch of core products.<\/li><li>Seven-day Smart Showroom for furniture viewing.<\/li><li>Free nationwide shipping to metro areas on all standing desks and many more products.<\/li><\/ul>",
             "text_is_display": false,
             "link_label": "",
             "link": ""
@@ -184,7 +184,7 @@
       "settings": {
         "title": "Best Sellers",
         "heading_size": "h2",
-        "description": "",
+        "description": "<p>Check out our top-selling office furniture items at a glance.<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "best-sellers",
@@ -203,7 +203,79 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 100,
-        "padding_bottom": 36
+        "padding_bottom": 60
+      }
+    },
+    "rich_text_xPWmPY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_L68AKG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Why Choose Uno Furniture?<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "text_3GcjeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We offer an extensive range of new office equipment and furniture to meet all your home or workplace needs. Our collection includes commercial office furniture for sale, suitable for businesses of all sizes, as well as home office furniture designed with comfort and productivity in mind. <\/p><p>Our helpful team provides tailored advice on creating ergonomic and efficient workspaces, ensuring you find the right style for your environment. Choose Uno Furniture for excellent quality, great service and a wide variety of modern office furniture. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_L68AKG",
+        "text_3GcjeP"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_XpdA7x": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yyE6cb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Looking To Fit Out Your Entire Office?<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "text_bVxHeF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Uno Furniture, we specialize in creating tailored <a href=\"https:\/\/unofurniture.co.nz\/pages\/office-furniture-fit-outs\"><span style=\"text-decoration:underline\">office furniture fit-outs<\/span><\/a> designed specifically for your business needs. Our range of high-quality and affordable furniture includes ergonomic standing desks and essential accessories, ensuring comfort and productivity in your workspace. <\/p><p>We take pride in our ability to transform your office environment, whether you’re furnishing a new space or upgrading existing areas. With a focus on style and functionality, our solutions are crafted to enhance your workplace experience.<\/p>"
+          }
+        },
+        "button_Ce7tzP": {
+          "type": "button",
+          "settings": {
+            "button_label": "REQUEST A QUOTE",
+            "button_link": "shopify:\/\/pages\/request-a-quote",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_yyE6cb",
+        "text_bVxHeF",
+        "button_Ce7tzP"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "e2b5a27d-272e-40ba-bcf8-d6e997a58e4d": {
@@ -221,6 +293,7 @@
       "settings": {
         "heading": "News and Tips",
         "heading_size": "h1",
+        "description": "Keep up with the latest trends in office design and discover how to boost productivity with our expert insights.",
         "blog": "news",
         "post_limit": 3,
         "columns_desktop": 3,
@@ -232,6 +305,36 @@
         "padding_top": 100,
         "padding_bottom": 36
       }
+    },
+    "rich_text_EeDykC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Ck9BJp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Serving Offices Across New Zealand<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "text_KUVChk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From Auckland and Tauranga to Wellington, Christchurch to Hamilton, and Whangarei to Hawkes Bay, we deliver office products to businesses and homes nationwide. Whether setting up a small home office or a large corporate space, Uno Furniture can help you achieve your ideal workspace.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ck9BJp",
+        "text_KUVChk"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -240,7 +343,10 @@
     "120edbb0-6cdb-4deb-a205-aef676f9bb3b",
     "18c2a1a7-7b01-4e21-ad19-4ceb7ab69072",
     "featured_collection",
+    "rich_text_xPWmPY",
+    "rich_text_XpdA7x",
     "e2b5a27d-272e-40ba-bcf8-d6e997a58e4d",
-    "080615af-67f0-430c-82a6-51a286981e04"
+    "080615af-67f0-430c-82a6-51a286981e04",
+    "rich_text_EeDykC"
   ]
 }
