@@ -66,6 +66,12 @@
             "short_desc_richtext": "{{ product.metafields.custom.product_short_description | metafield_tag }}"
           }
         },
+        "short_description_html_PznnNt": {
+          "type": "short_description_html",
+          "settings": {
+            "short_desc_html": "{{ product.metafields.custom.product_short_description_html.value }}"
+          }
+        },
         "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
           "type": "addon_products",
           "settings": {
@@ -142,6 +148,7 @@
         "quantity_selector",
         "buy_buttons",
         "1f9b7a27-d25b-41cc-807c-248f692563a1",
+        "short_description_html_PznnNt",
         "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "collapsible-row-0",
         "collapsible-row-2",
