@@ -1,5 +1,6 @@
 .collection-list-wrapper .title-wrapper-with-link {
   gap: 0;
+  margin-bottom: 1rem;
 }
 
 .collection-list {
@@ -19,8 +20,9 @@
 }
 
 .collection-list-description {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   margin-bottom: 1em;
+  max-width: 650px;
 }
 
 @media screen and (max-width: 749px) {
@@ -38,6 +40,11 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
+  .collection-list-description {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }  
 }
 
 .collection-list__item:only-child {

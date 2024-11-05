@@ -70,15 +70,14 @@
               <span>- Featured Categories</span>
             {% endif %}
           </h2>
-
-          <div class="collection-list-description">
-            {{ section.settings.description }}
-          </div>
     
           {%- if section.settings.show_view_all and show_mobile_slider -%}
             <a href="{{ routes.collections_url }}" id="ViewAll-{{ section.id }}" class="link underlined-link large-up-hide" aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}">{{ 'sections.collection_list.view_all' | t }}</a>
           {%- endif -%}
         </div>
+        <div class="collection-list-description">
+          {{ section.settings.description }}
+        </div>        
       {%- endunless -%}
     
       <slider-component class="slider-mobile-gutter">

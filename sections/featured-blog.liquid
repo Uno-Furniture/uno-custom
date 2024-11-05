@@ -44,6 +44,12 @@
           </a>
         {%- endif -%}
       </div>
+
+      {% if section.settings.description != blank %}
+        <p class="featured-blog-description">
+          {{ section.settings.description }}
+        </p>
+      {% endif %}
     {%- endunless -%}
     {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
       <slider-component class="slider-mobile-gutter">
@@ -128,6 +134,11 @@
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
     },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Featured blog description"
+    },    
     {
       "type": "blog",
       "id": "blog",
