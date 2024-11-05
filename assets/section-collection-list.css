@@ -1,4 +1,5 @@
 .collection-list-wrapper .title-wrapper-with-link {
+  gap: 0;
 }
 
 .collection-list {
@@ -15,6 +16,11 @@
 
 .collection-list-title span {
   color: rgb(var(--color-base-accent-2));
+}
+
+.collection-list-description {
+  font-size: 1.8rem;
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 749px) {

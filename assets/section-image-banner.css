@@ -38,7 +38,7 @@
   .banner--content-align-left.banner--desktop-transparent .banner__box,
   .banner--content-align-right.banner--desktop-transparent .banner__box,
   .banner--medium.banner--desktop-transparent .banner__box {
-    max-width: 68rem;
+    max-width: 78rem;
   }
 }
 
@@ -381,6 +381,10 @@
 
 .banner__box > * + .banner__text {
   margin-top: 1.5rem;
+  opacity: 1;
+  color: #000000;
+  background-color: rgba(255,255,255, .85);
+  padding: 10px 15px;
 }
 
 @media screen and (min-width: 750px) {
