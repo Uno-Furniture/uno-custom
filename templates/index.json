@@ -25,8 +25,15 @@
         "69bf00bf-e08f-4e6f-8e6a-f97753354945": {
           "type": "heading",
           "settings": {
-            "heading": "PREMIUM PRODUCTS, AFFORDABLE PRICES",
+            "heading": "PREMIUM OFFICE PRODUCTS, AFFORDABLE PRICES",
             "heading_size": "h0"
+          }
+        },
+        "text_w3PFkB": {
+          "type": "text",
+          "settings": {
+            "text": "Discover premium office furniture that New Zealand businesses trust. From versatile standing desks to ergonomic office chairs, Uno Furniture delivers high-quality furniture to help you design a productive, ergonomic working environment.",
+            "text_style": "body"
           }
         },
         "68168df3-6ccb-4531-8642-56b1af90a5d6": {
@@ -43,6 +50,7 @@
       },
       "block_order": [
         "69bf00bf-e08f-4e6f-8e6a-f97753354945",
+        "text_w3PFkB",
         "68168df3-6ccb-4531-8642-56b1af90a5d6"
       ],
       "settings": {
@@ -67,51 +75,53 @@
         "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": "standing-desks"
-          }
-        },
-        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "desk-and-storage-combos"
-          }
-        },
-        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "workstations-and-corner-desks"
+            "collection": "standing-desks",
+            "col_block_desc": "Boost productivity and support better posture with a height-adjustable standing desk, ideal for corporate and home offices."
           }
         },
         "ab64a91c-ea1d-4c08-b65a-43b2d9d6dc31": {
           "type": "featured_collection",
           "settings": {
-            "collection": "fixed-height-desks"
+            "collection": "fixed-height-desks",
+            "col_block_desc": "Discover sturdy fixed-height desks engineered for stability and aesthetics. Available in various styles to suit your professional setting."
           }
         },
         "236dccb3-693a-43d4-836f-2800839bb0d6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "office-chairs"
+            "collection": "office-chairs",
+            "col_block_desc": "Searching for a comfortable home office chair? Find ergonomic designs featuring breathable mesh and adjustable support for all-day comfort."
+          }
+        },
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "screens-and-acoustic-panels",
+            "col_block_desc": "Create privacy and minimise noise distractions with our range of screens and acoustic panels, perfect for any busy open-plan office space."
+          }
+        },
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "storage",
+            "col_block_desc": "Streamline your work setup with our functional storage solutions—from filing cabinets to bookcases; we have options to keep every office organised."
           }
         }
       },
       "block_order": [
         "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-0",
-        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-1",
-        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-2",
         "ab64a91c-ea1d-4c08-b65a-43b2d9d6dc31",
-        "236dccb3-693a-43d4-836f-2800839bb0d6"
+        "236dccb3-693a-43d4-836f-2800839bb0d6",
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-1",
+        "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-2"
       ],
       "settings": {
         "collection_list": [
-          "standing-desks",
-          "fixed-height-desks",
-          "office-chairs",
-          "screens-and-acoustic-panels",
-          "storage"
+
         ],
         "title": "Featured Collections",
         "heading_size": "h2",
+        "description": "Explore our curated range of quality office furniture online, crafted for practical, stylish and effective workspaces.",
         "image_ratio": "landscape",
         "columns_desktop": 5,
         "color_scheme": "background-1",
