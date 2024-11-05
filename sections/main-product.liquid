@@ -76,6 +76,12 @@
                   {{ block.settings.short_desc_richtext }}
                 </div> 
               {% endif %} 
+            {%- when 'short_description_html' -%}
+              {% if block.settings.short_desc_html != blank %}
+                <div class="short_description" {{ block.shopify_attributes }}>
+                  {{ block.settings.short_desc_html }}
+                </div> 
+              {% endif %}              
             {%- when 'addon_products' -%}
                 <div id="addonProducts" {{ block.shopify_attributes }}></div> 
             {%- when 'text' -%}
@@ -877,6 +883,17 @@
         }
       ]
     },
+    {
+      "type": "short_description_html",
+      "name": "Short description HTML",
+      "settings": [
+        {
+          "type": "text",
+          "id": "short_desc_html",
+          "label": "Product short description HTML"
+        }
+      ]
+    },    
     {
       "type": "addon_products",
       "name": "Addon products (FBT)"
