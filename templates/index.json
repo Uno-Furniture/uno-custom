@@ -125,9 +125,7 @@
         "template--16991205458231__120edbb0-6cdb-4deb-a205-aef676f9bb3b-1670016990afb4f9c8-2"
       ],
       "settings": {
-        "collection_list": [
-
-        ],
+        "collection_list": [],
         "title": "Featured Collections",
         "heading_size": "h2",
         "description": "Explore our curated range of quality office furniture online, crafted for practical, stylish and effective workspaces.",
@@ -344,6 +342,15 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_liquid_8mtXV6": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"stamped-reviews-widget\" data-widget-type=\"full-page\" data-take=\"2\" data-style-color-star=\"#f52727\" data-min-rating=\"5\" data-random=\"true\"></div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -356,6 +363,7 @@
     "rich_text_XpdA7x",
     "e2b5a27d-272e-40ba-bcf8-d6e997a58e4d",
     "080615af-67f0-430c-82a6-51a286981e04",
-    "rich_text_EeDykC"
+    "rich_text_EeDykC",
+    "custom_liquid_8mtXV6"
   ]
 }
