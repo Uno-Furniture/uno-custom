@@ -40,6 +40,7 @@
         },
         "text_w3PFkB": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Discover premium office furniture that New Zealand businesses trust. From versatile standing desks to ergonomic office chairs, Uno Furniture delivers high-quality furniture to help you design a productive, ergonomic working environment.",
             "text_style": "body"
