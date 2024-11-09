@@ -42,7 +42,7 @@
   margin-bottom: 4rem;
 }
 
-.page-handle-stamped-store-reviews-only div#stamped-reviews-widget[data-widget-type="full-page-nps"] {
+.page-handle-stamped-store-reviews-only div#stamped-reviews-widget[data-widget-type="full-page"] {
   max-width: 100%;
   width: 100%;
 }
