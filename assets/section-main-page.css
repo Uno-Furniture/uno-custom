@@ -39,11 +39,12 @@
 }
 
 .page-handle-stamped-store-reviews-only .reviews-description {
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .page-handle-stamped-store-reviews-only div#stamped-reviews-widget[data-widget-type="full-page-nps"] {
   max-width: 100%;
+  width: 100%;
 }
 
 .page-handle-stamped-store-reviews-only #stamped-reviews-widget[data-widget-type="full-page"] .stamped-widget-buttons {
