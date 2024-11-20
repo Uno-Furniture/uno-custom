@@ -24,6 +24,17 @@ slideshow-component .slideshow.banner {
   flex-direction: column;
 }
 
+/* CUSTOM - Slideshow allows for mobile images with <picture> element */
+.slideshow__media > a {
+  z-index: 2;
+}
+
+.slideshow__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 749px) {
   .slideshow--placeholder.banner--mobile-bottom.banner--adapt_image .slideshow__media,
   .slideshow--placeholder.banner--adapt_image:not(.banner--mobile-bottom) {
