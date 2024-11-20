@@ -36,7 +36,7 @@
           "settings": {
             "image": "shopify://shop_images/Uno_Black_Friday_Sale_-_Desktop.jpg",
             "image_mobile": "shopify://shop_images/Uno_Black_Friday_Sale_-_Mobile.jpg",
-            "slide_link": "shopify://collections/all",
+            "slide_link": "shopify://collections/items-on-sale",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
