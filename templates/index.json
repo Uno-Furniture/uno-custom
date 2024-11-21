@@ -9,25 +9,6 @@
  */
 {
   "sections": {
-    "33788c93-ee94-4cd3-af41-784d1e5f2d89": {
-      "type": "image-banner",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/Christmas-Banner-Image-2023.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": true,
-        "restrict_banner_width": true,
-        "bottom_margin": 42,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "slideshow_VynyWe": {
       "type": "slideshow",
       "blocks": {
@@ -159,6 +140,29 @@
         "show_text_below": false
       }
     },
+    "rich_text_Gk8MnQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YWNhF7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Premium Office Furniture & Supplies</h1>",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YWNhF7"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 0
+      }
+    },
     "120edbb0-6cdb-4deb-a205-aef676f9bb3b": {
       "type": "collection-list",
       "blocks": {
@@ -216,7 +220,7 @@
         "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 48,
+        "padding_top": 16,
         "padding_bottom": 36
       }
     },
@@ -426,9 +430,9 @@
     }
   },
   "order": [
-    "33788c93-ee94-4cd3-af41-784d1e5f2d89",
     "slideshow_VynyWe",
     "image_banner",
+    "rich_text_Gk8MnQ",
     "120edbb0-6cdb-4deb-a205-aef676f9bb3b",
     "18c2a1a7-7b01-4e21-ad19-4ceb7ab69072",
     "featured_collection",
