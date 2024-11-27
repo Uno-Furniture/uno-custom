@@ -378,6 +378,7 @@
     },
     "custom_liquid_GjWV76": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div class=\"reviews-description\">Hear from our satisfied customers about their experiences with Uno Furniture.</div>\n<div data-random=\"true\" data-take=\"2\" id=\"stamped-reviews-widget\" data-widget-type=\"full-page\" data-style-color-star=\"#e9161d\" data-style-color-text=\"#363435\" data-min-rating=\"5\"></div>",
         "color_scheme": "background-1",
