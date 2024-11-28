@@ -424,7 +424,7 @@ a.btn-product-reviews:empty, a.btn-site-reviews:empty {
 </style>
 <script>
   $(document).ready(function() {
-    $(document).on('click', '#cart-icon-bubble', () => {
+    $(document).on('click', '#cart-icon-bubble, .product-buy-buttons button.product-form__submit', () => {
         StampedFn.loadBadges();
       console.log('click test');
     });
