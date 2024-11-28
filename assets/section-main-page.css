@@ -47,8 +47,13 @@
   width: 100%;
 }
 
-.page-handle-stamped-store-reviews-only #stamped-reviews-widget[data-widget-type="full-page"] .stamped-widget-buttons {
+/* .page-handle-stamped-store-reviews-only #stamped-reviews-widget[data-widget-type="full-page"] .stamped-widget-buttons {
   display: none !important;
+} */
+
+.page-handle-stamped-store-reviews-only #stamped-reviews-widget[data-widget-type="full-page"] .stamped-widget-buttons a,
+.page-handle-stamped-store-reviews-only #stamped-reviews-widget[data-widget-type="full-page-nps"] .stamped-widget-buttons a {
+  cursor: pointer;
 }
 
 .page-handle-stamped-store-reviews-only div#stamped-reviews-widget[data-widget-type="full-page-nps"] .stamped-widget-text {
