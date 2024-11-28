@@ -56,6 +56,18 @@
   cursor: pointer;
 }
 
+.page-handle-stamped-store-reviews-only .stamped-widget-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 420px) {
+  .page-handle-stamped-store-reviews-only .stamped-widget-title {
+    font-size: 1.8rem;
+  }
+}
+
+
 .page-handle-stamped-store-reviews-only div#stamped-reviews-widget[data-widget-type="full-page-nps"] .stamped-widget-text {
   margin: 0;
   font-size: 1.3rem;
