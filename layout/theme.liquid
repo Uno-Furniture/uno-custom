@@ -415,6 +415,12 @@ a.btn-product-reviews:empty, a.btn-site-reviews:empty {
     font-size: 17px;
     margin-right: 5px;
 }
+  .stamped-badge-caption[data-reviews][data-label][data-version="2"]:after {
+    content: ')' !important;
+}
+  .stamped-badge-caption[data-reviews][data-label][data-version="2"]:before {
+    content: attr(data-rating) ' (' !important;
+}
 </style>
         
 
