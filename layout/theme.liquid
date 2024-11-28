@@ -422,7 +422,14 @@ a.btn-product-reviews:empty, a.btn-site-reviews:empty {
     content: attr(data-rating) ' (' !important;
 }
 </style>
-        
+<script>
+  $(document).ready(function() {
+    $(document).on('click', '#cart-icon-bubble', () => {
+        StampedFn.loadBadges();
+      console.log('click test');
+    });
+  });
+</script>        
 
     <!-- Stamped - End script -->   
 
