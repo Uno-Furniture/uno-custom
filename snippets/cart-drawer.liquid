@@ -134,6 +134,16 @@
                           <a href="{{ item.url }}" class="cart-item__name h4 break">
                             {{- item.product.title | escape -}}
                           </a>
+   <!-- Stamped - Begin Star Rating Badge -->
+<span 
+class="stamped-product-reviews-badge stamped-main-badge" 
+data-id="{{ item.product.id }}" 
+data-product-sku="{{ item.product.handle }}" 
+data-product-title="{{item.product.title}}" 
+data-product-type="{{item.product.type}}" 
+style="display: block;">
+</span>
+<!-- Stamped - End Star Rating Badge -->                       
 
                           {%- if item.original_price != item.final_price -%}
                             <div class="cart-item__discounted-prices">
