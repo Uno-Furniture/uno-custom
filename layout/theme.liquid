@@ -427,6 +427,7 @@ a.btn-product-reviews:empty, a.btn-site-reviews:empty {
     $(document).on('click', '#cart-icon-bubble, .product-buy-buttons button.product-form__submit, cart-remove-button', () => {
        setTimeout(function() {
         StampedFn.loadBadges();
+         console.log('click test');
       },
       2000);
     });
