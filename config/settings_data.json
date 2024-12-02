@@ -153,7 +153,7 @@
           "announcement_QEgUbn": {
             "type": "announcement",
             "settings": {
-              "text": "Shop Black November Specials Now",
+              "text": "Shop Sale Items Now",
               "text_alignment": "center",
               "color_scheme": "inverse",
               "link": "shopify://collections/items-on-sale"
