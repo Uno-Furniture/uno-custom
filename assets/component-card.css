@@ -395,3 +395,8 @@
 .col-list-block-desc {
   font-size: 1.4rem;
 }
+
+/* Hide zero reviews stars */
+.stamped-main-badge.stamped-product-reviews-badge:has(span[data-rating="0.0"]) {
+  display: none !important;
+}

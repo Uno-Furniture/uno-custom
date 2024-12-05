@@ -454,6 +454,7 @@ a.product__text {
   aspect-ratio: 16 / 9;
   height: auto;
   margin: 9px 0;
+  max-width: 100%;
 }
 
 .product .price .badge {
