@@ -247,34 +247,49 @@
         "padding_bottom": 60
       }
     },
-    "rich_text_xPWmPY": {
-      "type": "rich-text",
+    "image_with_text_LFmVwk": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_L68AKG": {
+        "heading_9N9Pcx": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>Why Choose Uno Furniture?</h2>",
-            "heading_size": "h1"
+            "heading": "Why Choose Uno Furniture?",
+            "heading_size": "h2"
           }
         },
-        "text_3GcjeP": {
+        "text_FJmN8k": {
           "type": "text",
           "settings": {
-            "text": "<p>We offer an extensive range of new office equipment and furniture to meet all your home or workplace needs. Our collection includes commercial office furniture for sale, suitable for businesses of all sizes, as well as home office furniture designed with comfort and productivity in mind. </p><p>Our helpful team provides tailored advice on creating ergonomic and efficient workspaces, ensuring you find the right style for your environment. Choose Uno Furniture for excellent quality, great service and a wide variety of modern office furniture. </p>"
+            "text": "<p>We offer an extensive range of new office equipment and furniture to meet all your home or workplace needs. Our collection includes commercial office furniture for sale, suitable for businesses of all sizes, as well as home office furniture designed with comfort and productivity in mind. </p><p>Our helpful team provides tailored advice on creating ergonomic and efficient workspaces, ensuring you find the right style for your environment. Choose Uno Furniture for excellent quality, great service and a wide variety of modern office furniture. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_Ax9YyC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact US",
+            "button_link": "shopify://pages/contact"
           }
         }
       },
       "block_order": [
-        "heading_L68AKG",
-        "text_3GcjeP"
+        "heading_9N9Pcx",
+        "text_FJmN8k",
+        "button_Ax9YyC"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "background-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image": "shopify://shop_images/TeamPhotoCroppedWeb2.webp",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_ncMM4E": {
@@ -387,7 +402,7 @@
     "120edbb0-6cdb-4deb-a205-aef676f9bb3b",
     "18c2a1a7-7b01-4e21-ad19-4ceb7ab69072",
     "featured_collection",
-    "rich_text_xPWmPY",
+    "image_with_text_LFmVwk",
     "image_with_text_ncMM4E",
     "e2b5a27d-272e-40ba-bcf8-d6e997a58e4d",
     "080615af-67f0-430c-82a6-51a286981e04",
