@@ -290,15 +290,15 @@
         "text_fqp4by": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>At Uno Furniture, we specialize in creating tailored <a href=\"https://unofurniture.co.nz/pages/office-furniture-fit-outs\"><span style=\"text-decoration:underline\">office furniture fit-outs</span></a> designed specifically for your business needs. Our range of high-quality and affordable furniture includes ergonomic standing desks and essential accessories, ensuring comfort and productivity in your workspace. </p><p>We take pride in our ability to transform your office environment, whether you’re furnishing a new space or upgrading existing areas. With a focus on style and functionality, our solutions are crafted to enhance your workplace experience.</p>",
             "text_style": "body"
           }
         },
         "button_7WbV3a": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "Request A quote",
+            "button_link": "shopify://pages/request-a-quote"
           }
         }
       },
@@ -308,6 +308,7 @@
         "button_7WbV3a"
       ],
       "settings": {
+        "image": "shopify://shop_images/uno-fit-out-hero.webp",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -317,49 +318,7 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_XpdA7x": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_yyE6cb": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h2>Looking To Fit Out Your Entire Office?</h2>",
-            "heading_size": "h1"
-          }
-        },
-        "text_bVxHeF": {
-          "type": "text",
-          "settings": {
-            "text": "<p>At Uno Furniture, we specialize in creating tailored <a href=\"https://unofurniture.co.nz/pages/office-furniture-fit-outs\"><span style=\"text-decoration:underline\">office furniture fit-outs</span></a> designed specifically for your business needs. Our range of high-quality and affordable furniture includes ergonomic standing desks and essential accessories, ensuring comfort and productivity in your workspace. </p><p>We take pride in our ability to transform your office environment, whether you’re furnishing a new space or upgrading existing areas. With a focus on style and functionality, our solutions are crafted to enhance your workplace experience.</p>"
-          }
-        },
-        "button_Ce7tzP": {
-          "type": "button",
-          "settings": {
-            "button_label": "REQUEST A QUOTE",
-            "button_link": "shopify://pages/request-a-quote",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_yyE6cb",
-        "text_bVxHeF",
-        "button_Ce7tzP"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
+        "padding_top": 72,
         "padding_bottom": 0
       }
     },
@@ -430,7 +389,6 @@
     "featured_collection",
     "rich_text_xPWmPY",
     "image_with_text_ncMM4E",
-    "rich_text_XpdA7x",
     "e2b5a27d-272e-40ba-bcf8-d6e997a58e4d",
     "080615af-67f0-430c-82a6-51a286981e04",
     "rich_text_EeDykC"
