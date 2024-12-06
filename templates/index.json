@@ -277,6 +277,50 @@
         "padding_bottom": 52
       }
     },
+    "image_with_text_ncMM4E": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bMTwVi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Looking To Complete Office Fitouts?",
+            "heading_size": "h2"
+          }
+        },
+        "text_fqp4by": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_7WbV3a": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_bMTwVi",
+        "text_fqp4by",
+        "button_7WbV3a"
+      ],
+      "settings": {
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_XpdA7x": {
       "type": "rich-text",
       "blocks": {
@@ -385,6 +429,7 @@
     "18c2a1a7-7b01-4e21-ad19-4ceb7ab69072",
     "featured_collection",
     "rich_text_xPWmPY",
+    "image_with_text_ncMM4E",
     "rich_text_XpdA7x",
     "e2b5a27d-272e-40ba-bcf8-d6e997a58e4d",
     "080615af-67f0-430c-82a6-51a286981e04",
