@@ -134,6 +134,7 @@
             {%- endif -%}
           </div>
         </div>
+        <a class="card-media-link" href="{{ card_product.url }}"><span class="visually-hidden">{{ card_product.title }} product page</span></a>
       </div>
       <div class="card__content">
         <div class="card__information">
@@ -193,7 +194,7 @@
 
                 <div class="product-card-swatches">
                   {% for desktop_colour in desktop_colours %}
-                    {% render 'facet-swatch', colour: desktop_colour, product_swatch: true, image_url: desktop_colour_images[forloop.index] %}
+                    {% render 'facet-swatch', colour: desktop_colour, product_swatch: true, image_url: desktop_colour_images[forloop.index0] %}
                   {% endfor %}
                 </div>
 
