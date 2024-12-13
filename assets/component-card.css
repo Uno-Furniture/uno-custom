@@ -400,3 +400,8 @@
 .stamped-main-badge.stamped-product-reviews-badge:has(span[data-rating="0.0"]) {
   display: none !important;
 }
+
+/* CUSTOM - Swatches on collections */
+.product-card-swatches {
+  display: flex;
+}

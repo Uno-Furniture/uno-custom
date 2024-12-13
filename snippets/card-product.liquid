@@ -163,8 +163,49 @@
 
             <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ card_product.id }}" data-product-sku="{{ card_product.handle }}" data-product-type="{{card_product.type}}" data-product-title="{{card_product.title}}"  style="display: inline-block;">{{ card_product.metafields.stamped.badge }}</span>
 
+            {% comment %} CUSTOM - Desktop colour swatches on product cards in collections {% endcomment %}
+            {% for option in card_product.options %}
+              {% capture downcased_option %}{{ option | downcase }}{% endcapture %}
 
-            {% assign option_index = 0 %}
+              {% if downcased_option contains 'desktop color' or downcased_option contains 'desktop colour' %}
+                {% assign option_index = forloop.index0 %}
+                
+                {% assign desktop_colours = '' %}
+                {% assign desktop_colour_images = '' %}
+
+                {% for variant in card_product.variants %}
+                  {% assign current_colour = variant.options[option_index] %}
+
+                  {% unless desktop_colours contains current_colour %}
+                    {% if desktop_colours != '' %}
+                      {% assign desktop_colours = desktop_colours | append: ',' %}
+                      {% assign desktop_colour_images = desktop_colour_images | append: ',' %}
+                    {% endif %}
+
+                    {% assign desktop_colours = desktop_colours | append: current_colour %}
+                    {% assign theVariantImage = variant.image | image_url: width: 600  %}
+                    {% assign desktop_colour_images = desktop_colour_images | append: theVariantImage %}
+                  {% endunless %}
+                {% endfor %}
+
+                {% assign desktop_colours = desktop_colours | split: ',' %}
+                {% assign desktop_colour_images = desktop_colour_images | split: ',' %}
+
+                <div class="product-card-swatches">
+                  {% for desktop_colour in desktop_colours %}
+                    {% render 'facet-swatch', colour: desktop_colour, product_swatch: true, image_url: desktop_colour_images[forloop.index] %}
+                  {% endfor %}
+                </div>
+
+                {% break %}
+              {% endif %}
+            {% endfor %}
+
+
+            
+
+
+            {% comment %} {% assign option_index = 0 %}
             <div class="product-options-info-wrap">
               {% for option in card_product.options %}
                 {% capture downcased_option %}{{ option | downcase }}{% endcapture %}
@@ -219,7 +260,7 @@
                     {% endunless %}
                   {% endif %}
               {% endfor %} 
-            </div>           
+            </div>            {% endcomment %}
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
