@@ -356,10 +356,6 @@ style="display: block;">
         </form>
       </cart-drawer-items>
 
-      <div class="cart-drawer-bnpl">
-        Buy Now or Pay Later with <img id="bnplAfterpayCart" src="https://cdn.shopify.com/s/files/1/0008/5796/4659/files/afterpay_4c150ef7-b657-4cd3-929e-d12fddb6d23b.svg?v=1734329782" alt="Afterpay logo"> <img id="bnplZipCart" src="https://cdn.shopify.com/s/files/1/0008/5796/4659/files/zip-fearless-98.svg?v=1734330658" alt="Zip logo"> <img id="bnplGemCart" src="https://cdn.shopify.com/s/files/1/0008/5796/4659/files/gem-logo.svg?v=1734330249" alt="Gem logo-NZD">
-      </div>
-
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
@@ -451,7 +447,10 @@ style="display: block;">
             {{ 'sections.cart.checkout' | t }}
           </button>
         </div>
-      </div>
+        <div class="cart-drawer-bnpl">
+          <span>Buy Now or Pay Later with</span> <img id="bnplAfterpayCart" src="https://cdn.shopify.com/s/files/1/0008/5796/4659/files/afterpay_4c150ef7-b657-4cd3-929e-d12fddb6d23b.svg?v=1734329782" alt="Afterpay logo"> <img id="bnplZipCart" src="https://cdn.shopify.com/s/files/1/0008/5796/4659/files/zip-fearless-98.svg?v=1734330658" alt="Zip logo"> <img id="bnplGemCart" src="https://cdn.shopify.com/s/files/1/0008/5796/4659/files/gem-logo.svg?v=1734330249" alt="Gem logo-NZD">
+        </div>        
+      </div>      
     </div>
   </div>
 </cart-drawer>

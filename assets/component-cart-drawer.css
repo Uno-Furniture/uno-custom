@@ -413,9 +413,14 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 /* CUSTOM - BNPL message in slide our cart */
 .cart-drawer-bnpl {
   font-size: 1.2rem;
-  padding: 10px 0;
+  padding: 10px 0 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.cart-drawer-bnpl span {
+  opacity: .9;
 }
 
 .cart-drawer-bnpl #bnplAfterpayCart {
