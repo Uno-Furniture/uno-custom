@@ -439,7 +439,7 @@
   position: relative;
   text-align: center;
   font-size: 1.2rem;
-  margin-right: 3px;
+  margin-right: 2px;
 }
 
 .product-card-swatches .colour-option img {
@@ -447,7 +447,7 @@
   height: 100%;
   object-fit: cover;
   padding: 1px;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .product-card-swatches .colour-tooltip {

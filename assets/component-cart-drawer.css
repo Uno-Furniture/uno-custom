@@ -409,3 +409,39 @@ cart-drawer-items::-webkit-scrollbar-thumb {
 cart-drawer-items::-webkit-scrollbar-track-piece {
   margin-top: 31px;
 }
+
+/* CUSTOM - BNPL message in slide our cart */
+.cart-drawer-bnpl {
+  font-size: 1.2rem;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.cart-drawer-bnpl #bnplAfterpayCart {
+  opacity: .33;
+  margin: 0 4px 0 8px;
+  position: relative;
+  /* transform: translateY(3px); */
+}
+
+.cart-drawer-bnpl #bnplZipCart {
+  opacity: .33;
+  width: 52px;
+  margin: 0 4px 0 4px;
+}
+
+.cart-drawer-bnpl #bnplGemCart {
+  opacity: .33;
+  height: 18px;
+  margin: 0 4px;
+  position: relative;
+  transform: translateY(3px);
+}
+
+@media screen and (max-width: 390px) {
+  .cart-drawer-bnpl {
+    font-size: 1rem;
+    letter-spacing: .2px;
+  }  
+}
