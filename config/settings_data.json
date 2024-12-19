@@ -165,7 +165,7 @@
             "settings": {
               "text": "Uno Will be closed Between 21 Dec and 5 Jan",
               "text_alignment": "center",
-              "color_scheme": "accent-1",
+              "color_scheme": "inverse",
               "link": "https://unofurniture.co.nz/pages/christmas-hours"
             }
           }
