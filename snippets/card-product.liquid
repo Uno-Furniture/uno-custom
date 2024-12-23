@@ -162,7 +162,7 @@
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
             {%- endif -%}
 
-            {% comment %} CUSTOM - Desktop colour swatches on product cards in collections {% endcomment %}
+            {% comment %} CUSTOM - Colour swatches on product cards in collections {% endcomment %}
             {% for option in card_product.options %}
               {% capture downcased_option %}{{ option | downcase }}{% endcapture %}
 
@@ -172,7 +172,7 @@
               {% endif %}
 
               {% assign invalid_colour = false %}
-              {% if downcased_option contains 'leg' or downcased_option contains 'base' or downcased_option contains 'door' %}
+              {% if downcased_option contains 'leg' or downcased_option contains 'base' or downcased_option contains 'frame' or downcased_option contains 'door' %}
                 {% assign invalid_colour = true %}
               {% endif %}
 
@@ -185,51 +185,45 @@
                 {% assign colour_count = 0 %}
 
 
-                {% comment %} NEED TO CHECK IF THERE IS A VARIANT IMAGE TOO
-  ___  ___  ___  ___  ___.---------------.
-.'\__\'\__\'\__\'\__\'\__,`   .  ____ ___ \
-|\/ __\/ __\/ __\/ __\/ _:\   |`.  \  \___ \
- \\'\__\'\__\'\__\'\__\'\_`.__|""`. \  \___ \
-  \\/ __\/ __\/ __\/ __\/ __:                \
-   \\'\__\'\__\'\__\ \__\'\_;-----------------`
-    \\/   \/   \/   \/   \/ :               hh|
-     \|______________________;________________|
-                {% endcomment %}
-
                 {% for variant in card_product.variants %}
                   {% assign current_colour = variant.options[option_index] %}
 
                   {% unless desktop_colours contains current_colour %}
-                    {% if desktop_colours != '' %}
-                      {% assign desktop_colours = desktop_colours | append: ',' %}
-                      {% assign desktop_colour_images = desktop_colour_images | append: ',' %}
-                    {% endif %}
-
-                    {% assign desktop_colours = desktop_colours | append: current_colour %}
                     {% assign theVariantImage = variant.image | image_url: width: 600  %}
-                    {% assign desktop_colour_images = desktop_colour_images | append: theVariantImage %}
 
-                    {% assign colour_count = colour_count | plus: 1 %}
+                    {% unless theVariantImage == blank %}
+                      {% if desktop_colours != '' %}
+                        {% assign desktop_colours = desktop_colours | append: ',' %}
+                        {% assign desktop_colour_images = desktop_colour_images | append: ',' %}
+                      {% endif %}
+  
+                      {% assign desktop_colours = desktop_colours | append: current_colour %}
+                      
+                      {% assign desktop_colour_images = desktop_colour_images | append: theVariantImage %}
+  
+                      {% assign colour_count = colour_count | plus: 1 %}
+                    {% endunless %}
                   {% endunless %}
                 {% endfor %}
 
                 {% assign desktop_colours = desktop_colours | split: ',' %}
                 {% assign desktop_colour_images = desktop_colour_images | split: ',' %}
 
-                
-                <div class="product-card-swatches">
-                  {% for desktop_colour in desktop_colours %}
-                    {% if forloop.index == 6 %}
-                      <div class="colour-link-wrapper">
-                        <a class="more-colours-link full-unstyled-link" href="{{ card_product.url }}" aria-label="View more colour options">+{{ colour_count | minus: 5 }}</a>
-                      </div>
-
-                      {% break %}
-                    {% else %}
-                      {% render 'facet-swatch', colour: desktop_colour, product_swatch: true, image_url: desktop_colour_images[forloop.index0] %}
-                    {% endif %}
-                  {% endfor %}
-                </div>
+                {% if desktop_colours.size > 1 %}
+                  <div class="product-card-swatches">
+                    {% for desktop_colour in desktop_colours %}
+                      {% if forloop.index == 6 %}
+                        <div class="colour-link-wrapper">
+                          <a class="more-colours-link full-unstyled-link" href="{{ card_product.url }}" aria-label="View more colour options">+{{ colour_count | minus: 5 }}</a>
+                        </div>
+  
+                        {% break %}
+                      {% else %}
+                        {% render 'facet-swatch', colour: desktop_colour, product_swatch: true, image_url: desktop_colour_images[forloop.index0] %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>                  
+                {% endif %}
 
                 {% break %}
               {% endif %}
