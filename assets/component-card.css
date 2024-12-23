@@ -417,8 +417,10 @@
 /* CUSTOM - Swatches on collections */
 .product-card-swatches {
   display: flex;
+  align-items: center;
   position: relative;
   z-index: 2;
+  margin-top: 9px;
 }
 
 /* A new link to help with swatch cards */
@@ -468,4 +470,16 @@
 
 .product-card-swatches .colour-option:hover .colour-tooltip {
   opacity: 1;
+}
+
+a.more-colours-link {
+  position: relative;
+  z-index: 1;
+  text-decoration: none !important;
+  font-size: 1.3rem;
+  border: 1px solid #ccc;
+  border-radius: 32px;
+  margin-left: 2px;
+  padding: 3px 5px;
+  line-height: 1;
 }
