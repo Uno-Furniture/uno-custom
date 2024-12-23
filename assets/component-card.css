@@ -444,6 +444,13 @@
   margin-right: 2px;
 }
 
+@media screen and (max-width: 379px) {
+  .product-card-swatches .colour-option {
+    width: 21px;
+    height: 21px;
+  }
+}
+
 .product-card-swatches .colour-option img {
   width: 100%;
   height: 100%;
