@@ -14,6 +14,7 @@
       "blocks": {
         "slide_4E7b3f": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/EmailFooterChristmas2024-Recovered.jpg",
             "image_mobile": "shopify://shop_images/Christmas_Banner_Image_2024-NewPageCrop-Recovered.jpg",
