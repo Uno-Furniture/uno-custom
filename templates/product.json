@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "1d4eaa9d-6bbe-4684-b0be-79c48ca2b9c4": {
@@ -11,11 +20,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "47ece7e1-a554-4cfa-b8fb-23806c91976c": {
-          "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "use_metafields": true,
             "sku_tagtype": "sku",
@@ -25,8 +33,7 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "custom_liquid_pG6fBQ": {
           "type": "custom_liquid",
@@ -51,8 +58,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -64,7 +70,7 @@
           "type": "custom_liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "<div id=\"latitude-product-widget\"><\/div>\n\n{% render 'zip-widget' %}"
+            "custom_liquid": "<div id=\"latitude-product-widget\"></div>\n\n{% render 'zip-widget' %}"
           }
         },
         "e16f7eb1-7704-438f-9540-0716c4d26981": {
@@ -91,6 +97,16 @@
             "content": "",
             "page": "",
             "dynamic_text": "{{ product.metafields.custom.product_specifications.value }}"
+          }
+        },
+        "collapsible_tab_8WaJef": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Material",
+            "icon": "leather",
+            "content": "",
+            "page": "",
+            "dynamic_text": "{{ product.metafields.custom.product_materials.value }}"
           }
         },
         "collapsible-row-3": {
@@ -147,6 +163,7 @@
         "e16f7eb1-7704-438f-9540-0716c4d26981",
         "collapsible-row-0",
         "collapsible-row-2",
+        "collapsible_tab_8WaJef",
         "collapsible-row-3",
         "56e5bc52-12a6-489e-9082-6c2807a6aaa7",
         "collapsible-row-1",
@@ -164,7 +181,9 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "model_heading": "",
+        "model_info": ""
       }
     },
     "product-recommendations": {
@@ -188,7 +207,7 @@
     "7ee19107-8f55-491e-bdc0-a20ef143653e": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div id=\"addonProducts\"><\/div>",
+        "custom_liquid": "<div id=\"addonProducts\"></div>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
@@ -198,7 +217,7 @@
       "type": "apps",
       "blocks": {
         "dfac5d02-dc6b-4fb9-b794-285b45534fd4": {
-          "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
             "tags_exclude": "",
