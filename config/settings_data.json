@@ -152,6 +152,7 @@
           },
           "announcement_QEgUbn": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Shop Sale Items Now",
               "text_alignment": "center",
@@ -159,20 +160,30 @@
               "link": "shopify://collections/items-on-sale"
             }
           },
-          "announcement_VXEFfd": {
+          "announcement_EWKACa": {
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "Uno Will be closed Between 21 Dec and 5 Jan",
+              "text": "Welcome to our store",
+              "text_alignment": "center",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
+          "announcement_VXEFfd": {
+            "type": "announcement",
+            "settings": {
+              "text": "Uno Will is closed for Auckland Anniversary Day, back on deck tomorrow",
               "text_alignment": "center",
               "color_scheme": "inverse",
-              "link": "https://unofurniture.co.nz/pages/christmas-hours"
+              "link": "shopify://collections/items-on-sale"
             }
           }
         },
         "block_order": [
           "announcement_b3q4ny",
           "announcement_QEgUbn",
+          "announcement_EWKACa",
           "announcement_VXEFfd"
         ],
         "settings": {}
