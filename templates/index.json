@@ -410,8 +410,8 @@
         "button_7WbV3a": {
           "type": "button",
           "settings": {
-            "button_label": "Request A Free Cpnsultation",
-            "button_link": "shopify://pages/request-a-quote"
+            "button_label": "Request A Free Consultation",
+            "button_link": "https://unofurniture.co.nz/pages/office-furniture-fit-outs"
           }
         }
       },
