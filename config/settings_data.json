@@ -152,6 +152,7 @@
           },
           "announcement_QEgUbn": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Shop Sale Items Now",
               "text_alignment": "center",
@@ -161,19 +162,18 @@
           },
           "announcement_EWKACa": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Welcome to our store",
+              "text": "SHOWROOM AND OFFICE HOURS WAITANGI WEEKEND",
               "text_alignment": "center",
               "color_scheme": "accent-1",
-              "link": ""
+              "link": "shopify://pages/holiday-hours"
             }
           },
           "announcement_VXEFfd": {
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "Uno Will is closed for Auckland Anniversary Day, back on deck tomorrow",
+              "text": "Uno",
               "text_alignment": "center",
               "color_scheme": "inverse",
               "link": "shopify://collections/items-on-sale"
