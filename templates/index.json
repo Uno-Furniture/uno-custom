@@ -174,7 +174,7 @@
         ".multicolumn-card {display: flex; align-items: center; background-color: #363435 !important;}",
         ".multicolumn-card__image-wrapper {padding: 20px;}",
         ".multicolumn-card__info {padding-left: 0px;}",
-        ".multicolumn-card__info h3 {font-size: 15px; text-align:left;}"
+        ".multicolumn-card__info h3 {font-size: 15px; text-align: left;}"
       ],
       "settings": {
         "title": "",
@@ -416,8 +416,8 @@
         "button_7WbV3a": {
           "type": "button",
           "settings": {
-            "button_label": "Request A Free Cpnsultation",
-            "button_link": "shopify://pages/request-a-quote"
+            "button_label": "Request A Free Consultation",
+            "button_link": "shopify://pages/office-furniture-fit-outs"
           }
         }
       },
