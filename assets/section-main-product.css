@@ -1146,6 +1146,10 @@ a.product__text {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .template-suffix-addons .thumbnail-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .thumbnail-list_item--variant:not(:first-child) {
@@ -1163,6 +1167,14 @@ a.product__text {
 
   .product--large .thumbnail-list {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .template-suffix-addons .product--medium .thumbnail-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .template-suffix-addons .product--large .thumbnail-list {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
