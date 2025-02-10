@@ -152,7 +152,6 @@
           },
           "announcement_QEgUbn": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "Shop Sale Items Now",
               "text_alignment": "center",
@@ -162,6 +161,7 @@
           },
           "announcement_EWKACa": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "SHOWROOM AND OFFICE HOURS WAITANGI WEEKEND",
               "text_alignment": "center",
