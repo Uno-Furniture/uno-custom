@@ -121,7 +121,7 @@
             "title": "Smart Store Location",
             "heading_accent_color": false,
             "text": "",
-            "text_is_display": false,
+            "text_is_display": true,
             "link_label": "3D Store",
             "link": "shopify://pages/showroom-walkthrough"
           }
