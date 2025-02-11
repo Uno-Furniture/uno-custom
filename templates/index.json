@@ -118,11 +118,11 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/store-svgrepo-com.png",
-            "title": "Smart Store Location",
+            "title": "",
             "heading_accent_color": false,
             "text": "",
             "text_is_display": false,
-            "link_label": "3D Store",
+            "link_label": "Smart Store Location",
             "link": "shopify://pages/showroom-walkthrough"
           }
         },
@@ -130,11 +130,11 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/free-delivery-free-svgrepo-com.png",
-            "title": "Free Shipping Options",
+            "title": "",
             "heading_accent_color": false,
             "text": "",
             "text_is_display": true,
-            "link_label": "Shipping Options",
+            "link_label": "Free Shipping Options",
             "link": "shopify://pages/shipping"
           }
         },
@@ -142,11 +142,11 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/purchase-mobile-sales-svgrepo-com_1.png",
-            "title": "Exclusive Hot Deals",
+            "title": "",
             "heading_accent_color": false,
             "text": "",
             "text_is_display": false,
-            "link_label": "",
+            "link_label": "Exclusive Hot Deals",
             "link": "shopify://collections/items-on-sale"
           }
         },
@@ -154,11 +154,11 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/wallet-svgrepo-com_1.png",
-            "title": "Flexible Payment Options",
+            "title": "",
             "heading_accent_color": false,
             "text": "",
             "text_is_display": false,
-            "link_label": "",
+            "link_label": "Flexible Payment Options",
             "link": "shopify://pages/flexible-payment-option"
           }
         }
