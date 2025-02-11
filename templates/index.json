@@ -120,8 +120,8 @@
             "image": "shopify://shop_images/store-svgrepo-com.png",
             "title": "Smart Store Location",
             "heading_accent_color": false,
-            "text": "<p>bfigfids</p>",
-            "text_is_display": true,
+            "text": "<p>ABC</p>",
+            "text_is_display": false,
             "link_label": "3D Store",
             "link": "shopify://pages/showroom-walkthrough"
           }
