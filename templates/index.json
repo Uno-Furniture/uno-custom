@@ -174,7 +174,8 @@
         ".multicolumn-card {display: flex; align-items: center; background-color: #363435 !important;}",
         ".multicolumn-card__image-wrapper {padding: 20px;}",
         ".multicolumn-card__info {padding-left: 0px;}",
-        ".multicolumn-card__info h3 {font-size: 15px; text-align: left;}"
+        ".multicolumn-card__info h3 {font-size: 15px; text-align: left;}",
+        ".link{color:#fff;}"
       ],
       "settings": {
         "title": "",
