@@ -130,7 +130,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/free-delivery-free-svgrepo-com.png",
-            "title": "Free Standard Shipping",
+            "title": "Free Shipping Options",
             "heading_accent_color": false,
             "text": "",
             "text_is_display": false,
