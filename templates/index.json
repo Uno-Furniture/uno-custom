@@ -133,8 +133,8 @@
             "title": "Free Shipping Options",
             "heading_accent_color": false,
             "text": "",
-            "text_is_display": false,
-            "link_label": "",
+            "text_is_display": true,
+            "link_label": "Shipping Options",
             "link": "shopify://pages/shipping"
           }
         },
@@ -184,7 +184,7 @@
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
-        "button_label": "",
+        "button_label": "sfvgfv",
         "button_link": "",
         "color_scheme": "background-1",
         "columns_mobile": "1",
