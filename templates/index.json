@@ -120,7 +120,7 @@
             "image": "shopify://shop_images/store-svgrepo-com.png",
             "title": "Smart Store Location",
             "heading_accent_color": false,
-            "text": "<p>ABC</p>",
+            "text": "",
             "text_is_display": false,
             "link_label": "3D Store",
             "link": "shopify://pages/showroom-walkthrough"
@@ -175,7 +175,7 @@
         ".multicolumn-card__image-wrapper {padding: 20px;}",
         ".multicolumn-card__info {padding-left: 0px;}",
         ".multicolumn-card__info h3 {font-size: 15px; text-align: left;}",
-        ".link{color:#fff;}"
+        ".link {color: #fff;}"
       ],
       "settings": {
         "title": "",
