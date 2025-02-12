@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -20,7 +29,7 @@
         "text_qDrBHK": {
           "type": "text",
           "settings": {
-            "text": "<p>Uno Furniture offers complete office fit-outs tailored to your business needs, with a focus on quality and affordability. Whether you’re furnishing an entire office or upgrading key areas, we provide a range of solutions, including ergonomic standing desks and accessories. With fast delivery across New Zealand, we ensure your office fit-out is efficient and hassle-free.<\/p>",
+            "text": "<p>Uno Furniture offers complete office fit-outs tailored to your business needs, with a focus on quality and affordability. Whether you’re furnishing an entire office or upgrading key areas, we provide a range of solutions, including ergonomic standing desks and accessories. With fast delivery across New Zealand, we ensure your office fit-out is efficient and hassle-free.</p>",
             "text_style": "body"
           }
         },
@@ -28,7 +37,7 @@
           "type": "button",
           "settings": {
             "button_label": "Free Consultation",
-            "button_link": "shopify:\/\/pages\/contact"
+            "button_link": "shopify://pages/contact"
           }
         }
       },
@@ -38,11 +47,56 @@
         "button_H3BK4H"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/uno-fit-out-hero.jpg",
+        "image": "shopify://shop_images/uno-fit-out-hero.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_FnfdfM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WzYRjY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Choose UNO Furniture for your office fitout?",
+            "heading_size": "h2"
+          }
+        },
+        "text_eq9rc8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At UNO Furniture, we take pride in being your trusted partner for creating inspiring, functional workspaces. Our commitment to quality means you’ll enjoy furniture that stands the test of time, designed to enhance productivity and comfort. We understand that every business is unique, which is why we offer tailored solutions to suit your specific needs, whether it’s a complete office fit-out or upgrading key areas. With a wide range of ergonomic and stylish options, fast delivery across New Zealand, and a dedication to affordability, UNO Furniture ensures your office transformation is seamless, efficient, and stress-free.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_jy8hJT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request A Quote",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WzYRjY",
+        "text_eq9rc8",
+        "button_jy8hJT"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/fe3bq5upkond1-crop.webp",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -57,6 +111,7 @@
       "settings": {
         "heading": "Recent Office Fit-out Projects",
         "heading_size": "h2",
+        "description": "",
         "blog": "office-furniture-fit-outs",
         "post_limit": 3,
         "columns_desktop": 3,
@@ -76,8 +131,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/Datacom_200x_f1067471-dff3-4bb5-a74d-35dd0f051ab1.png",
-            "link": "https:\/\/www.datacom.co.nz\/Home.aspx",
+            "image": "shopify://shop_images/Datacom_200x_f1067471-dff3-4bb5-a74d-35dd0f051ab1.png",
+            "link": "https://www.datacom.co.nz/Home.aspx",
             "client_name": ""
           }
         },
@@ -85,8 +140,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/cLrX2cO_200x200_bf0b62b4-8318-48.png",
-            "link": "https:\/\/www.sharesies.nz\/",
+            "image": "shopify://shop_images/cLrX2cO_200x200_bf0b62b4-8318-48.png",
+            "link": "https://www.sharesies.nz/",
             "client_name": ""
           }
         },
@@ -94,8 +149,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/robertBird_200x_8e6350df-e202-4189-8a4b-452586998358.png",
-            "link": "https:\/\/www.robertbird.com\/",
+            "image": "shopify://shop_images/robertBird_200x_8e6350df-e202-4189-8a4b-452586998358.png",
+            "link": "https://www.robertbird.com/",
             "client_name": ""
           }
         },
@@ -103,8 +158,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/logo_200x_bcaf4ad6-84b1-4149-83dc-8213084ed3be.png",
-            "link": "https:\/\/www.port-tauranga.co.nz\/",
+            "image": "shopify://shop_images/logo_200x_bcaf4ad6-84b1-4149-83dc-8213084ed3be.png",
+            "link": "https://www.port-tauranga.co.nz/",
             "client_name": ""
           }
         },
@@ -112,8 +167,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/The-Salvation-Army-Logo-1200_200.png",
-            "link": "https:\/\/www.salvationarmy.org.nz\/",
+            "image": "shopify://shop_images/The-Salvation-Army-Logo-1200_200.png",
+            "link": "https://www.salvationarmy.org.nz/",
             "client_name": ""
           }
         },
@@ -121,8 +176,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/SilverFernFarms-Logo3-200_200x_0253fad2-8ccd-4091-a124-938a56f26bd9.png",
-            "link": "https:\/\/silverfernfarms.com\/",
+            "image": "shopify://shop_images/SilverFernFarms-Logo3-200_200x_0253fad2-8ccd-4091-a124-938a56f26bd9.png",
+            "link": "https://silverfernfarms.com/",
             "client_name": ""
           }
         },
@@ -130,8 +185,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/og_logo-200_200x_6de1e7a4-e34e-4555-a432-ce6ffaf558db.png",
-            "link": "https:\/\/www.consultrecruitment.co.nz\/",
+            "image": "shopify://shop_images/og_logo-200_200x_6de1e7a4-e34e-4555-a432-ce6ffaf558db.png",
+            "link": "https://www.consultrecruitment.co.nz/",
             "client_name": ""
           }
         },
@@ -139,8 +194,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/0718408001522210091-200_200x_e035482d-0900-42b0-aa15-fe45e4785e66.png",
-            "link": "https:\/\/www.rewardhospitality.co.nz\/",
+            "image": "shopify://shop_images/0718408001522210091-200_200x_e035482d-0900-42b0-aa15-fe45e4785e66.png",
+            "link": "https://www.rewardhospitality.co.nz/",
             "client_name": ""
           }
         },
@@ -148,8 +203,8 @@
           "type": "client",
           "settings": {
             "svg_link": "",
-            "image": "shopify:\/\/shop_images\/logo-header.png",
-            "link": "https:\/\/www.mainfreight.com\/new-zealand\/en-nz\/services-nz\/transport\/home-delivery",
+            "image": "shopify://shop_images/logo-header.png",
+            "link": "https://www.mainfreight.com/new-zealand/en-nz/services-nz/transport/home-delivery",
             "client_name": ""
           }
         }
@@ -176,97 +231,97 @@
         "image_CgtTqq": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Premio_1500_Black_Legs_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Premio_1500_Black_Legs_UGC.jpg"
           }
         },
         "image_pTqKMD": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Ultimo_1800_Gaming_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Ultimo_1800_Gaming_UGC.jpg"
           }
         },
         "image_iKNxkQ": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Copenhagen_1800_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Copenhagen_1800_UGC.jpg"
           }
         },
         "image_Q6TQVN": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Evolve_English_Oak_White_Legs_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Evolve_English_Oak_White_Legs_UGC.jpg"
           }
         },
         "image_Rmhzq8": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Premio_1500_White_Legs_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Premio_1500_White_Legs_UGC.jpg"
           }
         },
         "image_XiGXGw": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Evolve_1850_Cherry_Top_Black_Legs_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Evolve_1850_Cherry_Top_Black_Legs_UGC.jpg"
           }
         },
         "image_JBkGB3": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Premio_1500_White_legs_UGC_2.jpg"
+            "gallery_image": "shopify://shop_images/Premio_1500_White_legs_UGC_2.jpg"
           }
         },
         "image_NQQhBG": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Ultimo_White_Top_WHite_Legs_Home_Office.jpg"
+            "gallery_image": "shopify://shop_images/Ultimo_White_Top_WHite_Legs_Home_Office.jpg"
           }
         },
         "image_9JiEAL": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Evolve_Bamboo_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Evolve_Bamboo_UGC.jpg"
           }
         },
         "image_qVAknA": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Ultimo_1500_Cherry_Top_Black_legs_Side_by_Side_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Ultimo_1500_Cherry_Top_Black_legs_Side_by_Side_UGC.jpg"
           }
         },
         "image_nUxdh4": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Ultimo_White_Top_White_Legs_Home_Office_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Ultimo_White_Top_White_Legs_Home_Office_UGC.jpg"
           }
         },
         "image_Cc9G6H": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Ultimo_1500_Cherry_Top_Black_legs_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Ultimo_1500_Cherry_Top_Black_legs_UGC.jpg"
           }
         },
         "image_6Hjrxc": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Evolve_1500_English_Oak_White_Legs_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Evolve_1500_English_Oak_White_Legs_UGC.jpg"
           }
         },
         "image_nVrpHk": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Evolve_1800_Cherry_Top_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Evolve_1800_Cherry_Top_UGC.jpg"
           }
         },
         "image_6G87qQ": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Ultimo_1500_Cherry_Top_White_legs_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Ultimo_1500_Cherry_Top_White_legs_UGC.jpg"
           }
         },
         "image_KgGRma": {
           "type": "image",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Evolve_1800_Contoured_Black_Legs_UGC.jpg"
+            "gallery_image": "shopify://shop_images/Evolve_1800_Contoured_Black_Legs_UGC.jpg"
           }
         }
       },
@@ -290,15 +345,27 @@
       ],
       "settings": {
         "gallery_title": "Home Office FIt-outs",
-        "gallery_description": "<p>Our customers have been transforming their home offices into functional and stylish workspaces with our premium office furniture. Below are some amazing fit-outs they’ve shared with us, showing how our pieces have helped create inspiring environments to boost productivity and comfort. Take a look for inspiration and see how our furniture can enhance your own home office. <\/p>"
+        "gallery_description": "<p>Our customers have been transforming their home offices into functional and stylish workspaces with our premium office furniture. Below are some amazing fit-outs they’ve shared with us, showing how our pieces have helped create inspiring environments to boost productivity and comfort. Take a look for inspiration and see how our furniture can enhance your own home office. </p>"
+      }
+    },
+    "contact_form_tppwki": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Request a Free Fit-Out Quote",
+        "heading_size": "h2",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
     "image_with_text_QxFxjH",
+    "image_with_text_FnfdfM",
     "featured_blog_g6dDUA",
     "clients_list_P9FKdc",
-    "image_gallery_9i6fAP"
+    "image_gallery_9i6fAP",
+    "contact_form_tppwki"
   ]
 }

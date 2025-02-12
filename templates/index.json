@@ -117,45 +117,49 @@
         "column_Ew8Yn4": {
           "type": "column",
           "settings": {
-            "title": "Smart Store Location",
+            "image": "shopify://shop_images/store-svgrepo-com.png",
+            "title": "",
             "heading_accent_color": false,
             "text": "",
             "text_is_display": false,
-            "link_label": "",
+            "link_label": "Smart Store Location",
             "link": "shopify://pages/contact"
           }
         },
         "column_eQnFWt": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping",
+            "image": "shopify://shop_images/free-delivery-free-svgrepo-com.png",
+            "title": "",
             "heading_accent_color": false,
             "text": "",
-            "text_is_display": false,
-            "link_label": "",
+            "text_is_display": true,
+            "link_label": "Free Shipping Options",
             "link": "shopify://pages/shipping"
           }
         },
         "column_GCwQBU": {
           "type": "column",
           "settings": {
-            "title": "Hot Deals",
+            "image": "shopify://shop_images/purchase-mobile-sales-svgrepo-com_1.png",
+            "title": "",
             "heading_accent_color": false,
             "text": "",
             "text_is_display": false,
-            "link_label": "",
+            "link_label": "Exclusive Hot Deals",
             "link": "shopify://collections/items-on-sale"
           }
         },
         "column_fjVXiT": {
           "type": "column",
           "settings": {
-            "title": "Flexible Payment Options",
+            "image": "shopify://shop_images/wallet-svgrepo-com_1.png",
+            "title": "",
             "heading_accent_color": false,
             "text": "",
             "text_is_display": false,
-            "link_label": "",
-            "link": ""
+            "link_label": "Flexible Payment Options",
+            "link": "shopify://pages/flexible-payment-option"
           }
         }
       },
@@ -165,10 +169,13 @@
         "column_GCwQBU",
         "column_fjVXiT"
       ],
-      "disabled": true,
       "custom_css": [
-        ".multicolumn-list li .multicolumn-card {background-color: #eb3439 !important;}",
-        ".multicolumn-list li .multicolumn-card h3 {color: #fff !important; font-weight: bold;}"
+        ".multicolumn-list li .multicolumn-card h3 {color: #fff !important; font-weight: bold;}",
+        ".multicolumn-card {display: flex; align-items: center; background-color: #363435 !important;}",
+        ".multicolumn-card__image-wrapper {padding: 20px;}",
+        ".multicolumn-card__info {padding-left: 0px;}",
+        ".multicolumn-card__info h3 {font-size: 15px; text-align: left;}",
+        ".link {color: #fff;}"
       ],
       "settings": {
         "title": "",

@@ -134,6 +134,7 @@
             {%- endif -%}
           </div>
         </div>
+        <a class="card-media-link" href="{{ card_product.url }}"><span class="visually-hidden">{{ card_product.title }} product page</span></a>
       </div>
       <div class="card__content">
         <div class="card__information">
@@ -161,8 +162,76 @@
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
             {%- endif -%}
 
-            <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ card_product.id }}" data-product-sku="{{ card_product.handle }}" data-product-type="{{card_product.type}}" data-product-title="{{card_product.title}}"  style="display: inline-block;">{{ card_product.metafields.stamped.badge }}</span>
+            {% comment %} CUSTOM - Colour swatches on product cards in collections {% endcomment %}
+            {% for option in card_product.options %}
+              {% capture downcased_option %}{{ option | downcase }}{% endcapture %}
 
+              {% assign has_colour = false %}
+              {% if downcased_option contains 'colour' %}
+                {% assign has_colour = true %}
+              {% endif %}
+
+              {% assign invalid_colour = false %}
+              {% if downcased_option contains 'leg' or downcased_option contains 'base' or downcased_option contains 'frame' or downcased_option contains 'door' %}
+                {% assign invalid_colour = true %}
+              {% endif %}
+
+              {% if has_colour and invalid_colour == false %}
+                {% assign option_index = forloop.index0 %}
+                
+                {% comment %} This was originally just desktop colours but now other valid colours are possible {% endcomment %}
+                {% assign desktop_colours = '' %}
+                {% assign desktop_colour_images = '' %} 
+                {% assign colour_count = 0 %}
+
+
+                {% for variant in card_product.variants %}
+                  {% assign current_colour = variant.options[option_index] %}
+
+                  {% unless desktop_colours contains current_colour %}
+                    {% assign theVariantImage = variant.image | image_url: width: 600  %}
+
+                    {% unless theVariantImage == blank %}
+                      {% if desktop_colours != '' %}
+                        {% assign desktop_colours = desktop_colours | append: ',' %}
+                        {% assign desktop_colour_images = desktop_colour_images | append: ',' %}
+                      {% endif %}
+  
+                      {% assign desktop_colours = desktop_colours | append: current_colour %}
+                      
+                      {% assign desktop_colour_images = desktop_colour_images | append: theVariantImage %}
+  
+                      {% assign colour_count = colour_count | plus: 1 %}
+                    {% endunless %}
+                  {% endunless %}
+                {% endfor %}
+
+                {% assign desktop_colours = desktop_colours | split: ',' %}
+                {% assign desktop_colour_images = desktop_colour_images | split: ',' %}
+
+                {% if desktop_colours.size > 1 %}
+                  <div class="product-card-swatches">
+                    {% for desktop_colour in desktop_colours %}
+                      {% if forloop.index == 6 %}
+                        <div class="colour-link-wrapper">
+                          <a class="more-colours-link full-unstyled-link" href="{{ card_product.url }}" aria-label="View more colour options">+{{ colour_count | minus: 5 }}</a>
+                        </div>
+  
+                        {% break %}
+                      {% else %}
+                        {% render 'facet-swatch', colour: desktop_colour, product_swatch: true, image_url: desktop_colour_images[forloop.index0] %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>                  
+                {% endif %}
+
+                {% break %}
+              {% endif %}
+            {% endfor %}
+
+
+            
+          {% comment %}
 
             {% assign option_index = 0 %}
             <div class="product-options-info-wrap">
@@ -219,7 +288,11 @@
                     {% endunless %}
                   {% endif %}
               {% endfor %} 
-            </div>           
+            </div>  
+            
+            {% endcomment %}
+
+            <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ card_product.id }}" data-product-sku="{{ card_product.handle }}" data-product-type="{{card_product.type}}" data-product-title="{{card_product.title}}"  style="display: inline-block;">{{ card_product.metafields.stamped.badge }}</span>
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 

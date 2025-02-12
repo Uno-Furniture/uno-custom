@@ -28,3 +28,11 @@
   width: 10rem;
   padding: 0.5rem;
 }
+
+.highlight {
+    background-color: #E9161D; /* Set your desired background color */
+    color: #ffffff; /* Set text color for contrast */
+    padding: 0.5rem 1rem; /* Add some padding for spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    font-weight: bold; /* Make the text bold */
+}

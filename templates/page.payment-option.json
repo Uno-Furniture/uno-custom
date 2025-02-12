@@ -1,0 +1,55 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_JFem8b": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4ejPba": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Flexible Payment Options at Uno Furniture</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_znicaX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Uno Furniture, we believe that upgrading your workspace should be simple and stress-free. That’s why we offer <strong>flexible payment options</strong> to help you get the furniture you need <strong>now</strong> while spreading the cost over time.</p><h3><strong>Choose the Payment Plan That Works for You</strong></h3><p>✅ <strong>GEM Visa – Interest-Free Finance</strong><br/>Enjoy <strong>interest-free financing</strong> when you shop with your <strong>GEM Visa Card</strong>. Get the office furniture you need today and pay it off in manageable installments.</p><p>✅ <strong>ZIP – Buy Now, Pay Later</strong><br/>With <strong>ZIP Pay</strong>, you can shop now and split your payments into easy <strong>weekly, fortnightly, or monthly</strong> installments—completely interest-free!</p><p>✅ <strong>Afterpay – 4 Easy Payments</strong><br/>Break your purchase into <strong>4 equal interest-free payments</strong> with <strong>Afterpay</strong>. No fees, no hassle—just smarter shopping!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4ejPba",
+        "text_znicaX"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_JFem8b"
+  ]
+}

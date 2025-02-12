@@ -520,9 +520,11 @@
                     </details>
                   </header-menu>
                 {%- else -%}
-                  <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                  </a>
+                  <a href="{{ link.url }}" 
+       class="header__menu-item list-menu__item link link--text focus-inset {% if link.title == 'Sale' %}highlight{% endif %}" 
+       {% if link.current %} aria-current="page"{% endif %}>
+        <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+    </a>
                 {%- endif -%}
               </li>
             {%- endfor -%}
