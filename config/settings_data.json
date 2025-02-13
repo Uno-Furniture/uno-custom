@@ -232,7 +232,8 @@
         "settings": {
           "color_scheme": "inverse",
           "newsletter_enable": true,
-          "newsletter_heading": "Stay up to date with sales, deliveries, and news from Uno.",
+          "newsletter_heading": "Get $20 off your first purchase",
+          "newsletter_embed": "<div id=\"omnisend-embedded-v2-67ac466e5730c912c2c12b6e\"></div>",
           "show_social": true,
           "enable_country_selector": false,
           "enable_language_selector": false,
