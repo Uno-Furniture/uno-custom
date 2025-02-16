@@ -56,7 +56,6 @@
         },
         "slide_CpqmUb": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Uno-General-Shop---Desktop_634dba45-9036-45fb-8635-7d53b3107fe6.jpg",
             "image_mobile": "shopify://shop_images/Uno_General_Shop_-_Mobile.jpg",
@@ -77,7 +76,6 @@
         },
         "slide_tGF396": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Uno-Part-Payment---Desktop_6f12c6ff-31ba-482c-9364-acbf3e729d9b.jpg",
             "image_mobile": "shopify://shop_images/Uno_Part_Payment_-_Mobile.jpg",
@@ -103,7 +101,6 @@
         "slide_CpqmUb",
         "slide_tGF396"
       ],
-      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
