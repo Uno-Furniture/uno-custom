@@ -101,6 +101,7 @@
         "slide_CpqmUb",
         "slide_tGF396"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
