@@ -259,7 +259,13 @@
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
-              {% if block.settings.heading == 'Full Description' or block.settings.content != blank or block.settings.page != blank or block.settings.dynamic_text != blank %}
+
+              {% assign descHasContent = false %}
+              {% if block.settings.heading == 'Full Description' and product.description != blank %}
+                {% assign descHasContent = true %}
+              {% endif %}
+
+              {% if descHasContent or block.settings.content != blank or block.settings.page != blank or block.settings.dynamic_text != blank %}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary>
