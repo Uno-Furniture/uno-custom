@@ -1519,6 +1519,21 @@
         "id": "cart_drawer_collection",
         "label": "t:settings_schema.cart.settings.cart_drawer.collection.label",
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
+      },
+      {
+        "type": "text",
+        "id": "cart_drawer_bnpl_1",
+        "label": "BNPL logo file URL 1"
+      },
+      {
+        "type": "text",
+        "id": "cart_drawer_bnpl_2",
+        "label": "BNPL logo file URL 2"
+      },
+      {
+        "type": "text",
+        "id": "cart_drawer_bnpl_3",
+        "label": "BNPL logo file URL 3"
       }
     ]
   }
