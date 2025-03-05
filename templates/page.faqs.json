@@ -11,10 +11,9 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 0
       }
     },
     "collapsible_content_aExKdi": {
@@ -125,7 +124,7 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "Product & Shipping FAQs",
+        "heading": "",
         "heading_size": "h2",
         "heading_alignment": "center",
         "layout": "none",
