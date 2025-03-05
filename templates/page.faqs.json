@@ -87,7 +87,7 @@
           "settings": {
             "heading": "My item hasn’t been delivered yet, what do I do?",
             "icon": "check_mark",
-            "row_content": "<p>If you think your item(s) been delayed, give us a call on 0800 400 010 or e-mail <a href=\"mailto:info@unofurniture.co.nz\"><span style=\"text-decoration:underline\">info@unofurniture.co.nz</span></a> and we’ll sort it out for you.</p>",
+            "row_content": "<p>If you think your item(s) has been delayed, give us a call on 0800 400 010 or e-mail <a href=\"mailto:info@unofurniture.co.nz\"><span style=\"text-decoration:underline\">info@unofurniture.co.nz</span></a> and we’ll sort it out for you.</p>",
             "page": ""
           }
         },
