@@ -24,7 +24,7 @@
           "settings": {
             "heading": "Can I collect my order?",
             "icon": "check_mark",
-            "row_content": "<p>Some of our products can be collected form our Albany warehouse or showroom, others are shipped directly from the supplier, its best to check first if you wish to do that.</p>",
+            "row_content": "<p>Some of our products can be collected from our Albany warehouse or showroom, others are shipped directly from the supplier, it's best to check first if you wish to do that.</p>",
             "page": ""
           }
         },
