@@ -69,7 +69,7 @@
           "settings": {
             "heading": "Do you deliver overseas?",
             "icon": "check_mark",
-            "row_content": "<p>Unfortunately, not but we can deliver to a shipping agent here in New Zealand.</p>",
+            "row_content": "<p>Unfortunately we do not, but we can deliver to a shipping agent here in New Zealand.</p>",
             "page": ""
           }
         },
