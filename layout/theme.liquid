@@ -29,6 +29,20 @@
       {%- elsif canonical_url != blank -%}
         <link rel="canonical" href="{{ canonical_url }}">
       {%- endif -%}
+    {%- elsif template == 'collection' -%}
+
+      {%- assign tag_canonical_urls = '/collections/all/nordic-maple,/collections/coffee-tables/oak,/collections/desks/shared-double-side,/collections/coffee-tables/black-leg,/collections/all/breakout-spaces,/collections/desks/storage,/collections/coffee-tables/square,/collections/all/kids,/collections/all/glass-doors,/collections/cupboards/white,/collections/team-tables/white,/collections/office-chairs/200kg,/collections/office-chairs/heavy-duty' | split: ',' -%}  
+    
+      {%- assign current_full_url = request.path -%}
+
+      {%- if tag_canonical_urls contains current_full_url -%}
+        <!-- Use the tag-filtered URL as canonical -->
+        <link rel="canonical" href="{{ shop.url }}{{ current_full_url }}">
+      {%- else -%}
+        <!-- Default: canonical URL is the base collection -->
+        <link rel="canonical" href="{{ shop.url }}{{ collection.url }}">
+      {%- endif -%}          
+
     {%- else -%}
       {%- if canonical_url != blank -%}
         <link rel="canonical" href="{{ canonical_url }}">
