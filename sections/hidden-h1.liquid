@@ -1,0 +1,32 @@
+{%- comment -%}
+Hidden H1 section
+- Renders an SEO/screen-reader friendly H1 that is visually hidden.
+- Single text setting for the H1 content.
+- Add this section to templates where the normal page title/H1 is removed.
+{%- endcomment -%}
+
+{%- if section.settings.h1_text != blank -%}
+  <h1 class="visually-hidden">
+    {{ section.settings.h1_text | strip | escape }}
+  </h1>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Hidden H1",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "h1_text",
+      "label": "Hidden H1 text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hidden H1"
+    }
+  ]
+}
+{% endschema %}
