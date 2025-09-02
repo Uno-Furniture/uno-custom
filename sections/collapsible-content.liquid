@@ -69,12 +69,69 @@
   </div>
 </div>
 
+{% if section.settings.enable_faq_schema %}
+  {%- assign faqs = '' -%}
+
+  {%- comment -%} capture a literal U+00A0 nbsp to normalize later {%- endcomment -%}
+  {%- capture nbsp -%} {%- endcapture -%} {# <-- that's a real non-breaking space between the tags #}
+
+  {%- for block in section.blocks -%}
+    {%- assign q_raw  = block.settings.heading | default: block.settings.page.title -%}
+    {%- assign a_html = block.settings.row_content | default: block.settings.page.content -%}
+
+    {%- comment -%} Clean question: strip HTML, normalize &nbsp;/&#160;/U+00A0, collapse whitespace {%- endcomment -%}
+    {%- assign q = q_raw
+      | strip_html
+      | replace: '&nbsp;', ' '
+      | replace: '&#160;', ' '
+      | replace: nbsp, ' '
+      | strip_newlines
+      | strip
+    -%}
+    {%- assign q = q | replace: '  ', ' ' | replace: '  ', ' ' -%}
+
+    {%- comment -%} Optional: remove cosmetic spans; keep other HTML intact {%- endcomment -%}
+    {%- assign a = a_html
+      | replace: '<span style="text-decoration:underline">',''
+      | replace: '</span>',''
+    -%}
+
+    {%- if q != blank and a != blank -%}
+      {%- capture faqs -%}
+        {{ faqs }}{% if faqs != blank %},{% endif %}{
+          "@type":"Question",
+          "name": {{ q | json }},
+          "acceptedAnswer": { "@type":"Answer", "text": {{ a | json }} }
+        }
+      {%- endcapture -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if faqs != blank -%}
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[{{ faqs }}]
+    }
+    </script>
+  {%- endif -%}
+{% endif %}
+
+
+
 {% schema %}
 {
   "name": "t:sections.collapsible_content.name",
   "tag": "section",
   "class": "section",
   "settings": [
+    { 
+      "type": "checkbox", 
+      "id": "enable_faq_schema", 
+      "label": "Enable FAQ schema", 
+      "default": false 
+    },
     {
       "type": "text",
       "id": "caption",
