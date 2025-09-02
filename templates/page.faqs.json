@@ -31,7 +31,7 @@
         "collapsible_row_bwK9q9": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How long does it take for my order to be delivered? ",
+            "heading": "How long does it take for my order to be delivered?",
             "icon": "check_mark",
             "row_content": "<p>Generally, delivery can be anywhere between 2-7 working days after dispatch. However, we will send you a confirmation with approx. delivery timings and who the carrier is.</p><p>Most times are stated on the individual product pages as times vary from product to product such as those that require customisation. </p>",
             "page": ""
@@ -123,6 +123,7 @@
         "collapsible_row_B9hfx7"
       ],
       "settings": {
+        "enable_faq_schema": true,
         "caption": "",
         "heading": "Product & Shipping",
         "heading_size": "h2",

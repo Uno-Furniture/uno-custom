@@ -1,5 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "hidden_h1_9EFLjf": {
+      "type": "hidden-h1",
+      "name": "Hidden H1",
+      "settings": {
+        "h1_text": "About Uno Furniture"
+      }
+    },
     "b216e683-40f9-47cd-90c3-5764c48c5c95": {
       "type": "image-with-text",
       "blocks": {
@@ -13,7 +37,7 @@
         "template--15103683133555__b216e683-40f9-47cd-90c3-5764c48c5c95-168256781008f15f13-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Uno Furniture is an online office furniture store providing quality furniture at affordable prices.<\/p><p>It is 100% New Zealand owned.<\/p><p>Uno Furniture is based in Auckland, with a seven-day showroom on Auckland’s North Shore, perfect for people who want to try before they buy. Please call us to arrange your visit.<\/p><p><a href=\"\/pages\/contact\" title=\"\/pages\/contact\">Click Here for Contact Details and Showroom Address<\/a><\/p>",
+            "text": "<p>Uno Furniture is an online office furniture store providing quality furniture at affordable prices.</p><p>It is 100% New Zealand owned.</p><p>Uno Furniture is based in Auckland, with a seven-day showroom on Auckland’s North Shore, perfect for people who want to try before they buy. Please call us to arrange your visit.</p><p><a href=\"/pages/contact\" title=\"/pages/contact\">Click Here for Contact Details and Showroom Address</a></p>",
             "text_style": "body"
           }
         }
@@ -23,8 +47,8 @@
         "template--15103683133555__b216e683-40f9-47cd-90c3-5764c48c5c95-168256781008f15f13-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/TeamPhotoCroppedWeb2.jpg",
-        "image_caption": "Left to Right: Kerry Graham (Co-owner) , Melissa Mcintosh (Customer Service and Sales), Gav Pearce (Ops Manager) and Dean Graham (Owner\/Director)",
+        "image": "shopify://shop_images/TeamPhotoCroppedWeb2.jpg",
+        "image_caption": "Left to Right: Kerry Graham (Co-owner) , Melissa Mcintosh (Customer Service and Sales), Gav Pearce (Ops Manager) and Dean Graham (Owner/Director)",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -43,7 +67,7 @@
         "template--15103683133555__bf33247d-7801-44a3-ac38-3eabef4ec8d6-168256781008f15f13-1": {
           "type": "text",
           "settings": {
-            "text": "<p>The movement towards standing desks is something we strongly support. As such we offer a wide variety of not only desks, but accessories to make your transition to standing easier.<\/p><p>We offer free metro shipping to ground floor on all standing desks to the South Island, and free delivery on all furniture to North Island towns and cities. There is a one off surcharge to rural North and South Island addresses for some products.<\/p><p>Whether you need a full office fit-out or a single desk and chair, please get in touch.<\/p><p>Furniture ordered from Uno Furniture should reach you within seven business days. And if you need installation, we can make recommendations there too.<\/p>",
+            "text": "<p>The movement towards standing desks is something we strongly support. As such we offer a wide variety of not only desks, but accessories to make your transition to standing easier.</p><p>We offer free metro shipping to ground floor on all standing desks to the South Island, and free delivery on all furniture to North Island towns and cities. There is a one off surcharge to rural North and South Island addresses for some products.</p><p>Whether you need a full office fit-out or a single desk and chair, please get in touch.</p><p>Furniture ordered from Uno Furniture should reach you within seven business days. And if you need installation, we can make recommendations there too.</p>",
             "text_style": "body"
           }
         }
@@ -52,7 +76,7 @@
         "template--15103683133555__bf33247d-7801-44a3-ac38-3eabef4ec8d6-168256781008f15f13-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Standing_Desks_5c1ba5ac-9313-4cd3-94d7-60d9beba9b5d.jpg",
+        "image": "shopify://shop_images/Standing_Desks_5c1ba5ac-9313-4cd3-94d7-60d9beba9b5d.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -66,35 +90,27 @@
         "padding_bottom": 36
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "c9a5bba0-531b-4801-aee4-37d0c813c454": {
       "type": "collage",
       "blocks": {
         "2fd32998-8951-4722-919e-3b01c3d539b4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Office_Desks_dbd86463-64bf-47d9-9abd-80056efb35f8.jpg",
+            "image": "shopify://shop_images/Office_Desks_dbd86463-64bf-47d9-9abd-80056efb35f8.jpg",
             "image_padding": false
           }
         },
         "4a49d074-75af-4db5-9ddd-690c425d2daf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Other_Furniture_2048x_5bfe1342-ec8a-4159-9900-d0d7a512bb63.jpg",
+            "image": "shopify://shop_images/Other_Furniture_2048x_5bfe1342-ec8a-4159-9900-d0d7a512bb63.jpg",
             "image_padding": false
           }
         },
         "01e36202-34f0-4f24-9467-677c4f592cc0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ergoplan_tawa_1350x1013eca8.jpg",
+            "image": "shopify://shop_images/Ergoplan_tawa_1350x1013eca8.jpg",
             "image_padding": false
           }
         }
@@ -117,9 +133,10 @@
     }
   },
   "order": [
+    "main",
+    "hidden_h1_9EFLjf",
     "b216e683-40f9-47cd-90c3-5764c48c5c95",
     "bf33247d-7801-44a3-ac38-3eabef4ec8d6",
-    "main",
     "c9a5bba0-531b-4801-aee4-37d0c813c454"
   ]
 }
