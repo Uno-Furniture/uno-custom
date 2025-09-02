@@ -22,7 +22,6 @@
     }
   ],
   "blog": [],
-  "brand": [],
   "collection": [
     {
       "key": "sub_collections",
@@ -241,6 +240,26 @@
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
+      }
+    },
+    {
+      "key": "tabletop-color",
+      "namespace": "shopify",
+      "name": "Tabletop color",
+      "description": "Specifies the color of a table's top surface, such as black or white",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "frame-color",
+      "namespace": "shopify",
+      "name": "Frame color",
+      "description": "Specifies the color of a product's frame, such as clear or gold",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
       }
     }
   ],
