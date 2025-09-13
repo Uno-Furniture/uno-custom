@@ -73,7 +73,7 @@
   {%- assign faqs = '' -%}
 
   {%- comment -%} capture a literal U+00A0 nbsp to normalize later {%- endcomment -%}
-  {%- capture nbsp -%} {%- endcapture -%} {# <-- that's a real non-breaking space between the tags #}
+  {%- capture nbsp -%} {%- endcapture -%}
 
   {%- for block in section.blocks -%}
     {%- assign q_raw  = block.settings.heading | default: block.settings.page.title -%}
