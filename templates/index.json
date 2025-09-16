@@ -94,13 +94,34 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_eRbgX8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Ligna_Bar_Leaner_w_LeGrille_Homepage.jpg",
+            "image_mobile": "shopify://shop_images/Ligna_Bar_Leaner_w_LeGrille_Mobile.jpg",
+            "slide_link": "shopify://collections/ligna-collection",
+            "heading": "Ligna",
+            "heading_size": "h1",
+            "subheading": "Natural craftsmanship meets contemporary versatility.",
+            "button_label": "View Collection",
+            "link": "shopify://collections/ligna-collection",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_4E7b3f",
         "slide_MLqeYE",
         "slide_CpqmUb",
-        "slide_tGF396"
+        "slide_tGF396",
+        "slide_eRbgX8"
       ],
       "settings": {
         "layout": "full_bleed",
