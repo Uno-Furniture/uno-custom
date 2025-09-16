@@ -107,7 +107,7 @@
             "button_label": "View Collection",
             "link": "shopify://collections/ligna-collection",
             "button_style_secondary": false,
-            "box_align": "middle-left",
+            "box_align": "middle-center",
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
