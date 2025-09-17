@@ -431,7 +431,7 @@
 
 @media screen and (max-width: 550px) {
   .banner__heading {
-    text-shadow: 0 0 10px #ffffff;
+    /* text-shadow: 0 0 10px #ffffff; */
   }  
 }
 

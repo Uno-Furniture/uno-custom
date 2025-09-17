@@ -52,7 +52,12 @@ slideshow-component .slideshow.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 54.5rem;
+  max-width: 78rem;
+}
+
+.slideshow__text.banner__box.force-white-text .banner__heading,
+.slideshow__text.banner__box.force-white-text .banner__text {
+  color: #ffffff;
 }
 
 @media screen and (max-width: 749px) {

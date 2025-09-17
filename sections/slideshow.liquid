@@ -140,7 +140,7 @@
 
         {% unless block.settings.heading == blank and block.settings.subheading == blank %}
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if block.settings.is_alt_mobile_layout %} is-alt-mobile-layout{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}{% if block.settings.force_white_text %} force-white-text{% endif %}">
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
@@ -499,6 +499,11 @@
           "default": "background-1",
           "label": "t:sections.all.colors.label",
           "info": "t:sections.slideshow.blocks.slide.settings.color_scheme.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "force_white_text",
+          "label": "Force white text"
         },
         {
           "type": "header",
