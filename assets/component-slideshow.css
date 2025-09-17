@@ -55,6 +55,16 @@ slideshow-component .slideshow.banner {
   max-width: 54.5rem;
 }
 
+.is-alt-mobile-layout .slideshow__text.banner__box {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.is-alt-mobile-layout .alt-mobile-spacer {
+  display: block;
+  flex: 1;
+}
+
 .slideshow__text > * {
   max-width: 100%;
 }
