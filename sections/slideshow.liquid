@@ -145,7 +145,7 @@
               <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              <div class="banner__text" {{ block.shopify_attributes }}>
+              <div class="banner__text {% if block.settings.hide_subheading_background %}hide-subheading-background{% endif %}" {{ block.shopify_attributes }}>
                 <span>{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
@@ -366,6 +366,11 @@
           "id": "subheading",
           "default": "Tell your brand's story through images",
           "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_subheading_background",
+          "label": "Hide subheading background"
         },
         {
           "type": "text",

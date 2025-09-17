@@ -387,6 +387,12 @@
   padding: 10px 15px;
 }
 
+.banner__box > * + .banner__text.hide-subheading-background {
+  background-color: transparent;
+}
+
+
+
 @media screen and (min-width: 750px) {
   .banner__box > * + .banner__text {
     margin-top: 2rem;
