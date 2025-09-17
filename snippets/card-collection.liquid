@@ -107,6 +107,7 @@
           {%- endif -%}
         </div>
       </div>
+      <a class="custom-card-link" href="{{ card_collection.url }}"><span class="visually-hidden">{{- card_collection.title | escape -}}</span></a>
     </div>
     {% if card_style == 'card' or card_collection.featured_image %}
       <div class="card__content">
