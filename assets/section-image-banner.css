@@ -392,6 +392,16 @@
 }
 
 @media screen and (min-width: 750px) {
+  .banner__text.large-subheading {
+    font-size: 2rem;
+  }
+
+  .banner__text.largest-subheading {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
   .banner__box > * + .banner__text {
     margin-top: 2rem;
   }
