@@ -22,6 +22,8 @@
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
+            "subheading_size": "normal",
+            "hide_subheading_background": false,
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -30,7 +32,9 @@
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "force_white_text": false,
+            "text_alignment_mobile": "center",
+            "is_alt_mobile_layout": false
           }
         },
         "slide_MLqeYE": {
@@ -43,6 +47,8 @@
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
+            "subheading_size": "normal",
+            "hide_subheading_background": false,
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -51,7 +57,9 @@
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "force_white_text": false,
+            "text_alignment_mobile": "center",
+            "is_alt_mobile_layout": false
           }
         },
         "slide_CpqmUb": {
@@ -63,6 +71,8 @@
             "heading": "Premium office products, affordable prices",
             "heading_size": "h0",
             "subheading": "Every day, genuine low prices - we won't increase prices just to discount them.",
+            "subheading_size": "large",
+            "hide_subheading_background": true,
             "button_label": "Shop Now",
             "link": "shopify://collections/all",
             "button_style_secondary": false,
@@ -71,7 +81,9 @@
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "force_white_text": true,
+            "text_alignment_mobile": "center",
+            "is_alt_mobile_layout": false
           }
         },
         "slide_tGF396": {
@@ -84,6 +96,8 @@
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
+            "subheading_size": "normal",
+            "hide_subheading_background": false,
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -92,7 +106,9 @@
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "force_white_text": false,
+            "text_alignment_mobile": "center",
+            "is_alt_mobile_layout": false
           }
         },
         "slide_eRbgX8": {
@@ -104,6 +120,8 @@
             "heading": "Ligna",
             "heading_size": "h1",
             "subheading": "Natural craftsmanship meets contemporary versatility.",
+            "subheading_size": "large",
+            "hide_subheading_background": true,
             "button_label": "View Collection",
             "link": "shopify://collections/ligna-collection",
             "button_style_secondary": false,
@@ -112,7 +130,9 @@
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "force_white_text": false,
+            "text_alignment_mobile": "center",
+            "is_alt_mobile_layout": true
           }
         }
       },
