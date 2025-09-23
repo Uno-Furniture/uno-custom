@@ -261,6 +261,16 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "faqs",
+      "namespace": "custom",
+      "name": "FAQs",
+      "description": "List of product FAQ metaobjects",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
