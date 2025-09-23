@@ -148,6 +148,16 @@
             "page": "",
             "dynamic_text": ""
           }
+        },
+        "collapsible_tab_HmhFmE": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "FAQs",
+            "icon": "question_mark",
+            "content": "",
+            "page": "",
+            "dynamic_text": ""
+          }
         }
       },
       "block_order": [
@@ -167,7 +177,8 @@
         "collapsible-row-3",
         "56e5bc52-12a6-489e-9082-6c2807a6aaa7",
         "collapsible-row-1",
-        "d408bd18-0c7c-42d4-b3d1-39f53d7394a9"
+        "d408bd18-0c7c-42d4-b3d1-39f53d7394a9",
+        "collapsible_tab_HmhFmE"
       ],
       "settings": {
         "enable_sticky_info": false,
