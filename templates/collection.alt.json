@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bd1bb340-802d-48ce-96cf-3ccb87b5c5a3": {
+      "type": "breadcrumbs",
+      "settings": {
+        "menu": "breadcrumbs-structure",
+        "products_per_page": 24
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "7d03ade4-fb87-43cb-9771-3e061899eab1": {
+      "type": "collection-list",
+      "settings": {
+        "collection_list": "{{ collection.metafields.custom.sub_collections.value }}",
+        "title": "{{ collection.title }}",
+        "heading_size": "h2",
+        "description": "",
+        "image_ratio": "landscape",
+        "columns_desktop": 5,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "d2cffc3f-cba1-46e2-9b3a-ce623bc034ca": {
+      "type": "main-collection-description",
+      "settings": {}
+    },
+    "image_with_text_MXyhD6": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hCNzmf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Looking For Complete Office Fitouts?",
+            "heading_size": "h2"
+          }
+        },
+        "text_YQgptY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Uno Furniture, we specialize in creating tailored <a href=\"https://unofurniture.co.nz/pages/office-furniture-fit-outs\"><span style=\"text-decoration:underline\">office furniture fit-outs</span></a> designed specifically for your business needs. Our range of high-quality and affordable furniture includes ergonomic standing desks and essential accessories, ensuring comfort and productivity in your workspace. </p><p>We take pride in our ability to transform your office environment, whether you’re furnishing a new space or upgrading existing areas. With a focus on style and functionality, our solutions are crafted to enhance your workplace experience.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_xEBXgd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request A Free Consultation",
+            "button_link": "shopify://pages/office-furniture-fit-outs"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hCNzmf",
+        "text_YQgptY",
+        "button_xEBXgd"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Fitout-Thumbnail.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_iCiTRA": {
+      "type": "collapsible-content",
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "enable_faq_schema": true,
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "bd1bb340-802d-48ce-96cf-3ccb87b5c5a3",
+    "banner",
+    "7d03ade4-fb87-43cb-9771-3e061899eab1",
+    "product-grid",
+    "d2cffc3f-cba1-46e2-9b3a-ce623bc034ca",
+    "image_with_text_MXyhD6",
+    "collapsible_content_iCiTRA"
+  ]
+}
