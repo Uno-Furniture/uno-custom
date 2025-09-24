@@ -79,16 +79,6 @@
             "short_desc_richtext": "{{ product.metafields.custom.product_short_description | metafield_tag }}"
           }
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Full Description",
-            "icon": "clipboard",
-            "content": "",
-            "page": "",
-            "dynamic_text": ""
-          }
-        },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
@@ -158,6 +148,16 @@
             "page": "",
             "dynamic_text": ""
           }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Full Description",
+            "icon": "clipboard",
+            "content": "",
+            "page": "",
+            "dynamic_text": ""
+          }
         }
       },
       "block_order": [
@@ -171,14 +171,14 @@
         "buy_buttons",
         "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "e16f7eb1-7704-438f-9540-0716c4d26981",
-        "collapsible-row-0",
         "collapsible-row-2",
         "collapsible_tab_8WaJef",
         "collapsible-row-3",
         "56e5bc52-12a6-489e-9082-6c2807a6aaa7",
         "collapsible-row-1",
         "d408bd18-0c7c-42d4-b3d1-39f53d7394a9",
-        "collapsible_tab_HmhFmE"
+        "collapsible_tab_HmhFmE",
+        "collapsible-row-0"
       ],
       "settings": {
         "enable_sticky_info": false,
