@@ -1876,3 +1876,7 @@ CUSTOM -  Product FAQs in collapsible content block
 .product-faq p {
   margin-top: 0;
 }
+
+.product__accordion .accordion__content [style*="font-size"] { 
+  font-size: inherit !important; 
+}
