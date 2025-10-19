@@ -281,6 +281,36 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "furniture-fixture-material",
+      "namespace": "shopify",
+      "name": "Furniture/Fixture material",
+      "description": "Identifies the main material used in furniture or fixtures, like wood or metal",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "furniture-fixture-features",
+      "namespace": "shopify",
+      "name": "Furniture/Fixture features",
+      "description": "Highlights special characteristics of furniture or fixtures, like adjustable shelves or built-in mirror",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "leg-material",
+      "namespace": "shopify",
+      "name": "Leg material",
+      "description": "Specifies the material used for the legs of a product, such as cherry wood or bamboo",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
