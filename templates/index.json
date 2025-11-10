@@ -112,6 +112,7 @@
         },
         "slide_eRbgX8": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Ligna_Bar_Leaner_w_LeGrille_Homepage.jpg",
             "image_mobile": "shopify://shop_images/Ligna_Bar_Leaner_w_LeGrille_Mobile.jpg",
