@@ -1880,3 +1880,38 @@ CUSTOM -  Product FAQs in collapsible content block
 .product__accordion .accordion__content [style*="font-size"] { 
   font-size: inherit !important; 
 }
+
+/* ====================================================================== 
+CUSTOM -  Colour Groups product template - 2 column variant wizard app
+========================================================================*/
+.template-suffix-colour-groups {
+  --page-width: 166rem;
+}
+
+.template-suffix-colour-groups .product .short_description {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+
+.template-suffix-colour-groups .product-form__input input[type='radio'] + label.colour-option-label {
+  border-radius: var(--variant-pills-radius);
+}
+
+.template-suffix-colour-groups .product-form__input input[type='radio'] + label.colour-option-label img {
+  border-radius: var(--variant-pills-radius);
+}
+
+.template-suffix-colour-groups #addonProducts {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 14px;
+}
+
+.template-suffix-colour-groups #addonProducts .cbb-frequently-bought-product-image {
+  box-shadow: 3px 3px 7px rgba(0,0,0,.15);
+}
+
+.template-suffix-colour-groups .product-form__quantity .form__label {
+  display: none;
+}
