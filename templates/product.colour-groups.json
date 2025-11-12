@@ -41,6 +41,18 @@
             "custom_liquid": "{% render 'bnpl-snippet' %}"
           }
         },
+        "1f9b7a27-d25b-41cc-807c-248f692563a1": {
+          "type": "short_description",
+          "settings": {
+            "short_desc_richtext": "{{ product.metafields.custom.product_short_description | metafield_tag }}"
+          }
+        },
+        "short_description_html_PznnNt": {
+          "type": "short_description_html",
+          "settings": {
+            "short_desc_html": "{{ product.metafields.custom.product_short_description_html.value }}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -56,6 +68,10 @@
             "notify_title": ""
           }
         },
+        "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
+          "type": "addon_products",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -65,22 +81,6 @@
           "settings": {
             "show_dynamic_checkout": false
           }
-        },
-        "1f9b7a27-d25b-41cc-807c-248f692563a1": {
-          "type": "short_description",
-          "settings": {
-            "short_desc_richtext": "{{ product.metafields.custom.product_short_description | metafield_tag }}"
-          }
-        },
-        "short_description_html_PznnNt": {
-          "type": "short_description_html",
-          "settings": {
-            "short_desc_html": "{{ product.metafields.custom.product_short_description_html.value }}"
-          }
-        },
-        "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
-          "type": "addon_products",
-          "settings": {}
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -147,7 +147,7 @@
           "settings": {
             "heading": "Warranty",
             "icon": "warranty",
-            "content": "<p>{{ product.metafields.custom.product_warranty.value.info | metafield_tag }}</p>",
+            "content": "{{ product.metafields.custom.product_warranty.value.info | metafield_tag }}",
             "page": "",
             "dynamic_text": ""
           }
@@ -158,13 +158,13 @@
         "47ece7e1-a554-4cfa-b8fb-23806c91976c",
         "price",
         "895ba9a8-754f-4e15-810d-f2c88fc4d722",
-        "variant_picker",
-        "inventory_KghM6e",
-        "quantity_selector",
-        "buy_buttons",
         "1f9b7a27-d25b-41cc-807c-248f692563a1",
         "short_description_html_PznnNt",
+        "variant_picker",
+        "inventory_KghM6e",
         "5b935abd-bfad-4c5b-9968-8ddea7250d72",
+        "quantity_selector",
+        "buy_buttons",
         "collapsible-row-0",
         "collapsible-row-2",
         "collapsible_tab_dBXVW4",
