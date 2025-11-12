@@ -383,6 +383,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
+        "hide_product_subtitle": true,
         "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
