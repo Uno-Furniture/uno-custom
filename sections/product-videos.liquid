@@ -1,0 +1,273 @@
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  /* --- Section Padding --- */
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* --- Row Styles (Outer Full Width) --- */
+  .product-video-row {
+    width: 100%;
+    padding: 4rem 0; 
+  }
+
+  /* Background color for even rows */
+  .product-video-row:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+
+  /* --- Item Styles (Inner Constrained) --- */
+  .product-video-item {
+    display: flex;
+    flex-direction: column; /* Mobile: Stack vertically */
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* FIX: Ensure the wrapper takes full width on mobile */
+  .product-video-item__media-wrapper {
+    width: 100%;
+  }
+
+  /* Desktop Layout */
+  @media screen and (min-width: 750px) {
+    .product-video-row {
+        padding: 6rem 0; 
+    }
+
+    .product-video-item {
+      flex-direction: row; /* Standard: Video Left, Text Right */
+      gap: 5rem;
+      justify-content: space-between;
+    }
+
+    .product-video-item__media-wrapper,
+    .product-video-item__content {
+      flex: 1; /* Equal width columns */
+      width: 50%; 
+    }
+
+    /* Alternating Layout Logic */
+    .product-video-row:nth-child(even) .product-video-item {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .product-video-item__content {
+    padding: 1rem;
+  }
+
+  .product-video-item__title {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Force the deferred media container to respect the flex column width */
+  .product-video-item__media-wrapper .deferred-media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    
+    /* FIX: Set background to transparent so sub-pixel gaps don't show black lines */
+    background-color: transparent !important;
+    
+    border: none !important; 
+    box-shadow: none !important;
+    overflow: hidden !important; 
+    border-radius: var(--media-radius, 0px);
+  }
+  
+  .product-video-item__media-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; 
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  
+  <div class="section-{{ section.id }}-padding">
+    
+    {%- if section.settings.heading != blank -%}
+      <div class="page-width">
+        <div class="title-wrapper title-wrapper--no-top-margin">
+          <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {% comment %} 1. HARDCODED METAFIELD SOURCE {% endcomment %}
+    {% assign video_list = product.metafields.custom.product_video_items %}
+
+    {% if video_list != blank %}
+      <div class="product-videos__list">
+        
+        {% comment %} 2. Loop through the Metaobjects {% endcomment %}
+        {% for video_item in video_list.value %}
+          
+          {% assign input_url = video_item.video_url.value %}
+          {% assign vid_heading = video_item.heading.value %}
+          {% assign vid_text_field = video_item.text %}
+          
+          {% comment %} --- URL PARSING --- {% endcomment %}
+          {% assign vid_id = '' %}
+          {% if input_url contains 'youtube.com/watch' %}
+            {% assign vid_id = input_url | split: 'v=' | last %}
+            {% assign vid_id = vid_id | split: '&' | first %}
+          {% elsif input_url contains 'youtu.be/' %}
+            {% assign vid_id = input_url | split: 'youtu.be/' | last %}
+            {% assign vid_id = vid_id | split: '?' | first %}
+          {% else %}
+            {% assign vid_id = input_url %}
+          {% endif %}
+
+          {% if vid_id != blank %}
+            
+            <div class="product-video-row">
+              
+              <div class="page-width product-video-item">
+                
+                <div class="product-video-item__media-wrapper">
+                  <deferred-media class="deferred-media no-js-hidden global-media-settings" 
+                    data-media-id="{{ vid_id }}">
+                    
+                    <button
+                      id="Deferred-Poster-Modal-{{ vid_id }}"
+                      class="video-section__poster media deferred-media__poster media--landscape"
+                      type="button"
+                      aria-label="{{ 'sections.video.load_video' | t: description: vid_heading | escape }}"
+                    >
+                      {% comment %} FIX: Added transform: scale(1.05) to push black bars out of view {% endcomment %}
+                      <img
+                        src="https://img.youtube.com/vi/{{ vid_id }}/sddefault.jpg"
+                        loading="lazy"
+                        alt="{{ vid_heading | escape }}"
+                        width="1280"
+                        height="720"
+                        style="object-fit: cover; width: 100%; height: 100%; transform: scale(1.05);"
+                      >
+                      <span class="deferred-media__poster-button motion-reduce">
+                        {%- render 'icon-play' -%}
+                      </span>
+                    </button>
+                    
+                    <template>
+                      <iframe 
+                        src="https://www.youtube.com/embed/{{ vid_id }}?enablejsapi=1&autoplay=1&rel=0&modestbranding=1&iv_load_policy=3" 
+                        class="js-youtube" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen 
+                        title="{{ vid_heading | escape }}">
+                      </iframe>
+                    </template>
+                  </deferred-media>
+                </div>
+
+                <div class="product-video-item__content">
+                  {% if vid_heading != blank %}
+                    <h3 class="product-video-item__title h3">{{ vid_heading }}</h3>
+                  {% endif %}
+                  
+                  {% if vid_text_field != blank %}
+                    <div class="rte">{{ vid_text_field | metafield_tag }}</div>
+                  {% endif %}
+                </div>
+
+              </div> </div> {% endif %}
+        {% endfor %}
+
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Video List",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "This section automatically pulls videos from the 'Product video items' metafield list."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Product Videos"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1",
+      "label": "Heading Size"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "Accent 1" },
+        { "value": "accent-2", "label": "Accent 2" },
+        { "value": "background-1", "label": "Background 1" },
+        { "value": "background-2", "label": "Background 2" },
+        { "value": "inverse", "label": "Inverse" }
+      ],
+      "default": "background-1",
+      "label": "Color Scheme"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Video List"
+    }
+  ]
+}
+{% endschema %}
