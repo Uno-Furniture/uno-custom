@@ -84,6 +84,7 @@
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Full Description",
             "icon": "clipboard",
@@ -94,6 +95,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Specifications",
             "icon": "ruler",
@@ -104,6 +106,7 @@
         },
         "collapsible_tab_dBXVW4": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Material",
             "icon": "leather",
@@ -114,6 +117,7 @@
         },
         "43ac409c-2f43-499f-a2f8-505cfc991704": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Videos",
             "icon": "eye",
@@ -124,6 +128,7 @@
         },
         "2fd08b65-b7f3-452f-b2e8-71c5e3cdbcea": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Assembly Information",
             "icon": "box",
@@ -134,16 +139,18 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping Information",
             "icon": "truck",
-            "content": "{{ product.metafields.custom.product_shipping_information.value.info | metafield_tag }}",
+            "content": "<p>{{ product.metafields.custom.product_shipping_information.value.info | metafield_tag }}</p>",
             "page": "",
             "dynamic_text": ""
           }
         },
         "cf36e1c1-8191-4525-9bbf-2d1fd822f01e": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Warranty",
             "icon": "warranty",
@@ -208,6 +215,74 @@
         "padding_bottom": 28
       }
     },
+    "product_tabs_Pj6rbW": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_M7JfbM": {
+          "type": "tab",
+          "settings": {
+            "heading": "Full Description",
+            "tab_content": "{{ product.description }}"
+          }
+        },
+        "tab_wURD64": {
+          "type": "tab",
+          "settings": {
+            "heading": "Specifications",
+            "tab_content": "<p>{{ product.metafields.custom.product_specifications.value }}</p>"
+          }
+        },
+        "tab_Q6rLGN": {
+          "type": "tab",
+          "settings": {
+            "heading": "Assembly",
+            "tab_content": "{{ product.metafields.custom.product_assembly_information | metafield_tag }}"
+          }
+        },
+        "tab_GnDt87": {
+          "type": "tab",
+          "settings": {
+            "heading": "Shipping",
+            "tab_content": "{{ product.metafields.custom.product_shipping_information.value.info | metafield_tag }}"
+          }
+        },
+        "tab_QhYBeB": {
+          "type": "tab",
+          "settings": {
+            "heading": "Warranty",
+            "tab_content": "{{ product.metafields.custom.product_warranty.value.info | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "tab_M7JfbM",
+        "tab_wURD64",
+        "tab_Q6rLGN",
+        "tab_GnDt87",
+        "tab_QhYBeB"
+      ],
+      "name": "Product Details Tabs",
+      "settings": {
+        "heading": "Product Details",
+        "accordion_open_first_on_mobile": true,
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product_videos_8XcDXU": {
+      "type": "product-videos",
+      "name": "Product Video List",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1678871509fbdf5d67": {
       "type": "apps",
       "blocks": {
@@ -236,6 +311,8 @@
     "1d4eaa9d-6bbe-4684-b0be-79c48ca2b9c4",
     "main",
     "product-recommendations",
+    "product_tabs_Pj6rbW",
+    "product_videos_8XcDXU",
     "1678871509fbdf5d67"
   ]
 }
