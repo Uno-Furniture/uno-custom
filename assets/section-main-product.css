@@ -249,6 +249,7 @@ fieldset.product-form__input .form__label {
   border: 1px solid rgba(var(--color-foreground), 0.55);
   line-height: 1.4;
   min-width: 126px;
+  z-index: 1;
 }
 
 .product-form__input .colour-option:hover .colour-tooltip {
@@ -1915,3 +1916,27 @@ CUSTOM -  Colour Groups product template - 2 column variant wizard app
 .template-suffix-colour-groups .product-form__quantity .form__label {
   display: none;
 }
+
+@media screen and (min-width: 360px) and (max-width: 749px), (min-width: 1024px) {
+  .template-suffix-colour-groups .product-buy-buttons {
+      width: calc(100% - 127px);
+  }
+}
+
+/* ============================================
+The new product tabs section 
+==============================================*/
+product-tabs.gradient {
+    display: block;
+    margin-top: 30px;
+    background: #f3f3f3;
+}
+
+.product-tabs__container {
+  font-size: 14px;
+}
+
+.product-tabs__container [style*="font-size"] {
+  font-size: inherit !important;
+}
+

@@ -1,0 +1,431 @@
+<product-tabs class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="product-tabs__wrapper page-width section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="product-tabs__heading title-wrapper-center {{ section.settings.heading_size }}" style="text-align: {{ section.settings.heading_alignment }};">
+        {{ section.settings.heading | escape }}
+      </h2>
+    {%- endif -%}
+
+    {% if section.blocks.size > 0 %}
+      <div class="product-tabs__container">
+
+        <div class="product-tabs__header-list" role="tablist" aria-label="Product Details Tabs">
+          {%- for block in section.blocks -%}
+            {% assign content_source_value = block.settings.tab_content %}
+
+            {%- if content_source_value != blank -%}
+              <button
+                id="Tab-{{ block.id }}-{{ section.id }}"
+                class="product-tabs__header {% if forloop.first %}is-active{% endif %}"
+                role="tab"
+                aria-controls="Panel-desktop-{{ block.id }}-{{ section.id }}"
+                aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+                data-tab-id="{{ block.id }}-{{ section.id }}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.heading | escape }}
+              </button>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        <div class="product-tabs__desktop-content">
+          {%- for block in section.blocks -%}
+            {% assign content_source_value = block.settings.tab_content %}
+
+            {%- if content_source_value != blank -%}
+              <div
+                id="Panel-desktop-{{ block.id }}-{{ section.id }}"
+                class="product-tabs__panel rte {% if forloop.first %}is-active{% endif %}"
+                role="tabpanel"
+                aria-labelledby="Tab-{{ block.id }}-{{ section.id }}"
+                tabindex="0"
+                {% unless forloop.first %}hidden{% endunless %}
+              >
+                {{ content_source_value | raw }}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        
+        <div class="product-tabs__mobile-accordion">
+          {%- for block in section.blocks -%}
+            {% assign content_source_value = block.settings.tab_content %}
+
+            {%- if content_source_value != blank -%}
+              <details 
+                class="product-accordion-item" 
+                {% if forloop.first and section.settings.accordion_open_first_on_mobile %} open{% endif %} 
+              >
+                <summary class="product-accordion-item__summary h4">
+                    {{ block.settings.heading | escape }}
+                    {% render 'icon-caret' %}
+                </summary>
+                <div class="product-accordion-item__content rte">
+                  {{ content_source_value | raw }}
+                </div>
+              </details>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+      </div>
+    {% endif %}
+  </div>
+</product-tabs>
+
+<script>
+  if (!customElements.get('product-tabs')) {
+    class ProductTabs extends HTMLElement {
+      constructor() {
+        super();
+        this.tabs = this.querySelectorAll('.product-tabs__header');
+        // Target desktop panels for JS control
+        this.panels = this.querySelectorAll('.product-tabs__desktop-content .product-tabs__panel'); 
+        
+        // Only run tab logic on large screens
+        if (window.innerWidth >= 750) {
+            this.initTabs();
+        }
+
+        // Add a listener to re-init if the window resizes across the breakpoint (optional but robust)
+        window.addEventListener('resize', () => {
+             if (window.innerWidth >= 750) {
+                 this.initTabs();
+             }
+        });
+      }
+
+      initTabs() {
+        this.tabs.forEach(tab => {
+          tab.removeEventListener('click', this.handleTabClick.bind(this)); // Prevent double-binding
+          tab.removeEventListener('keydown', this.handleTabKeydown.bind(this));
+          tab.addEventListener('click', this.handleTabClick.bind(this));
+          tab.addEventListener('keydown', this.handleTabKeydown.bind(this));
+        });
+      }
+
+      handleTabClick(event) {
+        const activeTab = event.currentTarget;
+        const targetId = activeTab.dataset.tabId;
+        // Target the desktop panel
+        const targetPanel = this.querySelector(`#Panel-desktop-${targetId}`); 
+        
+        if (activeTab.classList.contains('is-active')) return;
+
+        // Deactivate old active tab/panel
+        this.tabs.forEach(tab => {
+          tab.classList.remove('is-active');
+          tab.setAttribute('aria-selected', 'false');
+          tab.setAttribute('tabindex', '-1');
+        });
+        this.panels.forEach(panel => {
+          panel.classList.remove('is-active');
+          panel.hidden = true;
+        });
+
+        // Activate new tab/panel
+        activeTab.classList.add('is-active');
+        activeTab.setAttribute('aria-selected', 'true');
+        activeTab.setAttribute('tabindex', '0');
+        targetPanel.classList.add('is-active');
+        targetPanel.hidden = false;
+        
+        targetPanel.focus();
+      }
+      
+      handleTabKeydown(event) {
+        let currentTab = event.target;
+        let tabsArray = Array.from(this.tabs);
+        let index = tabsArray.indexOf(currentTab);
+        let newIndex = index;
+        
+        // ... (Keydown logic remains the same) ...
+
+        switch (event.key) {
+          case 'ArrowLeft':
+          case 'ArrowUp':
+            newIndex = (index - 1 + tabsArray.length) % tabsArray.length;
+            event.preventDefault();
+            break;
+          case 'ArrowRight':
+          case 'ArrowDown':
+            newIndex = (index + 1) % tabsArray.length;
+            event.preventDefault();
+            break;
+          case 'Home':
+            newIndex = 0;
+            event.preventDefault();
+            break;
+          case 'End':
+            newIndex = tabsArray.length - 1;
+            event.preventDefault();
+            break;
+        }
+
+        if (newIndex !== index) {
+          this.tabs[newIndex].focus();
+          this.tabs[newIndex].click();
+        }
+      }
+    }
+
+    customElements.define('product-tabs', ProductTabs);
+  }
+</script>
+
+{%- style -%}
+  /* Fix: Ensures the custom element takes up space and receives the background color */
+  product-tabs {
+    display: block;
+  }
+
+  /* Styles matching your theme's padding logic */
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* --- DESKTOP TAB STYLES (750px and up) --- */
+  @media screen and (min-width: 750px) {
+    .product-tabs__header-list,
+    .product-tabs__desktop-content {
+      display: flex; /* Show desktop tabs */
+    }
+    
+    .product-tabs__mobile-accordion {
+      display: none; /* Hide the mobile accordion */
+    }
+
+    .product-tabs__panel {
+        padding: 0;
+        min-height: 200px;
+    }
+  }
+
+
+  /* --- MOBILE ACCORDION STYLES (Up to 749px) --- */
+  @media screen and (max-width: 749px) {
+    .product-tabs__header-list,
+    .product-tabs__desktop-content {
+      display: none; /* Hide the tab buttons and desktop panels */
+    }
+    
+    .product-tabs__mobile-accordion {
+      display: block; /* Show the mobile accordion */
+    }
+
+    /* Accordion Item Styling */
+    .product-accordion-item {
+      border-bottom: 1px solid rgb(var(--color-foreground), 0.1);
+      border-top: none;
+    }
+    .product-accordion-item:first-child {
+      border-top: 1px solid rgb(var(--color-foreground), 0.1);
+    }
+    
+    .product-accordion-item__summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+    }
+    
+    .product-accordion-item[open] > .product-accordion-item__summary .icon-caret {
+        transform: rotate(-180deg);
+    }
+
+    .product-accordion-item__content {
+        padding: 2rem 0;
+        border-top: 1px solid rgb(var(--color-foreground), 0.1);
+    }
+  }
+
+
+  /* --- COMMON STYLES --- */
+  .product-tabs__wrapper {
+    max-width: 120rem; 
+    margin: 0 auto;
+  }
+  
+  .product-tabs__header-list {
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border-bottom: 1px solid rgb(var(--color-foreground), 0.1); */
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+  }
+
+  .product-tabs__header {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 1em;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgb(var(--color-foreground), 0.6); 
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-bottom-color 0.2s;
+    white-space: nowrap; 
+  }
+
+  .product-tabs__header.is-active {
+    color: rgb(var(--color-foreground));
+    border-bottom-color: rgb(var(--color-foreground));
+    font-weight: bold;
+  }
+  
+  .product-tabs__panel,
+  .product-accordion-item__content {
+    line-height: 1.6;
+    outline: none;
+  }
+
+{%- endstyle -%}
+
+
+{% schema %}
+{
+  "name": "Product Tabs",
+  "tag": "section",
+  "class": "product-tabs-section section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Product Details"
+    },
+    {
+      "type": "checkbox",
+      "id": "accordion_open_first_on_mobile",
+      "label": "Open first item on mobile",
+      "default": true,
+      "info": "This setting only affects the mobile accordion view."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1",
+      "label": "Heading Size"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "Accent 1" },
+        { "value": "accent-2", "label": "Accent 2" },
+        { "value": "background-1", "label": "Background 1" },
+        { "value": "background-2", "label": "Background 2" },
+        { "value": "inverse", "label": "Inverse" }
+      ],
+      "default": "background-1",
+      "label": "Color Scheme"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Product Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Tab Heading",
+          "default": "Details"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content",
+          "label": "Tab Content",
+          "info": "Use the Dynamic Source icon (a database symbol) above to connect this field to a Product Metafield or a Metaobject field."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Details Tabs",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "heading": "Full Description",
+            "tab_content": "<p>Connect this field to the main product description or a dedicated 'Full Description' metafield.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "heading": "Specifications",
+            "tab_content": "<p>Connect this field to your product's specifications metafield/metaobject.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "heading": "Shipping Information",
+            "tab_content": "<p>Connect this field to your product's shipping information metafield/metaobject.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

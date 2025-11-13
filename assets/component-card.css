@@ -482,6 +482,7 @@
   line-height: 1.4;
   /* min-width: 126px; */
   white-space: nowrap;
+  z-index: 1;
 }
 
 .product-card-swatches .colour-option:hover .colour-tooltip {
