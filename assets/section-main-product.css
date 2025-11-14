@@ -1923,6 +1923,10 @@ CUSTOM -  Colour Groups product template - 2 column variant wizard app
   }
 }
 
+.template-suffix-colour-groups .pwzrswiper-btn-next, .template-suffix-colour-groups .pwzrswiper-btn-prev {
+  display: none !important;
+}
+
 /* ============================================
 The new product tabs section 
 ==============================================*/
