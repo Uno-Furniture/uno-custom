@@ -311,6 +311,16 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "product_video_items",
+      "namespace": "custom",
+      "name": "Product video items",
+      "description": "Product video items contain a heading, text, and URL to the hosted video e.g. YouTube",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
