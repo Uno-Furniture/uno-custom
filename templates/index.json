@@ -38,6 +38,7 @@
         },
         "slide_MLqeYE": {
           "type": "slide",
+          "name": "Black Friday",
           "settings": {
             "image": "shopify://shop_images/Webpage_Banner_v2.png",
             "image_mobile": "shopify://shop_images/Black_Friday_1014_x_1312.png",
