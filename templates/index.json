@@ -40,8 +40,8 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Uno_Black_Friday_Sale_-_Desktop.jpg",
-            "image_mobile": "shopify://shop_images/Uno_Black_Friday_Sale_-_Mobile.jpg",
+            "image": "shopify://shop_images/Webpage_Banner_v2.png",
+            "image_mobile": "shopify://shop_images/Black_Friday_1014_x_1312.png",
             "slide_link": "shopify://collections/items-on-sale",
             "heading": "",
             "heading_size": "h1",
