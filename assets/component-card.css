@@ -465,7 +465,7 @@
   height: 100%;
   object-fit: cover;
   padding: 1px;
-  border-radius: 2px;
+  border-radius: 20px;
 }
 
 .product-card-swatches .colour-tooltip {
