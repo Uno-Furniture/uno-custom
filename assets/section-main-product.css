@@ -1895,11 +1895,11 @@ CUSTOM -  Colour Groups product template - 2 column variant wizard app
   font-size: 14px;
 }
 
-.template-suffix-colour-groups .product-form__input input[type='radio'] + label.colour-option-label {
+.product-form__input input[type='radio'] + label.colour-option-label {
   border-radius: var(--variant-pills-radius);
 }
 
-.template-suffix-colour-groups .product-form__input input[type='radio'] + label.colour-option-label img {
+.product-form__input input[type='radio'] + label.colour-option-label img {
   border-radius: var(--variant-pills-radius);
 }
 
