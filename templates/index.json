@@ -38,27 +38,26 @@
         },
         "slide_MLqeYE": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Uno_Black_Friday_Sale_-_Desktop.jpg",
-            "image_mobile": "shopify://shop_images/Uno_Black_Friday_Sale_-_Mobile.jpg",
+            "image": "shopify://shop_images/Webpage_Banner_v2.png",
+            "image_mobile": "shopify://shop_images/Black_Friday_1014_x_1312.png",
             "slide_link": "shopify://collections/items-on-sale",
-            "heading": "",
-            "heading_size": "h1",
+            "heading": ".",
+            "heading_size": "h2",
             "subheading": "",
             "subheading_size": "normal",
             "hide_subheading_background": false,
-            "button_label": "",
-            "link": "",
+            "button_label": "Shop Sale Now",
+            "link": "https://unofurniture.co.nz/collections/items-on-sale",
             "button_style_secondary": false,
-            "box_align": "middle-center",
+            "box_align": "top-center",
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "background-1",
             "force_white_text": false,
             "text_alignment_mobile": "center",
-            "is_alt_mobile_layout": false
+            "is_alt_mobile_layout": true
           }
         },
         "slide_CpqmUb": {
