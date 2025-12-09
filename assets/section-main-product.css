@@ -1945,3 +1945,6 @@ product-tabs.gradient {
   font-size: inherit !important;
 }
 
+.vendor-message-content {
+  color: rgb(var(--color-base-accent-1));
+}
