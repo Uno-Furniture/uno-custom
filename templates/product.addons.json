@@ -56,6 +56,10 @@
             "notify_title": ""
           }
         },
+        "vendor_message_6BFap9": {
+          "type": "vendor_message",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -160,6 +164,7 @@
         "895ba9a8-754f-4e15-810d-f2c88fc4d722",
         "variant_picker",
         "inventory_KghM6e",
+        "vendor_message_6BFap9",
         "quantity_selector",
         "buy_buttons",
         "1f9b7a27-d25b-41cc-807c-248f692563a1",
