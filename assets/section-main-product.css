@@ -1414,6 +1414,10 @@ a.product__text {
   font-size: 1.3rem;
 }
 
+.notify_form {
+  margin-bottom: 1.3rem;
+}
+
 .notify_form__inputs {
   display: flex;
 }

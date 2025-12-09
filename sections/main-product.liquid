@@ -325,26 +325,28 @@
               {% endif %}
             {%- when 'vendor_message' -%}
 
-              {%- assign current_vendor = product.vendor | strip | downcase -%}
-              {%- assign vendor_list_objects = metaobjects['all_vendor_messages']['all-vendor-messages'].all_vendor_messages.value -%}
+              {% if product.available %}
+                {%- assign current_vendor = product.vendor | strip | downcase -%}
+                {%- assign vendor_list_objects = metaobjects['all_vendor_messages']['all-vendor-messages'].all_vendor_messages.value -%}
 
-              {% if vendor_list_objects != blank %}
-                {% for entry in vendor_list_objects %}
-                  {%- assign entry_vendor = entry.vendor | strip | downcase -%}
+                {% if vendor_list_objects != blank %}
+                  {% for entry in vendor_list_objects %}
+                    {%- assign entry_vendor = entry.vendor | strip | downcase -%}
 
-                  {%- if entry_vendor == current_vendor -%}
-                    <div class="product__vendor-message" {{ block.shopify_attributes }}>
-                      <div class="vendor-message-content">
-                        {{ entry.vendor_message | metafield_tag }}
+                    {%- if entry_vendor == current_vendor -%}
+                      <div class="product__vendor-message" {{ block.shopify_attributes }}>
+                        <div class="vendor-message-content">
+                          {{ entry.vendor_message | metafield_tag }}
+                        </div>
                       </div>
-                    </div>
 
-                    {%- break -%}            
-                  {%- endif -%}
+                      {%- break -%}            
+                    {%- endif -%}
 
-                {% endfor %}  
-              {% endif %}            
-
+                  {% endfor %}  
+                {% endif %}
+              {% endif %}
+            
             {%- when 'quantity_selector' -%}
               <div
                 class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
