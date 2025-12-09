@@ -14,6 +14,7 @@
       "blocks": {
         "slide_4E7b3f": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/web_Banner_2.png",
             "image_mobile": "shopify://shop_images/web_Banner_3.png",
@@ -39,16 +40,16 @@
         "slide_MLqeYE": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Webpage_Banner_v2.png",
-            "image_mobile": "shopify://shop_images/Black_Friday_1014_x_1312.png",
-            "slide_link": "shopify://collections/items-on-sale",
+            "image": "shopify://shop_images/Xmas_Web_Banner_2025_-_2708_x_852_2.png",
+            "image_mobile": "shopify://shop_images/Xmas_2025_1014_x_1312_1.png",
+            "slide_link": "",
             "heading": ".",
             "heading_size": "h2",
             "subheading": "",
             "subheading_size": "normal",
             "hide_subheading_background": false,
-            "button_label": "Shop Sale Now",
-            "link": "https://unofurniture.co.nz/collections/items-on-sale",
+            "button_label": "",
+            "link": "",
             "button_style_secondary": false,
             "box_align": "top-center",
             "show_text_box": false,
