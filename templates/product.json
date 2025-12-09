@@ -56,6 +56,10 @@
             "notify_title": ""
           }
         },
+        "vendor_message_yhkbCP": {
+          "type": "vendor_message",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -167,6 +171,7 @@
         "custom_liquid_pG6fBQ",
         "variant_picker",
         "inventory_tNpPfa",
+        "vendor_message_yhkbCP",
         "quantity_selector",
         "buy_buttons",
         "895ba9a8-754f-4e15-810d-f2c88fc4d722",
