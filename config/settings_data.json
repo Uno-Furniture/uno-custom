@@ -143,6 +143,16 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "announcement_hH7mgP": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Uno Furniture is now closed for the Christmas Break. We will return on the 5th January. We wish you all a Wonderful Christmas and New Year!",
+              "text_alignment": "center",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
           "announcement_b3q4ny": {
             "type": "announcement",
             "disabled": true,
@@ -185,6 +195,7 @@
           }
         },
         "block_order": [
+          "announcement_hH7mgP",
           "announcement_b3q4ny",
           "announcement_QEgUbn",
           "announcement_EWKACa",
