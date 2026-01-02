@@ -145,6 +145,7 @@
         "blocks": {
           "announcement_j8NAp9": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "We are now closed for the Christmas Break and will be back Monday 5th January. Have a wonderful Christmas and New Year!",
               "text_alignment": "center",
