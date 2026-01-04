@@ -39,6 +39,7 @@
         },
         "slide_MLqeYE": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Xmas_Web_Banner_2025_-_2708_x_852_4.png",
             "image_mobile": "shopify://shop_images/Xmas_2025_1014_x_1312_2.png",
