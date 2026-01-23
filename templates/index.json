@@ -40,10 +40,9 @@
         },
         "slide_MLqeYE": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Xmas_Web_Banner_2025_-_2708_x_852_4.png",
-            "image_mobile": "shopify://shop_images/Xmas_2025_1014_x_1312_2.png",
+            "image": "shopify://shop_images/AA_WebBanner_1927_X_606_1.png",
+            "image_mobile": "shopify://shop_images/AA_WebBanner_1.png",
             "slide_link": "",
             "heading": ".",
             "heading_size": "h2",
@@ -116,7 +115,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Ligna_Bar_Leaner_w_LeGrille_Homepage.jpg",
-            "image_mobile": "shopify://shop_images/Ligna_Bar_Leaner_w_LeGrille_Mobile.jpg",
+            "image_mobile": "shopify://shop_images/Xmas_2025_1014_x_1312_2.png",
             "slide_link": "shopify://collections/ligna-collection",
             "heading": "Ligna",
             "heading_size": "h1",
