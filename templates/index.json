@@ -40,6 +40,7 @@
         },
         "slide_MLqeYE": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/AA_WebBanner_1927_X_606_1.png",
             "image_mobile": "shopify://shop_images/AA_WebBanner_1.png",
