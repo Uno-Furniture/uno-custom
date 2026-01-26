@@ -143,15 +143,6 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "announcement_Qb9wLF": {
-            "type": "announcement",
-            "settings": {
-              "text": "The Office is closed for Auckland Anniversary Day, the showroom will be accessible, see contact page for details",
-              "text_alignment": "center",
-              "color_scheme": "accent-1",
-              "link": "https://unofurniture.co.nz/pages/contact"
-            }
-          },
           "announcement_j8NAp9": {
             "type": "announcement",
             "disabled": true,
@@ -204,7 +195,6 @@
           }
         },
         "block_order": [
-          "announcement_Qb9wLF",
           "announcement_j8NAp9",
           "announcement_b3q4ny",
           "announcement_QEgUbn",
