@@ -68,6 +68,10 @@
             "notify_title": ""
           }
         },
+        "vendor_message_cLb9Pe": {
+          "type": "vendor_message",
+          "settings": {}
+        },
         "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
           "type": "addon_products",
           "settings": {}
@@ -169,6 +173,7 @@
         "short_description_html_PznnNt",
         "variant_picker",
         "inventory_KghM6e",
+        "vendor_message_cLb9Pe",
         "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "quantity_selector",
         "buy_buttons",
