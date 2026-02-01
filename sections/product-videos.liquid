@@ -137,6 +137,22 @@
           {% endif %}
 
           {% if vid_id != blank %}
+
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              "mainEntityOfPage": {
+                "@id": "{{ shop.url }}{{ product.url }}#json-ld-for-seo"
+              },
+              "name": {{ vid_heading | default: product.title | json }},
+              "description": {{ vid_text_field | metafield_tag | strip_html | strip | default: product.description | truncate: 160 | json }},
+              "thumbnailUrl": "https://img.youtube.com/vi/{{ vid_id }}/maxresdefault.jpg",
+              "uploadDate": "{{ product.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+              "embedUrl": "https://www.youtube.com/embed/{{ vid_id }}",
+              "contentUrl": {{ input_url | json }}
+            }
+            </script>            
             
             <div class="product-video-row">
               
