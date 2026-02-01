@@ -68,6 +68,10 @@
             "notify_title": ""
           }
         },
+        "vendor_message_cLb9Pe": {
+          "type": "vendor_message",
+          "settings": {}
+        },
         "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
           "type": "addon_products",
           "settings": {}
@@ -158,6 +162,16 @@
             "page": "",
             "dynamic_text": ""
           }
+        },
+        "collapsible_tab_XPPJfL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "FAQs",
+            "icon": "check_mark",
+            "content": "",
+            "page": "",
+            "dynamic_text": ""
+          }
         }
       },
       "block_order": [
@@ -169,6 +183,7 @@
         "short_description_html_PznnNt",
         "variant_picker",
         "inventory_KghM6e",
+        "vendor_message_cLb9Pe",
         "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "quantity_selector",
         "buy_buttons",
@@ -178,7 +193,8 @@
         "43ac409c-2f43-499f-a2f8-505cfc991704",
         "2fd08b65-b7f3-452f-b2e8-71c5e3cdbcea",
         "collapsible-row-1",
-        "cf36e1c1-8191-4525-9bbf-2d1fd822f01e"
+        "cf36e1c1-8191-4525-9bbf-2d1fd822f01e",
+        "collapsible_tab_XPPJfL"
       ],
       "settings": {
         "enable_sticky_info": false,
