@@ -300,6 +300,9 @@
                         {
                           "@context": "https://schema.org",
                           "@type": "FAQPage",
+                          "mainEntityOfPage": {
+                            "@id": "{{ shop.url }}{{ product.url }}#json-ld-for-seo"
+                          },
                           "mainEntity": [
                             {% for faq in product.metafields.custom.faqs.value %}
                             {
