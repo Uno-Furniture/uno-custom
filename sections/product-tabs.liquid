@@ -44,6 +44,34 @@
                 {% unless forloop.first %}hidden{% endunless %}
               >
                 {{ content_source_value | raw }}
+
+                {%- assign tab_title = block.settings.heading | downcase -%}
+
+                {%- if tab_title contains 'warranty' -%}
+                  {%- assign warranty_text = content_source_value | strip_html | strip -%}
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "@id": "{{ shop.url }}{{ product.url }}#json-ld-for-seo",
+                    "warranty": {
+                      "@type": "WarrantyPromise",
+                      "description": {{ warranty_text | json }}
+                    }
+                  }
+                  </script>
+
+                {%- elsif tab_title contains 'shipping' -%}
+                  {%- assign shipping_text = content_source_value | strip_html | strip -%}
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "@id": "{{ shop.url }}{{ product.url }}#json-ld-for-seo",
+                    "disambiguatingDescription": {{ shipping_text | prepend: "Delivery Information: " | json }}
+                  }
+                  </script>
+                {%- endif -%}                
               </div>
             {%- endif -%}
           {%- endfor -%}
