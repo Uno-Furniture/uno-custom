@@ -9,11 +9,22 @@
     {% if section.blocks.size > 0 %}
       <div class="product-tabs__container">
 
+        {% if product.metafields.custom.faqs != blank %}
+          {% assign hasFAQs = true %}                
+        {% endif %}      
+
         <div class="product-tabs__header-list" role="tablist" aria-label="Product Details Tabs">
+
           {%- for block in section.blocks -%}
             {% assign content_source_value = block.settings.tab_content %}
 
-            {%- if content_source_value != blank -%}
+            {%- if hasFAQs and block.settings.heading == 'FAQs' -%}
+              {% assign isFAQs = true %}
+            {%- else -%}
+              {% assign isFAQs = false %}
+            {%- endif -%}
+
+            {%- if content_source_value != blank or isFAQs -%}
               <button
                 id="Tab-{{ block.id }}-{{ section.id }}"
                 class="product-tabs__header {% if forloop.first %}is-active{% endif %}"
@@ -34,7 +45,13 @@
           {%- for block in section.blocks -%}
             {% assign content_source_value = block.settings.tab_content %}
 
-            {%- if content_source_value != blank -%}
+            {%- if hasFAQs and block.settings.heading == 'FAQs' -%}
+              {% assign isFAQs = true %}
+            {%- else -%}
+              {% assign isFAQs = false %}
+            {%- endif -%}            
+
+            {%- if content_source_value != blank or isFAQs-%}
               <div
                 id="Panel-desktop-{{ block.id }}-{{ section.id }}"
                 class="product-tabs__panel rte {% if forloop.first %}is-active{% endif %}"
@@ -71,6 +88,39 @@
                     "disambiguatingDescription": {{ shipping_text | prepend: "Delivery Information: " | json }}
                   }
                   </script>
+                {%- elsif tab_title contains 'faqs' -%}
+                  {% for faq in product.metafields.custom.faqs.value %}
+                    <div class="product-faq">
+                      <h4 class="h5">
+                        {{ faq.question | escape }}
+                      </h4>
+                      <div class="rte">
+                        {{ faq.answer |  metafield_tag }}
+                      </div>
+                    </div>
+                  {% endfor %}  
+                  
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntityOfPage": {
+                      "@id": "{{ shop.url }}{{ product.url }}#json-ld-for-seo"
+                    },
+                    "mainEntity": [
+                      {% for faq in product.metafields.custom.faqs.value %}
+                      {
+                        "@type": "Question",
+                        "name": {{ faq.question | strip | json }},
+                        "acceptedAnswer": {
+                          "@type": "Answer",
+                          "text": {{ faq.answer | metafield_tag | strip_html | replace: '\n', ' ' | replace: '\r', ' ' | strip | json }}
+                        }
+                      }{% unless forloop.last %},{% endunless %}
+                      {% endfor %}
+                    ]
+                  }
+                  </script>                  
                 {%- endif -%}                
               </div>
             {%- endif -%}
@@ -81,7 +131,13 @@
           {%- for block in section.blocks -%}
             {% assign content_source_value = block.settings.tab_content %}
 
-            {%- if content_source_value != blank -%}
+            {%- if hasFAQs and block.settings.heading == 'FAQs' -%}
+              {% assign isFAQs = true %}
+            {%- else -%}
+              {% assign isFAQs = false %}
+            {%- endif -%}             
+
+            {%- if content_source_value != blank or isFAQs == true -%}
               <details 
                 class="product-accordion-item" 
                 {% if forloop.first and section.settings.accordion_open_first_on_mobile %} open{% endif %} 
@@ -91,7 +147,20 @@
                     {% render 'icon-caret' %}
                 </summary>
                 <div class="product-accordion-item__content rte">
-                  {{ content_source_value | raw }}
+                  {%- if isFAQs -%}
+                    {% for faq in product.metafields.custom.faqs.value %}
+                      <div class="product-faq">
+                        <h4 class="h5">
+                          {{ faq.question | escape }}
+                        </h4>
+                        <div class="rte">
+                          {{ faq.answer |  metafield_tag }}
+                        </div>
+                      </div>
+                    {% endfor %}                    
+                  {%- else -%}
+                    {{ content_source_value | raw }}
+                  {%- endif -%}
                 </div>
               </details>
             {%- endif -%}

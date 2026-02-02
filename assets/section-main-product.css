@@ -1875,7 +1875,7 @@ media-gallery {
 CUSTOM -  Product FAQs in collapsible content block
 =========================================================*/
 .product-faq h4 {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 .product-faq p {
@@ -1930,6 +1930,10 @@ CUSTOM -  Colour Groups product template - 2 column variant wizard app
 .template-suffix-colour-groups .pwzrswiper-btn-next, .template-suffix-colour-groups .pwzrswiper-btn-prev {
   fill: rgba(0, 0, 0, 0.2) !important;
   background-color: transparent !important;
+}
+
+.template-suffix-colour-groups .product__media-list {
+  align-items: center;
 }
 
 /* ============================================
