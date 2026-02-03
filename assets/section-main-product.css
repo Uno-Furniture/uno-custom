@@ -1707,7 +1707,20 @@ a.product__text {
 .template-product .product-buy-buttons button {
   height: 40px;
   min-height: 40px;
+  line-height: 1;
+  transition: background-color .4s ease;
 }
+
+.template-product .product-buy-buttons button:hover {
+  background-color: rgb(var(--color-base-text));
+}
+
+.template-product .product-buy-buttons button:hover::after {
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 var(--buttons-border-width) rgb(var(--color-base-text)), var(--alpha-button-background);
+}
+
+
 
 @media screen and (min-width: 360px) and (max-width: 749px), (min-width: 1024px) {
   .template-product .product-form__quantity {
