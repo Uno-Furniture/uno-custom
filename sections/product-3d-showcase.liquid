@@ -1,0 +1,228 @@
+{%- assign product_models = product.media | where: 'media_type', 'model' -%}
+
+{%- if product_models.size > 0 -%}
+  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
+  <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
+  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
+
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+    .product-3d-showcase__container {
+      max-width: {{ section.settings.model_width }}px;
+      margin: 0 auto;
+    }
+
+    .product-3d-showcase__model-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%; 
+    }
+
+    @media screen and (min-width: 750px) {
+       .product-3d-showcase__model-wrapper {
+          padding-bottom: 75%;
+       }
+    }
+
+    product-model.standalone-model {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: transparent; /* CUSTOM FIX FOR GREY BACKGROUND */
+    }
+
+    .product-3d-showcase__header {
+      text-align: {{ section.settings.heading_alignment }};
+      margin-bottom: 3rem;
+    }
+
+    .product-3d-showcase__instructions {
+      margin-top: 1rem;
+      color: rgba(var(--color-foreground), 0.75);
+    }
+    
+    .product-3d-showcase__xr-wrapper {
+      margin-top: 2rem;
+    }
+  {%- endstyle -%}
+
+  <div class="color-{{ section.settings.color_scheme }} gradient">
+    <div class="section-{{ section.id }}-padding page-width">
+      
+      {%- if section.settings.heading != blank or section.settings.instruction_text != blank -%}
+        <div class="product-3d-showcase__header">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="{{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+          {%- endif -%}
+          
+          {%- if section.settings.instruction_text != blank -%}
+            <div class="product-3d-showcase__instructions rte">
+              {{ section.settings.instruction_text }}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="product-3d-showcase__container">
+        {%- for media in product_models -%}
+          {%- if forloop.first or section.settings.show_all_models -%}
+            <div class="product-3d-showcase__model-wrapper">
+              <product-model class="deferred-media media standalone-model no-js-hidden" data-media-id="{{ media.id }}">
+                <button id="Deferred-Poster-{{ media.id }}" class="deferred-media__poster" type="button">
+                  <span class="deferred-media__poster-button motion-reduce">
+                    {%- render 'icon-3d-model' -%}
+                  </span>
+                  <img
+                    src="{{ media.preview_image | image_url: width: 1100 }}"
+                    loading="lazy"
+                    alt="{{ media.alt | escape }}"
+                    width="{{ media.preview_image.width }}"
+                    height="{{ media.preview_image.height }}"
+                  >
+                </button>
+                <template>
+                  {{ media | model_viewer_tag: reveal: 'auto', toggleable: true, data-model-id: media.id }}
+                </template>
+              </product-model>
+            </div>
+
+            <div class="product-3d-showcase__xr-wrapper center">
+              <button
+                class="button button--secondary product__xr-button"
+                type="button"
+                aria-label="{{ 'products.product.xr_button_label' | t }}"
+                data-shopify-xr
+                data-shopify-model3d-id="{{ media.id }}"
+                data-shopify-title="{{ product.title | escape }}"
+                data-shopify-xr-hidden
+              >
+                {%- render 'icon-3d-model' -%}
+                {{ 'products.product.xr_button' | t }}
+              </button>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" id="ProductJSON-{{ section.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+  <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product 3D Showcase",
+  "tag": "section",
+  "class": "section",
+  "templates": ["product"],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Experience it in 3D",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "instruction_text",
+      "default": "<p>Click the model to start. Drag to rotate and scroll to zoom. On mobile, tap \"View in your space\" to see it in AR.</p>",
+      "label": "Instructional Text"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center",
+      "label": "Heading alignment"
+    },
+    {
+      "type": "range",
+      "id": "model_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "default": 800,
+      "unit": "px",
+      "label": "Maximum model width"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_all_models",
+      "default": false,
+      "label": "Show all product models"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "background-1", "label": "Background 1" },
+        { "value": "background-2", "label": "Background 2" },
+        { "value": "inverse", "label": "Inverse" }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "label": "Padding top"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "label": "Padding bottom"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product 3D Showcase"
+    }
+  ]
+}
+{% endschema %}
