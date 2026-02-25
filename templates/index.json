@@ -40,7 +40,7 @@
         },
         "slide_MLqeYE": {
           "type": "slide",
-          "disabled": true,
+          "name": "Office Fit Out",
           "settings": {
             "image": "shopify://shop_images/Officec_Fit_Out_-_Web_Banner.png",
             "image_mobile": "shopify://shop_images/Office_Fit_Out_-_Mobile_Banner.png",
