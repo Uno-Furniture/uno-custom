@@ -77,7 +77,7 @@
             "button_label": "Free Consultation",
             "link": "shopify://pages/office-furniture-fit-outs",
             "button_style_secondary": false,
-            "box_align": "top-center",
+            "box_align": "middle-left",
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
