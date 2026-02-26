@@ -2,8 +2,14 @@
 
 {%- if product_models.size > 0 -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
+  
   <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
+
+  <script type="application/json" id="ProductJSON-{{ section.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+  <script src="{{ 'product-model.js' | asset_url }}" defer></script>
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -11,28 +17,44 @@
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
+    /* 1. MOBILE FIRST STYLES (The Default) */
+    .product-3d-showcase__grid {
+      display: grid;
+      grid-template-areas: 
+        "text"
+        "model";
+      gap: 2rem;
+    }
+
+    .product-3d-showcase__content { grid-area: text; }
+    .product-3d-showcase__visual { grid-area: model; }
+
+    @media screen and (max-width: 749px) {
+      .product-3d-showcase__header {
+        text-align: center;
+      }
+    }
+
+    /* 2. DESKTOP STYLES */
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
-    }
 
-    .product-3d-showcase__container {
-      max-width: {{ section.settings.model_width }}px;
-      margin: 0 auto;
+      .product-3d-showcase__grid {
+        grid-template-columns: 1fr 1fr;
+        /* Swap the order here: Model on left, Text on right */
+        grid-template-areas: "model text"; 
+        gap: 5rem;
+        align-items: center;
+      }
     }
 
     .product-3d-showcase__model-wrapper {
       position: relative;
       width: 100%;
       padding-bottom: 100%; 
-    }
-
-    @media screen and (min-width: 750px) {
-       .product-3d-showcase__model-wrapper {
-          padding-bottom: 75%;
-       }
     }
 
     product-model.standalone-model {
@@ -42,16 +64,16 @@
       width: 100%;
       height: 100%;
       display: block;
-      background: transparent; /* CUSTOM FIX FOR GREY BACKGROUND */
+      background: transparent; 
     }
 
-    .product-3d-showcase__header {
-      text-align: {{ section.settings.heading_alignment }};
-      margin-bottom: 3rem;
+    product-model.standalone-model model-viewer {
+      --poster-color: transparent;
+      background-color: transparent;
     }
 
     .product-3d-showcase__instructions {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       color: rgba(var(--color-foreground), 0.75);
     }
     
@@ -62,68 +84,69 @@
 
   <div class="color-{{ section.settings.color_scheme }} gradient">
     <div class="section-{{ section.id }}-padding page-width">
-      
-      {%- if section.settings.heading != blank or section.settings.instruction_text != blank -%}
-        <div class="product-3d-showcase__header">
-          {%- if section.settings.heading != blank -%}
-            <h2 class="{{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
-          {%- endif -%}
-          
-          {%- if section.settings.instruction_text != blank -%}
-            <div class="product-3d-showcase__instructions rte">
-              {{ section.settings.instruction_text }}
-            </div>
-          {%- endif -%}
+      <div class="product-3d-showcase__grid">
+        
+        {%- comment -%} 
+          HTML Order: Text first. 
+          This ensures text is on TOP on mobile.
+        {%- endcomment -%}
+        <div class="product-3d-showcase__content">
+          <div class="product-3d-showcase__header">
+            {%- if section.settings.heading != blank -%}
+              <h2 class="{{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+            {%- endif -%}
+            
+            {%- if section.settings.instruction_text != blank -%}
+              <div class="product-3d-showcase__instructions rte">
+                {{ section.settings.instruction_text }}
+              </div>
+            {%- endif -%}
+          </div>
         </div>
-      {%- endif -%}
 
-      <div class="product-3d-showcase__container">
-        {%- for media in product_models -%}
-          {%- if forloop.first or section.settings.show_all_models -%}
-            <div class="product-3d-showcase__model-wrapper">
-              <product-model class="deferred-media media standalone-model no-js-hidden" data-media-id="{{ media.id }}">
-                <button id="Deferred-Poster-{{ media.id }}" class="deferred-media__poster" type="button">
-                  <span class="deferred-media__poster-button motion-reduce">
-                    {%- render 'icon-3d-model' -%}
-                  </span>
-                  <img
-                    src="{{ media.preview_image | image_url: width: 1100 }}"
-                    loading="lazy"
-                    alt="{{ media.alt | escape }}"
-                    width="{{ media.preview_image.width }}"
-                    height="{{ media.preview_image.height }}"
-                  >
+        <div class="product-3d-showcase__visual">
+          {%- for media in product_models -%}
+            {%- if forloop.first or section.settings.show_all_models -%}
+              <div class="product-3d-showcase__model-wrapper">
+                <product-model class="deferred-media media standalone-model no-js-hidden" data-media-id="{{ media.id }}">
+                  <button id="Deferred-Poster-{{ media.id }}" class="deferred-media__poster" type="button">
+                    <span class="deferred-media__poster-button motion-reduce">
+                      {%- render 'icon-3d-model' -%}
+                    </span>
+                    <img
+                      src="{{ media.preview_image | image_url: width: 1100 }}"
+                      loading="lazy"
+                      alt="{{ media.alt | escape }}"
+                      width="{{ media.preview_image.width }}"
+                      height="{{ media.preview_image.height }}"
+                    >
+                  </button>
+                  <template>
+                    {{ media | model_viewer_tag: reveal: 'auto', toggleable: true, data-model-id: media.id }}
+                  </template>
+                </product-model>
+              </div>
+
+              <div class="product-3d-showcase__xr-wrapper center">
+                <button
+                  class="button button--secondary product__xr-button"
+                  type="button"
+                  data-shopify-xr
+                  data-shopify-model3d-id="{{ media.id }}"
+                  data-shopify-title="{{ product.title | escape }}"
+                  data-shopify-xr-hidden
+                >
+                  {%- render 'icon-3d-model' -%}
+                  {{ 'products.product.xr_button' | t }}
                 </button>
-                <template>
-                  {{ media | model_viewer_tag: reveal: 'auto', toggleable: true, data-model-id: media.id }}
-                </template>
-              </product-model>
-            </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
 
-            <div class="product-3d-showcase__xr-wrapper center">
-              <button
-                class="button button--secondary product__xr-button"
-                type="button"
-                aria-label="{{ 'products.product.xr_button_label' | t }}"
-                data-shopify-xr
-                data-shopify-model3d-id="{{ media.id }}"
-                data-shopify-title="{{ product.title | escape }}"
-                data-shopify-xr-hidden
-              >
-                {%- render 'icon-3d-model' -%}
-                {{ 'products.product.xr_button' | t }}
-              </button>
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
       </div>
     </div>
   </div>
-
-  <script type="application/json" id="ProductJSON-{{ section.id }}">
-    {{ product.media | where: 'media_type', 'model' | json }}
-  </script>
-  <script src="{{ 'product-model.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 {% schema %}
@@ -155,27 +178,6 @@
       ],
       "default": "h1",
       "label": "Heading size"
-    },
-    {
-      "type": "select",
-      "id": "heading_alignment",
-      "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
-      ],
-      "default": "center",
-      "label": "Heading alignment"
-    },
-    {
-      "type": "range",
-      "id": "model_width",
-      "min": 400,
-      "max": 1200,
-      "step": 50,
-      "default": 800,
-      "unit": "px",
-      "label": "Maximum model width"
     },
     {
       "type": "checkbox",
