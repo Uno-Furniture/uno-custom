@@ -68,10 +68,6 @@
             "notify_title": ""
           }
         },
-        "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
-          "type": "addon_products",
-          "settings": {}
-        },
         "vendor_message_cLb9Pe": {
           "type": "vendor_message",
           "settings": {}
@@ -85,6 +81,10 @@
           "settings": {
             "show_dynamic_checkout": false
           }
+        },
+        "5b935abd-bfad-4c5b-9968-8ddea7250d72": {
+          "type": "addon_products",
+          "settings": {}
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -173,10 +173,10 @@
         "short_description_html_PznnNt",
         "variant_picker",
         "inventory_KghM6e",
-        "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "vendor_message_cLb9Pe",
         "quantity_selector",
         "buy_buttons",
+        "5b935abd-bfad-4c5b-9968-8ddea7250d72",
         "collapsible-row-0",
         "collapsible-row-2",
         "collapsible_tab_dBXVW4",
