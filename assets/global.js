@@ -540,10 +540,17 @@ class SliderComponent extends HTMLElement {
 
     if (!this.slider || !this.nextButton) return;
 
-    this.initPages();
-    const resizeObserver = new ResizeObserver(entries => this.initPages());
-    resizeObserver.observe(this.slider);
+    const init = () => {
+      this.initPages();
+      const resizeObserver = new ResizeObserver(entries => this.initPages());
+      resizeObserver.observe(this.slider);
+    };
 
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(() => init());
+    } else {
+      setTimeout(() => init(), 1);
+    }
     this.slider.addEventListener('scroll', this.update.bind(this));
     this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
     this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
