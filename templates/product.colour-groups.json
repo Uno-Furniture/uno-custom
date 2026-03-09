@@ -64,6 +64,7 @@
         },
         "vendor_message_cLb9Pe": {
           "type": "vendor_message",
+          "disabled": true,
           "settings": {}
         },
         "quantity_selector": {
