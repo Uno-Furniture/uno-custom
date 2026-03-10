@@ -2,10 +2,12 @@
     Buy Now or Pay Later With <img id="bnplAfterpay" src="https://cdn.shopify.com/s/files/1/0008/5796/4659/files/afterpay.svg?v=1726722237" alt="Afterpay logo"> <img id="bnplZip" src="https://assets.partpay.co.nz/assets/Images/fearless/zip-fearless-98.svg" alt="Zip logo"> <img id="bnplGem" src="https://assets.latitudefinancial.com/merchant-services/latitude/icon/gem-logo.svg" alt="Gem logo-NZD">
     
     <div id="infoAfterpay">
+        <div id="loadingAfterpay">Loading...</div>
         <div id="afterpayTarget"></div>
         {% render 'afterpay-widget' %}
     </div>
     <div id="infoZip">
+        <div id="loadingZip">Loading...</div>
         {% render 'zip-widget-new' %}       
     </div>
     <div id="infoGem">
@@ -13,6 +15,12 @@
     </div>        
     </div>
 </div>
+
+<style>
+    #infoAfterpay, #infoZip {
+        min-height: 31px;
+    }
+</style>
 
 <script>
     (function() {
@@ -24,17 +32,54 @@
         let infoZip = document.getElementById('infoZip');
         let infoGem = document.getElementById('infoGem');
 
+        let loadingAfterpay = document.getElementById('loadingAfterpay');
+        let loadingZip = document.getElementById('loadingZip');
+
+        // Tracking variables to ensure scripts only load once
+        let afterpayLoaded = false;
+        let zipLoaded = false;        
+
         imgAfterpay.addEventListener('click', () => {
+
+            if (!afterpayLoaded) {
+                let s = document.createElement('script');
+                s.src = "https://static.afterpay.com/shopify-afterpay-javascript.js";
+                s.defer = true;
+                document.head.appendChild(s);
+                s.onload = () => {
+                    const checkReady = setInterval(() => {
+                        if (window.Afterpay) { // Change this based on the provider
+                            clearInterval(checkReady);
+                            afterpayLoaded = true;
+                            loadingAfterpay.style.display = 'none';
+                        }
+                    }, 100);
+                };                
+            }        
 
             if(!infoAfterpay.classList.contains('show-me')) {
                 infoGem.classList.remove('show-me');
                 infoZip.classList.remove('show-me');
             }
-
             infoAfterpay.classList.toggle('show-me');
         });        
 
         imgZip.addEventListener('click', () => {
+
+            if (!zipLoaded) {
+                let s = document.createElement('script');
+                s.src = "https://static.zip.co/lib/js/zm-widget-js/dist/zip-widget.min.js";
+                document.head.appendChild(s);
+                s.onload = () => {
+                    const checkReady = setInterval(() => {
+                        if (window.Zip) { // Change this based on the provider
+                            clearInterval(checkReady);
+                            zipLoaded = true;
+                            loadingZip.style.display = 'none';
+                        }
+                    }, 100);
+                };                
+            }        
 
             if(!infoZip.classList.contains('show-me')) {
                 infoGem.classList.remove('show-me');
