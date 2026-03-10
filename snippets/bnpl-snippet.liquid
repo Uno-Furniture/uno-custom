@@ -11,13 +11,14 @@
         {% render 'zip-widget-new' %}       
     </div>
     <div id="infoGem">
+        <div id="loadingGem">Loading...</div>
         <div id="latitude-product-widget"></div>
     </div>        
     </div>
 </div>
 
 <style>
-    #infoAfterpay, #infoZip {
+    #infoAfterpay, #infoZip, #infoGem {
         min-height: 31px;
     }
 </style>
@@ -34,10 +35,12 @@
 
         let loadingAfterpay = document.getElementById('loadingAfterpay');
         let loadingZip = document.getElementById('loadingZip');
+        let loadingGem = document.getElementById('loadingGem');
 
         // Tracking variables to ensure scripts only load once
         let afterpayLoaded = false;
-        let zipLoaded = false;        
+        let zipLoaded = false;   
+        let gemLoaded = false;     
 
         imgAfterpay.addEventListener('click', () => {
 
@@ -90,6 +93,22 @@
         });
 
         imgGem.addEventListener('click', () => {
+
+            if (!gemLoaded) {
+                let s = document.createElement('script');
+                s.src = "https://checkout.latitudefinancial.com/assets/shopify.js?containerId=latitude-product-widget&layout=standard&merchantId=090684630&minAmount=100&paymentOption=equal&promotionCode=2212&promotionMonths=12&shop=unofurniture.myshopify.com";
+                document.head.appendChild(s);
+                s.async = true;
+                s.onload = () => {
+                    const checkReady = setInterval(() => {
+                        if (window.LatitudeCheckout) { // Change this based on the provider
+                            clearInterval(checkReady);
+                            gemLoaded = true;
+                            loadingGem.style.display = 'none';
+                        }
+                    }, 100);
+                };                
+            }         
 
             if(!imgGem.classList.contains('show-me')) {
                 infoZip.classList.remove('show-me');
