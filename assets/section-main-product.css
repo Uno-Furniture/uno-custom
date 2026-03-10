@@ -1613,6 +1613,7 @@ a.product__text {
 
 .product .stamped-product-reviews-badge {
   min-height: 30px;
+  display: block;
 }
 
 .product .stamped-product-reviews-badge:has(span[data-rating="0.0"]) {
