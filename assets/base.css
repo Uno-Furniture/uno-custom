@@ -2238,6 +2238,16 @@ input[type='checkbox'] {
   letter-spacing: 0.1rem;
 }
 
+/* Have to hide pop convert with CSS because can't disable in theme editor for dev theme */
+#pop-convert-app {
+  display: none !important;
+  visibility: hidden;
+}
+
+#__pc-bar-spacer {
+  display: none !important;
+}
+
 /* section-header */
 #shopify-section-header {
   z-index: 3;
