@@ -546,11 +546,16 @@ class SliderComponent extends HTMLElement {
       resizeObserver.observe(this.slider);
     };
 
-    if (window.requestIdleCallback) {
-      window.requestIdleCallback(() => init());
+    if(this.classList.contains('announcement-bar')) {
+      init();
     } else {
-      setTimeout(() => init(), 1);
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(() => init());
+      } else {
+        setTimeout(() => init(), 1);
+      }
     }
+
     this.slider.addEventListener('scroll', this.update.bind(this));
     this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
     this.nextButton.addEventListener('click', this.onButtonClick.bind(this));

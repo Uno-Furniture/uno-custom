@@ -2272,9 +2272,18 @@ input[type='checkbox'] {
   left: 0;
 }
 
-.announcement-bar  .slider-button--next {
+.announcement-bar .slider-button--next {
   right: 0;
 }  
+
+.announcement-bar .slider__slide {
+  justify-content: center;
+}  
+
+.announcement-bar .slideshow__autoplay {
+  left: 0;
+}
+
 
 /* Have to hide pop convert with CSS because can't disable in theme editor for dev theme */
 #pop-convert-app {
