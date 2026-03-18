@@ -148,8 +148,6 @@
             "disabled": true,
             "settings": {
               "text": "We are now closed for the Christmas Break and will be back Monday 5th January. Have a wonderful Christmas and New Year!",
-              "text_alignment": "center",
-              "color_scheme": "accent-1",
               "link": ""
             }
           },
@@ -158,19 +156,7 @@
             "disabled": true,
             "settings": {
               "text": "Have Happy Easter, we are on holiday over the break but our smart showroom is available, see our contact page for details.",
-              "text_alignment": "center",
-              "color_scheme": "accent-1",
               "link": ""
-            }
-          },
-          "announcement_QEgUbn": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "Shop Sale Items Now",
-              "text_alignment": "center",
-              "color_scheme": "inverse",
-              "link": "shopify://collections/items-on-sale"
             }
           },
           "announcement_EWKACa": {
@@ -178,30 +164,45 @@
             "disabled": true,
             "settings": {
               "text": "SHOWROOM AND OFFICE HOURS WAITANGI WEEKEND",
-              "text_alignment": "center",
-              "color_scheme": "accent-1",
               "link": "shopify://pages/holiday-hours"
+            }
+          },
+          "announcement_QEgUbn": {
+            "type": "announcement",
+            "settings": {
+              "text": "Shop Sale Items Now!",
+              "link": "shopify://collections/items-on-sale"
             }
           },
           "announcement_VXEFfd": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Uno",
-              "text_alignment": "center",
-              "color_scheme": "inverse",
-              "link": "shopify://collections/items-on-sale"
+              "text": "Explore Free Shipping Options!",
+              "link": "shopify://pages/shipping"
+            }
+          },
+          "announcement_DrQytt": {
+            "type": "announcement",
+            "settings": {
+              "text": "Flexible Payment Options - Shop Now and Pay Later!",
+              "link": "shopify://pages/flexible-payment-option"
             }
           }
         },
         "block_order": [
           "announcement_j8NAp9",
           "announcement_b3q4ny",
-          "announcement_QEgUbn",
           "announcement_EWKACa",
-          "announcement_VXEFfd"
+          "announcement_QEgUbn",
+          "announcement_VXEFfd",
+          "announcement_DrQytt"
         ],
-        "settings": {}
+        "settings": {
+          "auto_rotate": true,
+          "change_slides_speed": 5,
+          "color_scheme": "inverse",
+          "show_line_separator": true
+        }
       },
       "header": {
         "type": "header",
