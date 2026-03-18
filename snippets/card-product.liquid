@@ -32,6 +32,12 @@
       assign ratio = 1
     endif
   -%}
+
+  {%- assign collection_handles = card_product.collections | map: 'handle' -%}
+  {% if collection_handles contains 'best-sellers' %}
+    {% assign isBestSeller = true %}
+  {% endif %}
+  
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
@@ -123,7 +129,7 @@
                 class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
               >
                 {{- 'products.product.sold_out' | t -}}
-              </span>
+              </span>              
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -131,6 +137,13 @@
               >
                 {{- 'products.product.on_sale' | t -}}
               </span>
+            {%- elsif isBestSeller -%}
+              <span
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+              >
+                Best seller
+              </span>              
             {%- endif -%}
           </div>
         </div>
