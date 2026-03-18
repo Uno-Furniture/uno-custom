@@ -402,6 +402,20 @@
     },
     "announcement-bar": {
       "name": "Announcement bar",
+      "settings": {
+        "auto_rotate": {
+          "label": "Auto rotate announcements"
+        },
+        "change_slides_speed": {
+          "label": "Change every"
+        },
+        "heading_utilities": {
+         "content": "Utilities"
+        },
+        "paragraph": {
+          "content": "Appear only on large screens"
+        }
+      },      
       "blocks": {
         "announcement": {
           "name": "Announcement",

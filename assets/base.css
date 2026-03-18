@@ -2236,7 +2236,45 @@ input[type='checkbox'] {
   padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
+  line-height: initial;
 }
+
+#shopify-section-announcement-bar {
+  text-align: center;
+}
+
+.announcement-bar {
+  padding: 0 44px;
+}
+
+.announcement-bar .slider-button {
+  position: absolute;
+  height: 36px;
+  top: 50%;
+  transform: translateY(-50%);  
+  z-index: 10;
+  color: white;
+  transition: opacity .2s ease;
+}
+
+.announcement-bar .slider-button:hover {
+  opacity: .75;
+  color: white;
+}
+
+#Slider-announcement-bar {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.announcement-bar .slider-button--prev {
+  left: 0;
+}
+
+.announcement-bar  .slider-button--next {
+  right: 0;
+}  
 
 /* Have to hide pop convert with CSS because can't disable in theme editor for dev theme */
 #pop-convert-app {
