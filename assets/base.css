@@ -2278,7 +2278,13 @@ input[type='checkbox'] {
 
 .announcement-bar .slider__slide {
   justify-content: center;
-}  
+  transition: opacity .2s ease .3s;
+} 
+
+.announcement-bar .slider__slide[aria-hidden="true"] {
+  transition: opacity 0s linear;
+  opacity: 0;
+} 
 
 .announcement-bar .slideshow__autoplay {
   left: 0;

@@ -546,7 +546,7 @@ class SliderComponent extends HTMLElement {
       resizeObserver.observe(this.slider);
     };
 
-    if(this.classList.contains('announcement-bar')) {
+    if(this.classList.contains('announcement-bar') || this.classList.contains('slider-above-fold')) {
       init();
     } else {
       if (window.requestIdleCallback) {
