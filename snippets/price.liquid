@@ -36,6 +36,11 @@
   endif
 -%}
 
+{%- assign collection_handles = product.collections | map: 'handle' -%}
+{% if collection_handles contains 'best-sellers' %}
+  {% assign isBestSeller = true %}
+{% endif %}
+
 {%- comment -%} =======================================================
   CUSTOM - display of price on product page with/without GST
 ===================================================== {%- endcomment -%}
@@ -44,6 +49,7 @@
     {%- if price_class %} {{ price_class }}{% endif -%}
     {%- if available == false %} price--sold-out {% endif -%}
     {%- if compare_at_price > price %} price--on-sale {% endif -%}
+    {%- if isBestSeller %} price--best-seller {% endif -%}
     {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
     {%- if show_badges %} price--show-badge{% endif -%}
   ">
@@ -128,6 +134,10 @@
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
       {{ 'products.product.on_sale' | t }}
     </span>
+
+    <span class="badge price__badge-best-seller color-{{ settings.sale_badge_color_scheme }}">
+      Best seller
+    </span>    
 
     <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
       {{ 'products.product.sold_out' | t }}
