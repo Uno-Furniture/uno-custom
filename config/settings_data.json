@@ -153,6 +153,7 @@
           },
           "announcement_b3q4ny": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Have Happy Easter, we are on holiday over the break but our smart showroom is available, see our contact page for details.",
               "link": ""
