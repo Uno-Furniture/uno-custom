@@ -15,10 +15,9 @@
         "slide_4E7b3f": {
           "type": "slide",
           "name": "Monthly Offers",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/January_Offer.png",
-            "image_mobile": "shopify://shop_images/January_Offer_1.png",
+            "image": "shopify://shop_images/Fitzroy_Offer_web_banner.png",
+            "image_mobile": "shopify://shop_images/January_Offer_4.png",
             "slide_link": "",
             "heading": "",
             "heading_size": "h0",
@@ -26,7 +25,7 @@
             "subheading_size": "normal",
             "hide_subheading_background": true,
             "button_label": "SHOP NOW",
-            "link": "",
+            "link": "https://unofurniture.co.nz/search?q=fitzroy&options%5Bprefix%5D=last",
             "button_style_secondary": true,
             "box_align": "bottom-left",
             "show_text_box": false,
