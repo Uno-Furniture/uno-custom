@@ -15,6 +15,7 @@
         "slide_4E7b3f": {
           "type": "slide",
           "name": "Monthly Offers",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Fitzroy_Offer_Web_Banner_v3.png",
             "image_mobile": "shopify://shop_images/January_Offer_6.png",
