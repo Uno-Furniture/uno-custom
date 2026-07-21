@@ -37,6 +37,7 @@
         },
         "custom_liquid_pG6fBQ": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "{% render 'bnpl-snippet' %}"
           }
